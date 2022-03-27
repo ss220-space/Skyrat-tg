@@ -19,8 +19,7 @@ GLOBAL_LIST_INIT(bodyparts_to_convert, list("body_markings", \
 "skrell_hair", \
 "taur", \
 "xenodorsal", \
-"xenohead", \
-"breasts",))
+"xenohead",))
 
 /datum/preferences/proc/migrate_skyrat(savefile/S)
 	if(features["flavor_text"])
