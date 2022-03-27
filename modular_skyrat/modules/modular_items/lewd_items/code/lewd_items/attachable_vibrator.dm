@@ -1,3 +1,4 @@
+/*
 //////////////////////////
 ///Normal vibrating egg///
 //////////////////////////
@@ -331,3 +332,4 @@
 		if("high")
 			vibration_mode = "high"
 			playsound(loc, 'sound/weapons/magin.ogg', 20, TRUE, ignore_walls = FALSE)
+*/
