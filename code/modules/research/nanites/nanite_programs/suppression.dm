@@ -138,7 +138,6 @@
 		"*surrender",
 		"*collapse",
 		"*faint",
-		"*cum", //Skyrat Edit - Imagine getting jerked off by nanites, what are you, gey?
 	)
 
 /datum/nanite_program/comm/speech/register_extra_settings()
