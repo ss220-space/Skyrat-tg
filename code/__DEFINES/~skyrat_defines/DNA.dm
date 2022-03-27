@@ -45,8 +45,6 @@
 #define ACC_RANDOM		"random"
 
 //organ slots
-#define ORGAN_SLOT_BREASTS "breasts"
-
 #define ORGAN_SLOT_WINGS "wings"
 
 #define MAXIMUM_MARKINGS_PER_LIMB 3
@@ -60,7 +58,7 @@
 #define BODY_SIZE_MAX 1.5
 #define BODY_SIZE_MIN 0.8
 
-#define MANDATORY_FEATURE_LIST list("mcolor" = "#FFFFBB","mcolor2" = "#FFFFBB","mcolor3" = "#FFFFBB","ethcolor" = "#FFCCCC","skin_color" = "#FFEEDD","flavor_text" = "","breasts_size" = 1, "body_size" = BODY_SIZE_NORMAL, "custom_species" = null, "uses_skintones" = FALSE)
+#define MANDATORY_FEATURE_LIST list("mcolor" = "#FFFFBB","mcolor2" = "#FFFFBB","mcolor3" = "#FFFFBB","ethcolor" = "#FFCCCC","skin_color" = "#FFEEDD","flavor_text" = "", "body_size" = BODY_SIZE_NORMAL, "custom_species" = null, "uses_skintones" = FALSE)
 
 #define UNDERWEAR_HIDE_SOCKS (1<<0)
 #define UNDERWEAR_HIDE_SHIRT (1<<1)
