@@ -1,3 +1,4 @@
+/*
 /obj/item/clothing/ears/kinky_headphones
 	name = "kinky headphones"
 	desc = "Protect your ears from loud noises. It has a switch on the right hand side."
@@ -99,3 +100,4 @@
 	var/obj/item/clothing/ears/kinky_headphones/headphones = target
 	if(istype(headphones))
 		headphones.toggle(owner)
+*/
