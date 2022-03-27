@@ -1,5 +1,5 @@
 import { FeatureDropdownInput, Feature, FeatureNumberInput, CheckboxInput, FeatureTriColorInput, FeatureTriBoolInput, FeatureNumeric, FeatureToggle, FeatureChoiced } from "../../base";
-
+/*
 export const penis_toggle: FeatureToggle = {
   name: "Penis",
   component: CheckboxInput,
@@ -94,6 +94,7 @@ export const feature_womb: Feature<string> = {
   name: "Womb Choice",
   component: FeatureDropdownInput,
 };
+*/
 
 export const breasts_toggle: FeatureToggle = {
   name: "Breasts",
@@ -114,17 +115,17 @@ export const breasts_emissive: Feature<boolean[]> = {
   name: "Breasts Emissives",
   component: FeatureTriBoolInput,
 };
-
+/*
 export const breasts_lactation_toggle: FeatureToggle = {
   name: "Breasts Lactation",
   component: CheckboxInput,
 };
-
+*/
 export const breasts_size: FeatureNumeric = {
   name: "Breasts Size",
   component: FeatureNumberInput,
 };
-
+/*
 export const anus_toggle: FeatureToggle = {
   name: "Anus",
   component: CheckboxInput,
@@ -134,12 +135,12 @@ export const feature_anus: Feature<string> = {
   name: "Anus Choice",
   component: FeatureDropdownInput,
 };
-
+*/
 export const body_size: FeatureNumeric = {
   name: "Body Size",
   component: FeatureNumberInput,
 };
-
+/*
 export const erp_status_pref: FeatureChoiced = {
   name: "ERP Status",
   component: FeatureDropdownInput,
@@ -159,4 +160,4 @@ export const erp_status_pref_mechanics: FeatureChoiced = {
   name: "ERP Mechanical Status",
   component: FeatureDropdownInput,
 };
-
+*/
