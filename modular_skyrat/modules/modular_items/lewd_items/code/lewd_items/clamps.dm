@@ -1,3 +1,4 @@
+/*
 //MAKE IT WORK
 
 /obj/item/clothing/sextoy/nipple_clamps
@@ -85,3 +86,4 @@
 
 	if(target_breast.aroused != AROUSAL_CANT)
 		target_breast.aroused = AROUSAL_FULL //Clamps keeping nipples aroused
+*/
