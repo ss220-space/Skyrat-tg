@@ -208,7 +208,6 @@ const SLOTS: Record<
     image: "inventory-pocket.png",
   },
 };
-// SKYRAT EDIT END
 enum ObscuringLevel {
   Completely = 1,
   Hidden = 2,
