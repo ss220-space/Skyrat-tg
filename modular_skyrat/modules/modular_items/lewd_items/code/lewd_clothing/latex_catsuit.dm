@@ -1,3 +1,4 @@
+/*
 /obj/item/clothing/under/misc/latex_catsuit
 	name = "latex catsuit"
 	desc = "A shiny uniform that fits snugly to the skin."
@@ -95,3 +96,4 @@
 	breasts_overlay.icon_state = "breasts"
 	breasts_icon_overlay = mutable_appearance('modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_clothing/lewd_uniform.dmi', "none")
 	breasts_icon_overlay.icon_state = "breasts"
+*/
