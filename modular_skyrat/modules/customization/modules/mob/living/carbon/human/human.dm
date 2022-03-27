@@ -3,22 +3,6 @@
 
 	if(href_list["lookup_info"])
 		switch(href_list["lookup_info"])
-			if("genitals")
-				var/list/line = list()
-				for(var/genital in list("penis", "testicles", "vagina", "breasts", "anus"))
-					if(!dna.species.mutant_bodyparts[genital])
-						continue
-					var/datum/sprite_accessory/genital/G = GLOB.sprite_accessories[genital][dna.species.mutant_bodyparts[genital][MUTANT_INDEX_NAME]]
-					if(!G)
-						continue
-					if(G.is_hidden(src))
-						continue
-					var/obj/item/organ/genital/ORG = getorganslot(G.associated_organ_slot)
-					if(!ORG)
-						continue
-					line += ORG.get_description_string(G)
-				if(length(line))
-					to_chat(usr, span_notice("[jointext(line, "\n")]"))
 			if("open_examine_panel")
 				tgui.holder = src
 				tgui.ui_interact(usr) //datum has a tgui component, here we open the window
