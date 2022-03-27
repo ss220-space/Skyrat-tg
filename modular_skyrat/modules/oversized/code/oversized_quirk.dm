@@ -1,3 +1,4 @@
+/*
 #define OVERSIZED_SPEED_SLOWDOWN 0.5
 
 /datum/quirk/oversized
@@ -36,3 +37,4 @@
 	human_holder.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/species, multiplicative_slowdown=speedmod)
 
 #undef OVERSIZED_SPEED_SLOWDOWN
+*/
