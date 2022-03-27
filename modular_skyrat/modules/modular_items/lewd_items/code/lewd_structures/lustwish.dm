@@ -1,3 +1,4 @@
+/*
 /obj/machinery/vending/dorms
 	name = "LustWish"
 	desc = "A vending machine with various toys. Not for the faint of heart."
@@ -195,3 +196,4 @@
 	machine_name = "LustWish"
 	icon_state = "lustwish_refill"
 	icon = 'modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_items/lewd_items.dmi'
+*/
