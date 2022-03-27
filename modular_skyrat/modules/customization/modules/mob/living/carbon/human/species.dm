@@ -287,13 +287,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 
 /datum/species/New()
 	. = ..()
-	if(can_have_genitals)
-		default_mutant_bodyparts["vagina"] = "None"
-		default_mutant_bodyparts["womb"] = "None"
-		default_mutant_bodyparts["testicles"] = "None"
-		default_mutant_bodyparts["breasts"] = "None"
-		default_mutant_bodyparts["anus"] = "None"
-		default_mutant_bodyparts["penis"] = "None"
 
 /datum/species/dullahan
 	mutant_bodyparts = list()
