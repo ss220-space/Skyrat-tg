@@ -45,12 +45,7 @@
 #define ACC_RANDOM		"random"
 
 //organ slots
-#define ORGAN_SLOT_PENIS "penis"
-#define ORGAN_SLOT_WOMB "womb"
-#define ORGAN_SLOT_VAGINA "vagina"
-#define ORGAN_SLOT_TESTICLES "testicles"
 #define ORGAN_SLOT_BREASTS "breasts"
-#define ORGAN_SLOT_ANUS "anus"
 
 #define ORGAN_SLOT_WINGS "wings"
 
@@ -60,32 +55,16 @@
 #define PREVIEW_PREF_LOADOUT "Loadout"
 #define PREVIEW_PREF_UNDERWEAR "Underwear"
 #define PREVIEW_PREF_NAKED "Naked"
-#define PREVIEW_PREF_NAKED_AROUSED "Naked - Aroused"
 
 #define BODY_SIZE_NORMAL 1.00
 #define BODY_SIZE_MAX 1.5
 #define BODY_SIZE_MIN 0.8
 
-//In inches
-#define PENIS_MAX_GIRTH 15
-#define PENIS_MIN_LENGTH 1
-#define PENIS_MAX_LENGTH 20
-
-#define SHEATH_NONE	"None"
-#define SHEATH_NORMAL "Sheath"
-#define SHEATH_SLIT	"Slit"
-#define SHEATH_MODES list(SHEATH_NONE, SHEATH_NORMAL, SHEATH_SLIT)
-
-#define MANDATORY_FEATURE_LIST list("mcolor" = "#FFFFBB","mcolor2" = "#FFFFBB","mcolor3" = "#FFFFBB","ethcolor" = "#FFCCCC","skin_color" = "#FFEEDD","flavor_text" = "","breasts_size" = 1,"breasts_lactation" = FALSE,"penis_size" = 13,"penis_girth" = 9,"penis_taur_mode" = TRUE,"penis_sheath" = SHEATH_NONE ,"balls_size" = 1, "body_size" = BODY_SIZE_NORMAL, "custom_species" = null, "uses_skintones" = FALSE)
+#define MANDATORY_FEATURE_LIST list("mcolor" = "#FFFFBB","mcolor2" = "#FFFFBB","mcolor3" = "#FFFFBB","ethcolor" = "#FFCCCC","skin_color" = "#FFEEDD","flavor_text" = "","breasts_size" = 1, "body_size" = BODY_SIZE_NORMAL, "custom_species" = null, "uses_skintones" = FALSE)
 
 #define UNDERWEAR_HIDE_SOCKS (1<<0)
 #define UNDERWEAR_HIDE_SHIRT (1<<1)
 #define UNDERWEAR_HIDE_UNDIES (1<<2)
-
-#define AROUSAL_CANT 0
-#define AROUSAL_NONE 1
-#define AROUSAL_PARTIAL 2
-#define AROUSAL_FULL 3
 
 //Species IDs. If you wanna look at tg's species ID defines, go look in the *other* DNA.dm file
 #define SPECIES_AKULA "akula"
