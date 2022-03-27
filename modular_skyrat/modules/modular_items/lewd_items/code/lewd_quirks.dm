@@ -1,3 +1,4 @@
+/*
 //////////////////////////
 ///CODE FOR LEWD QUIRKS///
 //////////////////////////
@@ -339,3 +340,4 @@
 						. += span_purple("[p_they()] [p_are()] aroused as hell.") + "\n"
 					if(91.01 to INFINITY)
 						. += span_purple("[p_they()] [p_are()] extremely excited, exhausting from entolerable desire.") + "\n"
+*/
