@@ -299,8 +299,6 @@
 /datum/preference/choiced/womb/create_default_value()
 	var/datum/sprite_accessory/genital/womb/none/default = /datum/sprite_accessory/genital/womb/none
 	return initial(default.name)
-	
-*/
 
 /datum/preference/toggle/breasts
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
@@ -356,8 +354,6 @@
 	relevant_mutant_bodypart = "breasts"
 	type_to_check = /datum/preference/toggle/breasts
 
-/*
-
 /datum/preference/toggle/breasts_lactation
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
 	savefile_identifier = PREFERENCE_CHARACTER
@@ -373,8 +369,6 @@
 	var/allowed = preferences.read_preference(/datum/preference/toggle/allow_mismatched_parts)
 	var/part_enabled = preferences.read_preference(/datum/preference/toggle/breasts)
 	return part_enabled && (passed_initial_check || allowed)
-	
-*/
 
 /datum/preference/numeric/breasts_size
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
@@ -395,6 +389,8 @@
 
 /datum/preference/numeric/breasts_size/create_default_value()
 	return 4
+	
+*/
 
 /datum/preference/numeric/body_size
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
