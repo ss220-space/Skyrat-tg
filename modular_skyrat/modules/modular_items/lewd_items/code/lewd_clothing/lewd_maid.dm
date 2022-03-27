@@ -1,3 +1,4 @@
+/*
 /obj/item/clothing/under/costume/lewdmaid
 	name = "latex maid costume"
 	desc = "A maid costume made of a thick latex."
@@ -98,3 +99,4 @@
 	wearer.update_inv_wear_suit()
 	wearer.fan_hud_set_fandom()
 	return TRUE
+*/
