@@ -264,8 +264,6 @@
 	icon_state = "anus"
 	name = "Anus"
 	color_src = null
-	
-*/
 
 /datum/sprite_accessory/genital/breasts
 	icon = 'modular_skyrat/master_files/icons/mob/sprite_accessory/genitals/breasts_onmob.dmi'
@@ -294,7 +292,6 @@
 	icon_state = "pair"
 	name = "Pair"
 
-/*
 /datum/sprite_accessory/genital/breasts/quad
 	icon_state = "quad"
 	name = "Quad"
