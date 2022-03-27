@@ -1,3 +1,4 @@
+/*
 /obj/item/clothing/under/stripper_outfit
 	name = "stripper outfit"
 	desc = "An item of clothing that leaves little to the imagination."
@@ -26,3 +27,4 @@
 	. = ..()
 	if(unique_reskin && !current_skin && user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY))
 		reskin_obj(user)
+*/
