@@ -1,3 +1,4 @@
+/*
 #define TIGHT_SLOWDOWN 2
 
 /obj/item/clothing/suit/corset
@@ -39,3 +40,4 @@
 		to_chat(user, span_purple("Phew. Now you can breathe normally."))
 
 #undef TIGHT_SLOWDOWN
+*/
