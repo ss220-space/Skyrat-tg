@@ -1,3 +1,4 @@
+/*
 /obj/item/clothing/head/domina_cap
 	name = "dominant cap"
 	desc = "For special types of inspections."
@@ -17,3 +18,4 @@
 	. = ..()
 	if(src == user.head)
 		to_chat(user, span_purple("BDSM session ended, huh?"))
+*/
