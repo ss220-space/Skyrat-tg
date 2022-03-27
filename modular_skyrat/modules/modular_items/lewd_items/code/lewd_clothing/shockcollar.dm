@@ -1,3 +1,4 @@
+/*
 /obj/item/electropack/shockcollar
 	name = "shock collar"
 	desc = "A reinforced metal collar. It has some sort of wiring near the front."
@@ -93,3 +94,4 @@
 /obj/item/electropack/shockcollar/pacify/dropped(mob/living/carbon/human/user)
 	. = ..()
 	REMOVE_TRAIT(user, TRAIT_PACIFISM, "pacifying-collar")
+*/
