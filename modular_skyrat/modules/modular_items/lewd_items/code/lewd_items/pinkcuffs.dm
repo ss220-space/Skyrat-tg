@@ -1,3 +1,4 @@
+/*
 /obj/item/restraints/handcuffs/lewd
 	name = "kinky handcuffs"
 	desc = "Fake handcuffs meant for erotic roleplay."
@@ -26,3 +27,4 @@
 		return
 	target.overlays_standing[HANDCUFF_LAYER] = mutable_appearance('modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_items/lewd_items.dmi', "pinkcuffs", -HANDCUFF_LAYER)
 	target.apply_overlay(HANDCUFF_LAYER)
+*/
