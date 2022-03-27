@@ -1,3 +1,4 @@
+/*
 /obj/item/clothing/glasses/nice_goggles
 	name = "surprisingly nice looking goggles"
 	desc = "It has an inscription engraved on the handle. Kubic. How strange."
@@ -9,3 +10,4 @@
 	righthand_file = 'modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_inhands/lewd_inhand_right.dmi'
 
 //that's all folks. Nothing superfunctional here.
+*/
