@@ -1,3 +1,4 @@
+/*
 /datum/sprite_accessory/genital
 	special_render_case = TRUE
 	var/associated_organ_slot
@@ -263,6 +264,8 @@
 	icon_state = "anus"
 	name = "Anus"
 	color_src = null
+	
+*/
 
 /datum/sprite_accessory/genital/breasts
 	icon = 'modular_skyrat/master_files/icons/mob/sprite_accessory/genitals/breasts_onmob.dmi'
@@ -291,6 +294,7 @@
 	icon_state = "pair"
 	name = "Pair"
 
+/*
 /datum/sprite_accessory/genital/breasts/quad
 	icon_state = "quad"
 	name = "Quad"
@@ -298,3 +302,4 @@
 /datum/sprite_accessory/genital/breasts/sextuple
 	icon_state = "sextuple"
 	name = "Sextuple"
+*/
