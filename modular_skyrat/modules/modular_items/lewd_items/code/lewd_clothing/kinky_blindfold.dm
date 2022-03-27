@@ -1,3 +1,4 @@
+/*
 /obj/item/clothing/glasses/blindfold/kinky
 	name = "kinky blindfold"
 	desc = "Covers the eyes, preventing sight. But it looks so nice..."
@@ -71,3 +72,4 @@
 	. = ..()
 	if(src == user.glasses)
 		to_chat(user, span_purple("The blindfold no longer restricts your vision."))
+*/
