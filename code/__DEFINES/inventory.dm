@@ -61,22 +61,8 @@
 /// Legcuff slot (bolas, beartraps)
 #define ITEM_SLOT_LEGCUFFED (1<<19)
 
-//SKYRAT EDIT ADDITION BEGIN - ERP UPDATE
-/// Penis slot
-#define ITEM_SLOT_PENIS (1<<20)
-/// Vagina slot
-#define ITEM_SLOT_VAGINA (1<<21)
-/// Anus slot
-#define ITEM_SLOT_ANUS (1<<22)
-/// Nipples slot
-#define ITEM_SLOT_NIPPLES (1<<23)
-//SKYRATE EDIT ADDITION END
-
 /// Total amount of slots
-//SKYRAT EDIT CHANGE BEGIN
-// #define SLOTS_AMT 20 // Keep this up to date! - SKYRAT EDIT - ORIGINAL
-#define SLOTS_AMT 24 // Keep this up to date!
-//SKYRAT EDIT CHANGE END
+#define SLOTS_AMT 20 // Keep this up to date!
 
 //SLOT GROUP HELPERS
 #define ITEM_SLOT_POCKETS (ITEM_SLOT_LPOCKET|ITEM_SLOT_RPOCKET)
@@ -106,8 +92,6 @@
 #define SHOWSPRITEEARS (1<<13)
 /// Does this sprite also hide the spine on tails? Realistically only useful for the clothes that have a special tail overlay, like MODsuits
 #define HIDESPINE (1<<14)
-/// Does this sprite hide devious devices?
-#define HIDESEXTOY (1<<15)
 //SKYRAT EDIT ADDITION END
 
 //bitflags for clothing coverage - also used for limbs
