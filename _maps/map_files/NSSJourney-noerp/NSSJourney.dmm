@@ -53314,10 +53314,6 @@
 	dir = 10
 	},
 /area/security/prison)
-"tLN" = (
-/obj/structure/falsewall,
-/turf/open/floor/plating,
-/area/security/prison)
 "tMd" = (
 /obj/structure/table,
 /obj/machinery/syndicatebomb/training,
@@ -56067,7 +56063,9 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "wmp" = (
-/obj/machinery/vending/dorms,
+/obj/machinery/vending{
+	 = 
+	},
 /turf/open/floor/plating,
 /area/security/prison/safe)
 "wnD" = (
@@ -84706,7 +84704,7 @@ dHU
 dHU
 aai
 aai
-acd
+aai
 jPh
 sCd
 sCd
@@ -84963,7 +84961,7 @@ sUX
 xzh
 sUX
 xzh
-tLN
+aai
 aET
 hXr
 eCm
@@ -85220,7 +85218,7 @@ mBe
 xzh
 xzh
 sUX
-acd
+aai
 jPh
 sCd
 sCd
