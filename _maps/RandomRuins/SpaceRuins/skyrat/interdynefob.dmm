@@ -2040,10 +2040,6 @@
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/skyrat/interdynefob/bridge/cl)
-"hb" = (
-/obj/machinery/washing_machine,
-/turf/open/floor/iron/dark,
-/area/ruin/space/has_grav/skyrat/interdynefob/service/dorms)
 "hd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -10145,7 +10141,7 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/skyrat/interdynefob/security/prison)
 "IP" = (
-/obj/machinery/vending/dorms,
+/obj/machinery/washing_machine,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/skyrat/interdynefob/service/dorms)
 "IQ" = (
@@ -13361,7 +13357,6 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/skyrat/interdynefob/service/hydroponics)
 "Tp" = (
-/obj/effect/decal/cleanable/cum,
 /obj/item/reagent_containers/food/drinks/waterbottle/empty,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -20085,7 +20080,7 @@ Sj
 Sj
 UA
 CO
-hb
+Ch
 Ch
 MZ
 pd

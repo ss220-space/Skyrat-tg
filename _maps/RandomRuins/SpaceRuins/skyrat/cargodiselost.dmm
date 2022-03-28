@@ -2777,23 +2777,6 @@
 /obj/machinery/light,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/deepstorage/lostcargo)
-"Up" = (
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/flashlight/seclite{
-	pixel_y = 12
-	},
-/obj/item/flashlight/seclite{
-	pixel_y = 8
-	},
-/obj/item/flashlight/seclite{
-	pixel_y = 4
-	},
-/obj/item/flashlight/seclite,
-/turf/open/floor/iron/dark/green/side{
-	dir = 4
-	},
-/area/ruin/space/has_grav/deepstorage/lostcargo)
 "UA" = (
 /obj/structure/closet/emcloset/wall{
 	pixel_y = 26
@@ -2835,6 +2818,27 @@
 /area/ruin/space/has_grav/deepstorage/lostcargo)
 "Vu" = (
 /obj/structure/table,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/flashlight/seclite{
+	pixel_y = 12
+	},
+/obj/item/flashlight/seclite{
+	pixel_y = 8
+	},
+/obj/item/flashlight/seclite{
+	pixel_y = 4
+	},
+/obj/item/flashlight/seclite,
+/turf/open/floor/iron/dark/green/side{
+	dir = 4
+	},
+/area/ruin/space/has_grav/deepstorage/lostcargo)
+"Vx" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/deepstorage/lostcargo)
+"Vy" = (
+/obj/structure/table,
 /obj/item/crowbar/red{
 	pixel_y = 12
 	},
@@ -2854,15 +2858,6 @@
 	dir = 4
 	},
 /area/ruin/space/has_grav/deepstorage/lostcargo)
-"Vx" = (
-/obj/structure/reagent_dispensers/watertank/high,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/deepstorage/lostcargo)
-"Vy" = (
-/obj/machinery/vending/games,
-/obj/machinery/light,
-/turf/open/floor/wood,
-/area/ruin/space/has_grav/deepstorage/lostcargo)
 "VB" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/iron/checker,
@@ -2873,7 +2868,7 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/deepstorage/lostcargo)
 "VZ" = (
-/obj/machinery/vending/dorms,
+/obj/machinery/vending/games,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/deepstorage/lostcargo)
 "Wd" = (
@@ -4084,7 +4079,7 @@ ie
 ml
 Bb
 IA
-Up
+YD
 Bb
 XU
 Vs
