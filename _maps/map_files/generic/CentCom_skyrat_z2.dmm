@@ -56,13 +56,6 @@
 /obj/structure/table,
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding/cafe)
-"aaQ" = (
-/obj/structure/curtain,
-/obj/machinery/shower{
-	dir = 1
-	},
-/turf/open/floor/material,
-/area/centcom/interlink)
 "aaY" = (
 /obj/structure/fans/tiny/invisible,
 /turf/open/misc/grass/planet,
@@ -5727,7 +5720,6 @@
 /obj/effect/turf_decal/trimline/darkblue/line{
 	dir = 6
 	},
-/obj/machinery/vending/dorms,
 /turf/open/floor/iron/white,
 /area/centcom/interlink)
 "aYK" = (
@@ -5979,17 +5971,6 @@
 "bnl" = (
 /obj/structure/trash_pile,
 /turf/open/floor/iron/white,
-/area/centcom/interlink)
-"bot" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	desc = "A simple drain.";
-	dir = 4;
-	name = "floor drain"
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/indestructible/hoteltile,
 /area/centcom/interlink)
 "bsM" = (
 /obj/machinery/light/small{
@@ -6938,12 +6919,6 @@
 /obj/machinery/vending/wardrobe/sec_wardrobe/peacekeeper,
 /turf/open/floor/iron,
 /area/centcom/holding/cafe)
-"hgr" = (
-/obj/structure/toilet{
-	pixel_y = 13
-	},
-/turf/open/indestructible/hoteltile,
-/area/centcom/interlink)
 "hoi" = (
 /obj/structure/chair/sofa/bench/right{
 	dir = 4
@@ -7191,9 +7166,6 @@
 /area/centcom/interlink)
 "iLk" = (
 /turf/open/indestructible/hotelwood,
-/area/centcom/interlink)
-"iTZ" = (
-/turf/open/indestructible/hoteltile,
 /area/centcom/interlink)
 "iVF" = (
 /obj/machinery/door/airlock/centcom{
@@ -9029,11 +9001,6 @@
 	},
 /turf/open/floor/plastic,
 /area/centcom/interlink)
-"rNG" = (
-/obj/structure/table/reinforced,
-/obj/item/soap/deluxe,
-/turf/open/indestructible/hoteltile,
-/area/centcom/interlink)
 "rOF" = (
 /obj/structure/sign/poster/official/walk,
 /turf/closed/indestructible/riveted,
@@ -9280,7 +9247,6 @@
 /obj/machinery/light/cold{
 	dir = 1
 	},
-/obj/item/lipstick/random,
 /turf/open/indestructible/hotelwood,
 /area/centcom/interlink)
 "tci" = (
@@ -9718,15 +9684,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/interlink)
-"uXL" = (
-/obj/structure/sink{
-	pixel_y = 12
-	},
-/obj/structure/mirror{
-	pixel_y = 29
-	},
-/turf/open/indestructible/hoteltile,
-/area/centcom/interlink)
 "uYz" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Central Access"
@@ -10002,7 +9959,7 @@
 /turf/open/floor/iron,
 /area/centcom/interlink)
 "wjm" = (
-/obj/machinery/vending/dorms,
+/obj/machinery/vending/autodrobe,
 /turf/open/floor/carpet/green,
 /area/centcom/interlink)
 "wkD" = (
@@ -10287,10 +10244,6 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark/textured,
 /area/centcom/interlink)
-"yae" = (
-/obj/machinery/vending/dorms,
-/turf/open/floor/carpet/orange,
-/area/centcom/interlink)
 "ybu" = (
 /obj/machinery/button/curtain{
 	id = "ghostcafecabin3curtain";
@@ -10338,10 +10291,6 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/carpet/red,
 /area/centcom/holding/cafedorms)
-"yjR" = (
-/obj/structure/mineral_door/wood,
-/turf/open/indestructible/hotelwood,
-/area/centcom/interlink)
 "ykr" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Administrative Office";
@@ -18637,7 +18586,7 @@ aje
 aIW
 bFx
 aHC
-yae
+aCJ
 aCJ
 aCJ
 aCJ
@@ -20444,19 +20393,19 @@ cEt
 aHC
 vhO
 vhO
-yjR
 vhO
 vhO
 vhO
-yjR
 vhO
 vhO
 vhO
-yjR
 vhO
 vhO
 vhO
-yjR
+vhO
+vhO
+vhO
+vhO
 vhO
 vhO
 aaa
@@ -20699,23 +20648,23 @@ gdl
 aXe
 tiU
 aHC
-vhO
-uXL
-iTZ
-rNG
-vhO
-uXL
-iTZ
-rNG
-vhO
-uXL
-iTZ
-rNG
-vhO
-uXL
-iTZ
-rNG
-vhO
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -20956,23 +20905,23 @@ qyu
 qyu
 qyu
 aHC
-vhO
-hgr
-bot
-aaQ
-vhO
-hgr
-bot
-aaQ
-vhO
-hgr
-bot
-aaQ
-vhO
-hgr
-bot
-aaQ
-vhO
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -21213,23 +21162,23 @@ uMK
 aRF
 jrF
 aHC
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
-vhO
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa

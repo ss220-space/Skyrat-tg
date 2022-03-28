@@ -6703,10 +6703,17 @@
 /turf/closed/wall,
 /area/maintenance/starboard/lesser)
 "bSq" = (
-/obj/structure/sign/poster/contraband/lizard{
-	pixel_x = 32
+/obj/structure/table/reinforced/plasmarglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_x = 5;
+	pixel_y = 4
 	},
-/turf/open/floor/carpet/purple,
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/turf/open/floor/light,
 /area/commons/fitness/recreation)
 "bSs" = (
 /obj/structure/railing/corner{
@@ -23150,10 +23157,6 @@
 	},
 /area/service/hydroponics)
 "iCp" = (
-/obj/item/lustwish_discount,
-/obj/item/bdsm_candle{
-	pixel_y = 6
-	},
 /obj/structure/table/reinforced/plasmarglass,
 /turf/open/floor/iron/dark/textured_large,
 /area/commons/fitness/recreation)
@@ -26256,10 +26259,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/engineering/gravity_generator)
-"jLW" = (
-/obj/machinery/vending/dorms,
-/turf/open/floor/carpet/purple,
-/area/commons/fitness/recreation)
 "jMd" = (
 /obj/structure/falsewall/wood,
 /turf/open/floor/wood/parquet,
@@ -30125,7 +30124,6 @@
 /turf/open/floor/iron,
 /area/cargo/office)
 "lrm" = (
-/obj/machinery/vending/dorms,
 /obj/structure/sign/barsign{
 	pixel_y = 32
 	},
@@ -30133,6 +30131,7 @@
 	c_tag = "Recreation - Nightclub Entrance";
 	name = "hallway camera"
 	},
+/obj/machinery/vending/cigarette,
 /turf/open/floor/carpet/purple,
 /area/commons/fitness/recreation)
 "lry" = (
@@ -37983,8 +37982,8 @@
 /area/hallway/primary/central/aft)
 "oBB" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/vending/dorms,
 /obj/machinery/airalarm/directional/west,
+/obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/iron/dark/side{
 	dir = 8
 	},
@@ -38001,13 +38000,6 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/central/aft)
-"oCz" = (
-/obj/item/polepack{
-	pixel_x = 16
-	},
-/obj/structure/table/reinforced/plasmarglass,
-/turf/open/floor/light,
-/area/commons/fitness/recreation)
 "oCG" = (
 /turf/open/openspace/airless,
 /area/maintenance/department/engine)
@@ -39917,10 +39909,6 @@
 /obj/machinery/newscaster/directional/north,
 /turf/open/floor/wood,
 /area/cargo/qm)
-"pno" = (
-/obj/machinery/vending/cigarette,
-/turf/open/floor/carpet/purple,
-/area/commons/fitness/recreation)
 "pnu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -51375,9 +51363,6 @@
 /turf/open/floor/iron/dark,
 /area/engineering/break_room)
 "tWa" = (
-/obj/effect/spawner/random/entertainment/arcade{
-	dir = 4
-	},
 /obj/machinery/light/small/broken/directional/west,
 /turf/open/floor/wood,
 /area/maintenance/starboard/aft)
@@ -55375,7 +55360,6 @@
 "vAA" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/lustwish_discount,
 /turf/open/floor/wood,
 /area/maintenance/starboard/aft)
 "vAB" = (
@@ -60721,7 +60705,9 @@
 /turf/closed/wall,
 /area/commons/fitness/locker_room)
 "xxN" = (
-/obj/machinery/vending/dorms,
+/obj/effect/spawner/random/entertainment/arcade{
+	dir = 4
+	},
 /turf/open/floor/wood,
 /area/maintenance/starboard/aft)
 "xxZ" = (
@@ -60824,10 +60810,6 @@
 /area/maintenance/department/crew_quarters/bar)
 "xyZ" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/pill/crocin{
-	pixel_x = -3;
-	pixel_y = 12
-	},
 /obj/item/reagent_containers/pill/lsd{
 	pixel_x = 5;
 	pixel_y = 5
@@ -80646,11 +80628,11 @@ ylQ
 ylQ
 ylQ
 ylQ
-wBq
-wBq
-wBq
-wBq
-wBq
+ylQ
+ylQ
+ylQ
+ylQ
+ylQ
 ylQ
 ylQ
 ylQ
@@ -80904,9 +80886,9 @@ vSD
 vSD
 vSD
 wBq
-vYu
-oCz
-vYu
+wBq
+wBq
+wBq
 wBq
 wBq
 ylQ
@@ -81419,7 +81401,7 @@ bxH
 oyp
 exe
 jTD
-vYu
+bSq
 fCt
 qqH
 xOd
@@ -81676,7 +81658,7 @@ kIQ
 tBQ
 vAZ
 glX
-bSq
+wtM
 wtM
 wtM
 ajC
@@ -81935,7 +81917,7 @@ xOd
 xOd
 xOd
 crS
-jLW
+xOd
 xOd
 ykf
 sdP
@@ -82193,7 +82175,7 @@ aOb
 xOd
 xOd
 xOd
-xOd
+sdP
 ykf
 xPa
 xPa
@@ -85264,7 +85246,7 @@ aLl
 elb
 rzg
 tsw
-pno
+wtM
 upj
 wtM
 hMj

@@ -4410,7 +4410,10 @@
 /turf/open/floor/plating,
 /area/maintenance/fore/upper)
 "aYf" = (
-/turf/open/floor/iron/dark/textured_large,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood{
+	icon_state = "wood-broken"
+	},
 /area/commons/dorms)
 "aYi" = (
 /obj/structure/table/wood,
@@ -4760,13 +4763,13 @@
 /turf/open/floor/iron,
 /area/science/explab)
 "bea" = (
-/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
-	dir = 4
+/obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden/layer4{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
-	dir = 4
+/turf/open/floor/wood{
+	icon_state = "wood-broken7"
 	},
-/turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
 "bek" = (
 /obj/structure/trash_pile,
@@ -6531,11 +6534,10 @@
 /turf/open/floor/wood,
 /area/command/heads_quarters/rd)
 "bBK" = (
-/obj/structure/table/abductor,
-/obj/item/clothing/sextoy/magic_wand,
-/obj/item/clothing/mask/leatherwhip,
 /obj/machinery/light/directional/south,
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/wood{
+	icon_state = "wood-broken3"
+	},
 /area/commons/dorms)
 "bBT" = (
 /obj/structure/cable,
@@ -7877,11 +7879,17 @@
 /turf/open/floor/iron/dark,
 /area/command/gateway)
 "bXv" = (
-/obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden/layer4{
-	dir = 1
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
+	dir = 4
 	},
-/turf/open/floor/carpet/purple,
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/item/cigbutt{
+	pixel_y = -6
+	},
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/plating,
 /area/commons/dorms)
 "bXz" = (
 /obj/structure/closet/crate/freezer{
@@ -12827,11 +12835,12 @@
 /turf/open/floor/iron/dark,
 /area/science/genetics)
 "dLS" = (
-/obj/structure/chair/x_stand,
-/obj/structure/window/reinforced/tinted{
-	dir = 8
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/wood{
+	icon_state = "wood-broken3"
 	},
-/turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
 "dLX" = (
 /obj/effect/turf_decal/bot,
@@ -13492,7 +13501,9 @@
 /turf/open/floor/wood/parquet,
 /area/service/theater)
 "dXg" = (
-/turf/open/floor/carpet/purple,
+/obj/structure/table_frame/wood,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet,
 /area/commons/dorms)
 "dXh" = (
 /obj/machinery/door/firedoor,
@@ -13704,13 +13715,11 @@
 /turf/open/floor/engine,
 /area/science/cytology)
 "ebo" = (
-/obj/structure/window/reinforced/tinted{
-	dir = 8
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
 	},
-/obj/structure/table/abductor,
-/obj/item/clothing/mask/ballgag,
-/obj/item/clothing/mask/ballgag/choking,
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/plating,
 /area/commons/dorms)
 "ecd" = (
 /obj/structure/window/reinforced{
@@ -23248,8 +23257,9 @@
 /turf/open/floor/mineral/plastitanium,
 /area/science/robotics/lab)
 "hPM" = (
-/obj/structure/bed/bdsm_bed,
-/turf/open/floor/iron/dark/textured_large,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/bookcase,
+/turf/open/floor/carpet,
 /area/commons/dorms)
 "hQi" = (
 /obj/effect/decal/cleanable/dirt,
@@ -24332,10 +24342,8 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/obj/item/kirbyplants{
-	icon_state = "plant-10"
-	},
-/turf/open/floor/carpet/purple,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
 /area/commons/dorms)
 "ilh" = (
 /obj/effect/turf_decal/siding/wood,
@@ -28336,11 +28344,11 @@
 "jJD" = (
 /obj/machinery/door/airlock{
 	id_tag = "Dorm9";
-	name = "BDSM Club"
+	name = "Broken cabin"
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4,
-/turf/open/floor/carpet/purple,
+/turf/open/space/basic,
 /area/commons/dorms)
 "jJJ" = (
 /obj/machinery/door/airlock/wood{
@@ -32694,6 +32702,18 @@
 /obj/effect/landmark/start/head_of_personnel,
 /turf/open/floor/wood,
 /area/command/heads_quarters/hop)
+"lpH" = (
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood{
+	icon_state = "wood-broken4"
+	},
+/area/commons/dorms)
 "lpW" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
@@ -34908,10 +34928,11 @@
 /turf/open/floor/iron,
 /area/security/checkpoint/medical)
 "mdu" = (
-/obj/structure/table/abductor,
-/obj/item/lustwish_discount,
-/obj/item/clothing/sextoy/vibroring,
-/turf/open/floor/iron/dark/textured_large,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood{
+	icon_state = "wood-broken6"
+	},
 /area/commons/dorms)
 "mdw" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -35295,15 +35316,8 @@
 /turf/open/floor/iron,
 /area/commons/dorms)
 "mmo" = (
-/obj/structure/table/abductor,
-/obj/item/clothing/sextoy/dildo{
-	pixel_x = -6;
-	pixel_y = 7
-	},
-/obj/item/clothing/sextoy/buttplug{
-	pixel_y = 4
-	},
-/turf/open/floor/iron/dark/textured_large,
+/obj/item/stack/sheet/mineral/wood,
+/turf/open/floor/plating,
 /area/commons/dorms)
 "mmr" = (
 /obj/structure/shuttle/engine/heater{
@@ -37932,7 +37946,9 @@
 /area/commons/dorms)
 "nkZ" = (
 /obj/machinery/light/directional/north,
-/turf/open/floor/iron/dark/textured_large,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/carpet,
 /area/commons/dorms)
 "nlb" = (
 /obj/effect/turf_decal/siding/wood{
@@ -39809,6 +39825,17 @@
 "nXI" = (
 /turf/open/floor/carpet,
 /area/service/theater)
+"nXU" = (
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/trash_pile,
+/turf/open/floor/plating,
+/area/commons/dorms)
 "nYn" = (
 /obj/structure/chair/sofa/bench{
 	dir = 8;
@@ -44108,8 +44135,8 @@
 /turf/open/floor/carpet/blue,
 /area/command/heads_quarters/captain/private)
 "pFG" = (
-/obj/structure/chair/x_stand,
-/turf/open/floor/iron/dark/textured_large,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
 /area/commons/dorms)
 "pFL" = (
 /obj/structure/chair/sofa/bench{
@@ -45462,7 +45489,7 @@
 "qjO" = (
 /obj/machinery/door/airlock{
 	id_tag = "Dorm9";
-	name = "Cabin 9"
+	name = "Broken cabin"
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
@@ -45471,7 +45498,10 @@
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/dark/textured_large,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood{
+	icon_state = "wood-broken3"
+	},
 /area/commons/dorms)
 "qjR" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -45775,6 +45805,11 @@
 	},
 /turf/open/floor/iron/dark,
 /area/science/robotics)
+"qpq" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/trash_pile,
+/turf/open/floor/carpet,
+/area/commons/dorms)
 "qpv" = (
 /obj/effect/turf_decal/stripes{
 	dir = 9
@@ -58610,9 +58645,9 @@
 /turf/open/floor/iron/white,
 /area/medical/virology)
 "vdK" = (
-/obj/machinery/vending/dorms,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/turf/open/floor/carpet/purple,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/girder,
+/turf/open/floor/carpet,
 /area/commons/dorms)
 "vdO" = (
 /obj/effect/turf_decal/tile/blue{
@@ -63682,7 +63717,7 @@
 "wVm" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4,
-/turf/open/floor/carpet/purple,
+/turf/open/floor/plating,
 /area/commons/dorms)
 "wVq" = (
 /obj/item/kirbyplants/random,
@@ -63858,9 +63893,11 @@
 /obj/structure/barricade/wooden/crude,
 /obj/machinery/door/airlock{
 	id_tag = "Dorm9";
-	name = "BDSM Club"
+	name = "Broken cabin"
 	},
-/turf/open/floor/iron/dark/textured_large,
+/turf/open/floor/wood{
+	icon_state = "wood-broken4"
+	},
 /area/commons/dorms)
 "wZa" = (
 /turf/open/openspace,
@@ -64527,11 +64564,16 @@
 /turf/open/floor/plating,
 /area/maintenance/department/eva)
 "xkR" = (
-/obj/structure/window/reinforced/tinted{
-	dir = 4
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/bed/maint,
+/obj/item/cigbutt{
+	pixel_x = -7;
+	pixel_y = 9
 	},
-/obj/structure/bed/bdsm_bed,
-/turf/open/floor/iron/dark/textured_large,
+/obj/item/cigbutt{
+	pixel_y = 7
+	},
+/turf/open/floor/plating,
 /area/commons/dorms)
 "xkS" = (
 /obj/effect/turf_decal/tile/neutral,
@@ -66709,19 +66751,17 @@
 /turf/closed/wall/r_wall,
 /area/science/research)
 "xTU" = (
-/obj/structure/window/reinforced/tinted{
-	dir = 4
-	},
-/obj/structure/table/abductor,
-/obj/item/clothing/sextoy/dildo/double_dildo,
-/obj/item/spanking_pad,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 6
 	},
-/turf/open/floor/iron/dark/textured_large,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/cigbutt{
+	pixel_x = -7
+	},
+/turf/open/floor/carpet,
 /area/commons/dorms)
 "xUf" = (
 /turf/open/floor/iron/white,
@@ -88294,9 +88334,9 @@ xgg
 llU
 hTM
 nkZ
-aYf
+pFG
 dXg
-mTO
+rmn
 pnN
 xgb
 wCX
@@ -88809,8 +88849,8 @@ hTM
 hTM
 vdK
 bXv
-vpz
-mTO
+qpq
+rmn
 xbC
 xgb
 eFk
@@ -89322,7 +89362,7 @@ wqs
 xsz
 wYO
 aYf
-bea
+nXU
 bBK
 hTM
 iJn
@@ -89579,7 +89619,7 @@ xiC
 tra
 hTM
 pFG
-bea
+lpH
 mdu
 hTM
 xbC

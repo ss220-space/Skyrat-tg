@@ -28883,7 +28883,6 @@
 /area/engineering/atmos/upper)
 "waV" = (
 /obj/structure/table,
-/obj/item/clothing/mask/leatherwhip,
 /turf/open/floor/iron/dark,
 /area/maintenance/fore)
 "wbe" = (
@@ -29495,8 +29494,6 @@
 /area/service/abandoned_gambling_den)
 "wys" = (
 /obj/structure/table,
-/obj/item/clothing/mask/muzzle/ball,
-/obj/item/clothing/mask/muzzle/ball,
 /obj/item/clothing/glasses/blindfold,
 /obj/item/clothing/glasses/blindfold,
 /turf/open/floor/iron/dark,
