@@ -831,11 +831,14 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/vending/dorms{
-	onstation = 0
-	},
 /obj/machinery/airalarm/directional/north{
 	req_access = list(150)
+	},
+/obj/machinery/vending/clothing{
+	onstation = 0
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
 	},
 /turf/open/floor/iron/cafeteria,
 /area/ruin/syndicate_lava_base/dormitories)
@@ -4212,21 +4215,6 @@
 /obj/machinery/light/directional/west,
 /turf/open/misc/grass,
 /area/ruin/syndicate_lava_base/bar)
-"Xz" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/machinery/vending/clothing{
-	onstation = 0
-	},
-/turf/open/floor/iron/cafeteria,
-/area/ruin/syndicate_lava_base/dormitories)
 "XD" = (
 /obj/machinery/washing_machine,
 /obj/effect/turf_decal/tile/blue{
@@ -5487,7 +5475,7 @@ zF
 zF
 SK
 zF
-Xz
+Jd
 sE
 sc
 tx
