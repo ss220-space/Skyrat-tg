@@ -4550,8 +4550,8 @@
 /area/awaymission/research/interior/escapepods)
 "yr" = (
 /obj/machinery/airalarm/engine{
-	pixel_y = 23;
-	dir = 1
+	dir = 1;
+	pixel_y = 23
 	},
 /turf/open/floor/engine,
 /area/awaymission/research/interior/engineering)
