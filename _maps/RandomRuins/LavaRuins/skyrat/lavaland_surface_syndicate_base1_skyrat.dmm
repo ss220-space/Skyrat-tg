@@ -542,8 +542,11 @@
 /obj/machinery/airalarm/directional/north{
 	req_access = list(150)
 	},
-/obj/machinery/vending/dorms{
+/obj/machinery/vending/clothing{
 	onstation = 0
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
 	},
 /turf/open/floor/iron/cafeteria,
 /area/ruin/syndicate_lava_base/dormitories)
@@ -1784,21 +1787,6 @@
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/syndicate_lava_base/bar)
-"wx" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/machinery/vending/clothing{
-	onstation = 0
-	},
-/turf/open/floor/iron/cafeteria,
-/area/ruin/syndicate_lava_base/dormitories)
 "wy" = (
 /obj/structure/ore_box,
 /obj/structure/railing{
@@ -5479,7 +5467,7 @@ Vb
 Vb
 ku
 Vb
-wx
+JS
 oH
 xm
 Qa
