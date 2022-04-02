@@ -944,6 +944,7 @@
 
 	targetmob.hud_used.hidden_inventory_update(usr)
 
+/*
 ////////////////////////////////////
 // STRIPPING ERP SYSTEM EXTENTION //
 ////////////////////////////////////
@@ -1019,6 +1020,7 @@ GLOBAL_LIST_INIT(strippable_human_erp_items, create_erp_strippable_list(list(
 		strippable_items[strippable_item.key] = strippable_item
 	GLOB.strippable_human_items += strippable_items
 	return strippable_items
+*/
 
 ////////////////////////////////////////////////////////////////////
 // EXTENTIONS FOR SPRITE_ACCESSORY IS_HIDDEN CHECKS FOR ERP STUFF //
