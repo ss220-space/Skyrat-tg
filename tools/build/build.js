@@ -45,7 +45,7 @@ export const DmMapsIncludeTarget = new Juke.Target({
   executes: async () => {
     const folders = [
       ...Juke.glob('_maps/RandomRuins/**/*.dmm'),
-      ...Juke.glob('_maps/RandomZLevels/**/*.dmm'),
+      ...Juke.glob('_maps/RandomZLevels-noerp/**/*.dmm'),
       ...Juke.glob('_maps/shuttles/**/*.dmm'),
       ...Juke.glob('_maps/templates/**/*.dmm'),
     ];
@@ -63,7 +63,7 @@ export const DmTarget = new Juke.Target({
     get(DefineParameter).includes('ALL_MAPS') && DmMapsIncludeTarget,
   ],
   inputs: [
-    '_maps/map_files/generic/**',
+    '_maps/map_files/generic-noerp/**',
     'code/**',
     'goon/**',
     'html/**',

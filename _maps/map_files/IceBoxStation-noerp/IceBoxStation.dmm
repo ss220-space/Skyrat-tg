@@ -7218,7 +7218,7 @@
 /turf/open/floor/iron/dark,
 /area/hallway/primary/central)
 "bCC" = (
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/iron,
 /area/command/heads_quarters/hop)
@@ -18806,7 +18806,7 @@
 /turf/open/floor/iron/white,
 /area/science/genetics)
 "gLw" = (
-/obj/machinery/newscaster/security_unit/directional/west,
+/obj/machinery/newscaster/directional/west,
 /obj/item/radio/intercom/directional/west{
 	pixel_y = -31
 	},
@@ -25678,7 +25678,7 @@
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/red/full,
 /turf/open/floor/iron/dark/smooth_large,
@@ -27644,7 +27644,7 @@
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain)
 "kYG" = (
-/obj/machinery/newscaster/security_unit/directional/west,
+/obj/machinery/newscaster/directional/west,
 /obj/machinery/camera/directional/west{
 	c_tag = "Head of Security's Office"
 	},
@@ -34260,7 +34260,7 @@
 /turf/open/floor/iron,
 /area/commons/locker)
 "oCa" = (
-/obj/machinery/newscaster/security_unit/directional/west,
+/obj/machinery/newscaster/directional/west,
 /obj/machinery/keycard_auth/directional/south,
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain)
@@ -45929,7 +45929,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai)
 "ulM" = (
@@ -48433,7 +48433,7 @@
 	pixel_x = 5
 	},
 /obj/item/storage/box/evidence,
-/obj/machinery/newscaster/security_unit/directional/west,
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron/grimy,
 /area/security/detectives_office)
 "vzX" = (
