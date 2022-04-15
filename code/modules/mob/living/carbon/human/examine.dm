@@ -504,12 +504,12 @@
 		flavor_text_link = span_notice("<a href='?src=[REF(src)];lookup_info=open_examine_panel'>Examine closely...</a>")
 	if (flavor_text_link)
 		. += flavor_text_link
-
+/*
 	if(client)
 		var/erp_status_pref = client.prefs.read_preference(/datum/preference/choiced/erp_status)
 		if(erp_status_pref && erp_status_pref != "disabled")
 			. += span_notice("ERP STATUS: [erp_status_pref]")
-
+*/
 	//Temporary flavor text addition:
 	if(temporary_flavor_text)
 		if(length_char(temporary_flavor_text) <= 40)
