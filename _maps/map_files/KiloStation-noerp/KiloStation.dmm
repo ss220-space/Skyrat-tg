@@ -26879,7 +26879,7 @@
 	c_tag = "Atrium Starboard";
 	name = "service camera"
 	},
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron/dark,
 /area/service/bar/atrium)
 "eDz" = (
@@ -37433,7 +37433,7 @@
 /obj/effect/turf_decal/tile/neutral,
 /obj/machinery/computer/security/telescreen/entertainment/directional/south,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/dark,
 /area/service/library)
@@ -38758,7 +38758,7 @@
 /obj/structure/table/wood,
 /obj/item/crowbar/red,
 /obj/machinery/recharger,
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/captain)
 "iGD" = (
@@ -42829,7 +42829,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/newscaster/security_unit/directional/west,
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron,
 /area/service/hydroponics)
 "jTh" = (
@@ -45744,7 +45744,7 @@
 /obj/structure/rack,
 /obj/item/wrench,
 /obj/item/crowbar/red,
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /obj/effect/turf_decal/bot,
 /obj/item/stack/sheet/glass{
 	amount = 20
@@ -52738,7 +52738,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/box,
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /obj/machinery/camera/directional/east{
 	c_tag = "Art Storage";
 	name = "library camera"
@@ -54723,7 +54723,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/obj/machinery/newscaster/security_unit/directional/south,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron/dark/corner{
 	dir = 8
 	},
@@ -55494,7 +55494,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
@@ -57492,7 +57492,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron/dark,
 /area/service/kitchen)
 "oEd" = (
@@ -59814,7 +59814,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /obj/machinery/camera/directional/east{
 	c_tag = "Kitchen Coldroom";
 	name = "kitchen camera"
@@ -62699,7 +62699,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark,
 /area/service/kitchen)
@@ -67314,7 +67314,7 @@
 /obj/structure/disposalpipe/trunk,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/bot_white,
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/wood,
 /area/service/library)
 "rIt" = (
@@ -70001,7 +70001,7 @@
 /obj/effect/turf_decal/tile/neutral,
 /obj/machinery/light/small/directional/west,
 /obj/structure/bookcase/random,
-/obj/machinery/newscaster/security_unit/directional/south,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron/dark,
 /area/service/library)
 "sAz" = (
@@ -72696,7 +72696,7 @@
 /area/medical/medbay/central)
 "txQ" = (
 /obj/machinery/airalarm/directional/east,
-/obj/machinery/newscaster/security_unit/directional/south,
+/obj/machinery/newscaster/directional/south,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
@@ -76966,7 +76966,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/obj/machinery/newscaster/security_unit/directional/west,
+/obj/machinery/newscaster/directional/west,
 /obj/machinery/computer/rdconsole{
 	dir = 4
 	},
@@ -77627,7 +77627,7 @@
 /obj/structure/table/wood,
 /obj/item/storage/crayons,
 /obj/item/bikehorn/rubberducky,
-/obj/machinery/newscaster/security_unit/directional/south,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/wood,
 /area/service/theater)
 "vhk" = (
@@ -78583,7 +78583,7 @@
 	pixel_x = 12;
 	pixel_y = 4
 	},
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plastic,
 /area/hallway/secondary/service)
 "vxw" = (
@@ -79715,7 +79715,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/obj/machinery/newscaster/security_unit/directional/south,
+/obj/machinery/newscaster/directional/south,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/checker,
 /area/service/hydroponics)
@@ -80965,7 +80965,7 @@
 "wmm" = (
 /obj/structure/table/wood,
 /obj/structure/mirror/directional/east,
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -85335,7 +85335,7 @@
 "xGg" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -87122,7 +87122,7 @@
 	pixel_y = 4
 	},
 /obj/item/pen,
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron/dark,
 /area/service/bar/atrium)
 

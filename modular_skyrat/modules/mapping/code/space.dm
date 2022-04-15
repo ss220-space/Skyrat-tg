@@ -1,6 +1,6 @@
 /*----- Template for ruins, prevents needing to re-type the filepath prefix -----*/
 /datum/map_template/ruin/space/skyrat
-	prefix = "_maps/RandomRuins/SpaceRuins/skyrat/"
+	prefix = "_maps/RandomRuins/SpaceRuins/skyrat-noerp/"
 /*------*/
 /* //Disabled due to the existence of DS-2.
 /datum/map_template/ruin/space/skyrat/forgottenship
