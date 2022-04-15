@@ -4056,7 +4056,7 @@
 "aZn" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/red,
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron,
 /area/security/prison)
 "aZo" = (
@@ -5855,7 +5855,7 @@
 /obj/machinery/camera/directional/east{
 	c_tag = "Security - Brig Fore"
 	},
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 4
 	},
@@ -7995,7 +7995,7 @@
 "bVl" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
-/obj/machinery/newscaster/security_unit/directional/west,
+/obj/machinery/newscaster/directional/west,
 /obj/machinery/light_switch/directional/west{
 	pixel_x = -42
 	},
@@ -8972,7 +8972,7 @@
 	c_tag = "Detective's Office"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/machinery/newscaster/security_unit/directional/west,
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron/dark,
 /area/security/detectives_office)
 "cgm" = (
@@ -9030,7 +9030,7 @@
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
 /obj/item/toy/figure/secofficer,
-/obj/machinery/newscaster/security_unit/directional/west,
+/obj/machinery/newscaster/directional/west,
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
 	},
@@ -10903,7 +10903,7 @@
 /area/science/mixing)
 "cCv" = (
 /obj/structure/dresser,
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron/grimy,
 /area/command/heads_quarters/hos)
 "cCw" = (
@@ -23561,7 +23561,7 @@
 /obj/structure/extinguisher_cabinet/directional/south{
 	pixel_x = 26
 	},
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/hos)
 "eFo" = (
@@ -25349,7 +25349,7 @@
 "ffu" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai)
 "ffy" = (
@@ -30201,7 +30201,7 @@
 /area/engineering/main)
 "gCU" = (
 /obj/effect/turf_decal/tile/red,
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/iron,
 /area/security/brig)
 "gDf" = (
@@ -39159,7 +39159,7 @@
 /area/hallway/secondary/command)
 "jgI" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
-/obj/machinery/newscaster/security_unit/directional/south,
+/obj/machinery/newscaster/directional/south,
 /obj/effect/turf_decal/tile/red/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/security/execution/education)
@@ -51253,7 +51253,7 @@
 /area/engineering/supermatter/room)
 "mFt" = (
 /obj/item/kirbyplants/random,
-/obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/newscaster/directional/north,
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 1
 	},
@@ -55742,7 +55742,7 @@
 /obj/structure/closet/secure_closet/security/sec,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/red/fourcorners,
-/obj/machinery/newscaster/security_unit/directional/east,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/iron,
 /area/security/lockers)
 "obV" = (

@@ -51,7 +51,7 @@
 	id = "ash-walker"
 	description = "A race of unbreathing lizards live here, that run faster than a human can, worship a broken dead city, and are capable of reproducing by something involving tentacles? \
 	Probably best to stay clear."
-	prefix = "_maps/RandomRuins/LavaRuins/skyrat/" // SKYRAT ADDITION
+	prefix = "_maps/RandomRuins/LavaRuins/skyrat-noerp/" // SKYRAT ADDITION
 	suffix = "lavaland_surface_ash_walker1_skyrat.dmm" // SKYRAT EDIT - ORIGINAL: lavaland_surface_ash_walker1.dmm
 	always_place = TRUE //SKYRAT EDIT CHANGE
 	allow_duplicates = FALSE
