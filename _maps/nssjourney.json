@@ -1,7 +1,7 @@
 {
 	"version": 1,
 	"map_name": "NSS Journey",
-	"map_path": "map_files/NSSJourney-noerp",
+	"map_path": "map_files/NSSJourney",
 	"map_file": "NSSJourney.dmm",
 	"shuttles": {
 		"emergency": "emergency_box",
