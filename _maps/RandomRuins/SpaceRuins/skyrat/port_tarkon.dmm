@@ -6991,7 +6991,6 @@
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/port_tarkon/garden)
 "Rp" = (
-/obj/machinery/vending/dorms,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/port_tarkon/cargo)
 "Rq" = (

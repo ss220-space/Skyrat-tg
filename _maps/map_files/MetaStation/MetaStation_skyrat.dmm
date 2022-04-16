@@ -33814,7 +33814,6 @@
 /area/cargo/sorting)
 "kZk" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/machinery/vending/dorms,
 /turf/open/floor/iron/dark,
 /area/commons/locker)
 "kZq" = (
