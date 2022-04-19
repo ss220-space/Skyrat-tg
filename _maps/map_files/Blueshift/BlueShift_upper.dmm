@@ -6492,7 +6492,6 @@
 "bBK" = (
 /obj/structure/table/abductor,
 /obj/item/clothing/sextoy/magic_wand,
-/obj/item/clothing/mask/leatherwhip,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
@@ -12811,7 +12810,6 @@
 /turf/open/floor/iron/dark,
 /area/science/genetics)
 "dLS" = (
-/obj/structure/chair/x_stand,
 /obj/structure/window/reinforced/tinted{
 	dir = 8
 	},
@@ -13688,7 +13686,6 @@
 	dir = 8
 	},
 /obj/structure/table/abductor,
-/obj/item/clothing/mask/ballgag,
 /obj/item/clothing/mask/ballgag/choking,
 /turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
@@ -18701,10 +18698,6 @@
 /area/science/xenobiology)
 "fXo" = (
 /obj/structure/table,
-/obj/item/clothing/gloves/ball_mittens,
-/obj/item/clothing/gloves/ball_mittens,
-/obj/item/clothing/gloves/ball_mittens,
-/obj/item/clothing/gloves/ball_mittens,
 /obj/item/restraints/handcuffs{
 	pixel_y = 4
 	},
@@ -23408,7 +23401,6 @@
 /turf/open/floor/mineral/plastitanium,
 /area/science/robotics/lab)
 "hPM" = (
-/obj/structure/bed/bdsm_bed,
 /turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
 "hQO" = (
@@ -29159,7 +29151,6 @@
 /turf/open/indestructible,
 /area/science/test_area)
 "jQl" = (
-/obj/machinery/vending/dorms,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -35449,8 +35440,6 @@
 /area/security/checkpoint/medical)
 "mdu" = (
 /obj/structure/table/abductor,
-/obj/item/lustwish_discount,
-/obj/item/clothing/sextoy/vibroring,
 /turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
 "mdw" = (
@@ -40485,7 +40474,6 @@
 	dir = 4
 	},
 /obj/structure/table/abductor,
-/obj/item/spanking_pad,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
 	dir = 6
 	},
@@ -44806,7 +44794,6 @@
 	},
 /area/space/nearstation)
 "pFG" = (
-/obj/structure/chair/x_stand,
 /turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
 "pFL" = (
@@ -59404,7 +59391,6 @@
 /turf/open/floor/iron/white,
 /area/medical/virology)
 "vdK" = (
-/obj/machinery/vending/dorms,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/carpet/purple,
 /area/commons/dorms)
@@ -65364,7 +65350,6 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 4
 	},
-/obj/structure/bed/bdsm_bed,
 /turf/open/floor/iron/dark/textured_large,
 /area/commons/dorms)
 "xkS" = (

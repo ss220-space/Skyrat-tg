@@ -51340,7 +51340,6 @@
 /area/commons/locker)
 "mhf" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/machinery/vending/dorms,
 /turf/open/floor/iron/dark,
 /area/commons/locker)
 "mhh" = (
