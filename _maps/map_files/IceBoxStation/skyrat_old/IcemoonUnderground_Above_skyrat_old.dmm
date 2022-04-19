@@ -2835,11 +2835,6 @@
 /turf/open/floor/iron,
 /area/service/bar)
 "hf" = (
-/obj/machinery/vending/dorms{
-	default_price = 0;
-	extra_price = 0;
-	fair_market_price = 0
-	},
 /turf/open/floor/plating,
 /area/security/prison/safe)
 "hg" = (
@@ -7240,7 +7235,6 @@
 /obj/structure/closet,
 /obj/item/seeds/cotton/durathread,
 /obj/effect/spawner/random/contraband/permabrig_gear,
-/obj/item/clothing/mask/leatherwhip,
 /obj/item/restraints/handcuffs/cable/yellow,
 /turf/open/floor/plating,
 /area/security/prison)
@@ -9025,7 +9019,6 @@
 /obj/item/clothing/under/rank/civilian/skirt,
 /obj/item/stack/cable_coil/five,
 /obj/effect/spawner/random/contraband/permabrig_gear,
-/obj/item/clothing/mask/leatherwhip,
 /obj/item/restraints/handcuffs/cable/yellow,
 /turf/open/floor/plating,
 /area/security/prison/safe)

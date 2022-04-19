@@ -53,10 +53,10 @@
 	if (flavor_text_link)
 		. += flavor_text_link
 
-	if(client)
-		var/erp_status_pref = client.prefs.read_preference(/datum/preference/choiced/erp_status)
-		if(erp_status_pref && erp_status_pref != "disabled")
-			. += span_notice("ERP STATUS: [erp_status_pref]")
+	// if(client)
+	// 	var/erp_status_pref = client.prefs.read_preference(/datum/preference/choiced/erp_status)
+	// 	if(erp_status_pref && erp_status_pref != "disabled")
+	// 		. += span_notice("ERP STATUS: [erp_status_pref]")
 	if(temporary_flavor_text)
 		if(length_char(temporary_flavor_text) <= 40)
 			. += span_notice("<b>They look different than usual:</b> [temporary_flavor_text]")

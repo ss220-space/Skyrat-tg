@@ -18283,7 +18283,6 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/obj/machinery/vending/dorms,
 /turf/open/floor/iron,
 /area/commons/fitness)
 "gpx" = (
