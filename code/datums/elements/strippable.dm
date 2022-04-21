@@ -21,6 +21,8 @@
 
 	RegisterSignal(target, COMSIG_MOUSEDROP_ONTO, .proc/mouse_drop_onto)
 
+	if(CONFIG_GET(flag/disable_erp_preferences))
+		items -= GLOB.strippable_human_erp_items
 	src.items = items
 	src.should_strip_proc_path = should_strip_proc_path
 
