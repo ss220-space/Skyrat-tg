@@ -13,7 +13,7 @@
 	new_status += " ("
 	new_status += "<a href=\"[CONFIG_GET(string/discord_link)]\">"
 	new_status += "Discord"
-	new_status += ")\]"
+	new_status += "</a>)\]" //SS220 EDIT CHANGE
 	new_status += "<br>[CONFIG_GET(string/servertagline)]<br>"
 
 
