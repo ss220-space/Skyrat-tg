@@ -98,6 +98,8 @@ DISABLE_ERP_PREFERENCES
 DISABLE_LEWD_ITEMS
 ERP_EMOTES_TO_DISABLE cum
 
+DISABLE_TAUR
+
 ## Disables mismatched parts for codebases that don't want it.
 #DISABLE_MISMATCHED_PARTS
 
