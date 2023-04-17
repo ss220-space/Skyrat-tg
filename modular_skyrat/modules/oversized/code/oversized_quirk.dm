@@ -12,7 +12,7 @@
 	value = 0
 	mob_trait = TRAIT_OVERSIZED
 	icon = "expand-arrows-alt"
-	veteran_only = TRUE
+	veteran_only = FALSE
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_CHANGES_APPEARANCE
 
 /datum/quirk/oversized/add(client/client_source)
