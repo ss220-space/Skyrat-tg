@@ -8310,4 +8310,8 @@
 #include "modular_nova\modules\xenos_nova_redo\code\xeno_types\sentinel.dm"
 #include "modular_nova\modules\xenos_nova_redo\code\xeno_types\spitter.dm"
 #include "modular_nova\modules\xenos_nova_redo\code\xeno_types\warrior.dm"
+#include "modular_ss220\modules\cyrillic_key_fixes\code\client_procs.dm"
+#include "modular_ss220\modules\cyrillic_key_fixes\code\communication.dm"
+#include "modular_ss220\modules\cyrillic_key_fixes\code\keybindings.dm"
+#include "modular_ss220\modules\cyrillic_key_fixes\code\text.dm"
 // END_INCLUDE
