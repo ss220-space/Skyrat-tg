@@ -5,6 +5,7 @@ $include dbconfig.txt
 $include comms.txt
 $include resources.txt
 $include skyrat/skyrat_config.txt
+$include ss220/ss220_config.txt
 $include interviews.txt
 $include lua.txt
 $include auxtools.txt
@@ -671,3 +672,8 @@ TOAST_NOTIFICATION_ON_INIT
 
 ## Causes configuration errors to spit out runtimes
 CONFIG_ERRORS_RUNTIME
+
+## Silero Text-to-speech
+#TTS_TOKEN_SILERO mytoken
+#TTS_ENABLED
+#TTS_CACHE
