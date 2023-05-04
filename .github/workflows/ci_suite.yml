@@ -74,6 +74,7 @@ jobs:
         run: |
           bash tools/ci/check_grep.sh
           bash modular_nova/tools/nova_check_grep.sh # NOVA EDIT ADDITION - checking modular_nova code
+          bash ss220/tools/ss220_check_grep.sh # SS220 EDIT ADDITION - checking modular_ss220 code
       - name: Ticked File Enforcement
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: |
