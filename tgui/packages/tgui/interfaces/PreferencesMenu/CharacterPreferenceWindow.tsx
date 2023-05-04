@@ -17,6 +17,8 @@ import { PageButton } from './PageButton';
 import { QuirksPage } from './QuirksPage';
 import { SpeciesPage } from './SpeciesPage';
 
+import { VoicePage } from './VoicePage';
+
 enum Page {
   Antags,
   Main,
@@ -28,6 +30,7 @@ enum Page {
   Species,
   Quirks,
   Loadout,
+  Voice,
 }
 
 const CharacterProfiles = (props: {
@@ -102,6 +105,10 @@ export const CharacterPreferenceWindow = (props) => {
       pageContents = <LoadoutPage />;
       break;
 
+    case Page.Voice:
+      pageContents = <VoicePage />;
+      break;
+      
     default:
       exhaustiveCheck(currentPage);
   }
@@ -209,6 +216,17 @@ export const CharacterPreferenceWindow = (props) => {
                   Quirks
                 </PageButton>
               </Stack.Item>
+
+              {Boolean(data.tts_enabled) && (
+                <Stack.Item grow>
+                  <PageButton
+                    currentPage={currentPage}
+                    page={Page.Voice}
+                    setPage={setCurrentPage}>
+                    Voice
+                  </PageButton>
+                </Stack.Item>
+              )}
             </Stack>
           </Stack.Item>
 
