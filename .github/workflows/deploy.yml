@@ -1,0 +1,43 @@
+﻿name: Deploy
+
+concurrency:
+  group: deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      ci_required:
+        description: 'CI Suite is required'
+        type: boolean
+        required: true
+        default: true
+      perform_deploy_skyrat_main:
+        description: 'Deploy Skyrat Main'
+        type: boolean
+        required: true
+        default: true
+
+jobs:
+  CI:
+    uses: ./.github/workflows/ci_suite.yml  # use the callable tests job to run tests
+    if: ${{ inputs.ci_required }}
+
+  deploy-skyrat-main:
+    name: Deploy Skyrat Main
+    runs-on: ubuntu-latest
+    needs: [CI]
+    if: always() && !cancelled() && !failure() && inputs.perform_deploy_skyrat_main
+
+    steps:
+    - name: Update and Build Skyrat Main
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.PRODUCTION_HOST }}
+        username: ${{ secrets.PRODUCTION_USERNAME }}
+        key: ${{ secrets.PRODUCTION_SSH_KEY }}
+        passphrase: ${{ secrets.PRODUCTION_SSH_KEY_PASS }}
+        script: |
+          TIME=$(date +'%Y-%m-%d%T')
+          sudo systemctl --wait start deploy-skyrat-main
+          journalctl --since $TIME -u deploy-skyrat-main --no-pager --all
+          systemctl is-failed deploy-skyrat-main | grep -q "failed" && echo "Deployment Failed!" && exit 1 || exit 0
