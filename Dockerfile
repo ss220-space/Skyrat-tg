@@ -60,14 +60,14 @@ RUN apt-get install -y --no-install-recommends \
         gcc-multilib \
         git \
     && git init \
-    && git remote add origin https://github.com/tgstation/rust-g
+    && git remote add origin https://github.com/ss220-space/rust-g-tg
 
 COPY dependencies.sh .
 
 RUN . ./dependencies.sh \
     && git fetch --depth 1 origin "${RUST_G_VERSION}" \
     && git checkout FETCH_HEAD \
-    && env PKG_CONFIG_ALLOW_CROSS=1 ~/.cargo/bin/cargo build --release --target i686-unknown-linux-gnu
+    && env PKG_CONFIG_ALLOW_CROSS=1 ~/.cargo/bin/cargo build --release --target i686-unknown-linux-gnu --all-features
 
 # final = byond + runtime deps + rust_g + build
 FROM byond
