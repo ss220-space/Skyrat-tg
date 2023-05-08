@@ -15,7 +15,7 @@ cd "$original_dir"
 # update rust-g
 if [ ! -d "rust-g" ]; then
 	echo "Cloning rust-g..."
-	git clone https://github.com/tgstation/rust-g
+	git clone https://github.com/ss220-space/rust-g-tg
 	cd rust-g
 	~/.cargo/bin/rustup target add i686-unknown-linux-gnu
 else
@@ -27,7 +27,7 @@ fi
 
 echo "Deploying rust-g..."
 git checkout "$RUST_G_VERSION"
-env PKG_CONFIG_ALLOW_CROSS=1 ~/.cargo/bin/cargo build --release --target=i686-unknown-linux-gnu
+env PKG_CONFIG_ALLOW_CROSS=1 ~/.cargo/bin/cargo build --release --target=i686-unknown-linux-gnu --all-features
 mv target/i686-unknown-linux-gnu/release/librust_g.so "$1/librust_g.so"
 cd ..
 
