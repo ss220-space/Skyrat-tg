@@ -8737,6 +8737,7 @@
 #include "modular_nova\modules\xenoarchartifacts\obj\geosample.dm"
 #include "modular_nova\modules\xenoarchartifacts\obj\particle_battery.dm"
 #include "modular_nova\modules\xenoarchartifacts\obj\wave_scanner.dm"
+#include "modular_ss220\master_files_skyrat\code\modules\client\preferences\emote_panel.dm"
 #include "modular_ss220\modules\cyrillic_key_fixes\code\client_procs.dm"
 #include "modular_ss220\modules\cyrillic_key_fixes\code\communication.dm"
 #include "modular_ss220\modules\cyrillic_key_fixes\code\keybindings.dm"
