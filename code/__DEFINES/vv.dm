@@ -106,6 +106,7 @@
 #define VV_HK_OBSERVE_FOLLOW "observe_follow"
 #define VV_HK_GET_MOVABLE "get_movable"
 #define VV_HK_DEADCHAT_PLAYS "deadchat_plays"
+#define VV_HK_SELECT_TTS_VOICE "select_tts_voice"
 
 // /obj
 #define VV_HK_OSAY "osay"
