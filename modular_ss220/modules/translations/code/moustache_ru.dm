@@ -1,11 +1,3 @@
-/obj/item/clothing/mask/fakemoustache
-	name = "накладные усы"
-	desc = "Осторожно: усы накладные."
-
-/obj/item/clothing/mask/fakemoustache/italian
-	name = "итальянские усы"
-	desc = "Изготовлен из настоящих итальянских волосков для усов. Дает владельцу непреодолимое желание дико жестикулировать."
-
 /obj/item/clothing/mask/fakemoustache/italian/handle_speech(datum/source, list/speech_args)
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message[1] != "*")
