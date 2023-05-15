@@ -15,3 +15,6 @@
 
 /obj/item/ttsdevice
 	tts_seed = "Xenia"
+
+/obj/machinery/vending
+	tts_seed = null
