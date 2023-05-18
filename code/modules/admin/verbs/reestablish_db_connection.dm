@@ -1,6 +1,10 @@
 /client/proc/reestablish_db_connection()
 	set category = "Server"
 	set name = "Reestablish DB Connection"
+
+	if(!check_rights(R_ADMIN))
+		return
+
 	if (!CONFIG_GET(flag/sql_enabled))
 		to_chat(usr, span_adminnotice("The Database is not enabled!"), confidential = TRUE)
 		return

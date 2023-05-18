@@ -2,8 +2,7 @@
 	set category = "Admin.Game"
 	set name = "Dsay"
 	set hidden = TRUE
-	if(!holder)
-		to_chat(src, "Only administrators may use this command.", confidential = TRUE)
+	if(!check_rights(R_ADMIN))
 		return
 	if(!mob)
 		return

@@ -157,7 +157,8 @@ GLOBAL_PROTECT(href_token)
 	remove_verb(owner, /client/proc/readmin)
 	owner.init_verbs() //re-initialize the verb list
 	owner.update_special_keybinds()
-	GLOB.admins |= client
+	if(check_for_rights(R_ADMIN))
+		GLOB.admins |= client
 
 	try_give_profiling()
 
