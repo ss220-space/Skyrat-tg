@@ -4,8 +4,7 @@
 	set category = "Admin.Game"
 	set desc = "Fixes air in specified radius."
 
-	if(!holder)
-		to_chat(src, "Only administrators may use this command.", confidential = TRUE)
+	if(!check_rights(R_ADMIN))
 		return
 	if(check_rights(R_ADMIN,1))
 		var/range=input("Enter range:","Num",2) as num
