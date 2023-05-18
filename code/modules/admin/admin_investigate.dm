@@ -13,7 +13,7 @@
 /client/proc/investigate_show()
 	set name = "Investigate"
 	set category = "Admin.Game"
-	if(!holder)
+	if(!check_rights(R_ADMIN))
 		return
 
 	var/list/investigates = list(

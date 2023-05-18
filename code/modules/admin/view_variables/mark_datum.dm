@@ -1,5 +1,5 @@
 /client/proc/mark_datum(datum/D)
-	if(!holder)
+	if(!check_rights(R_ADMIN))
 		return
 	if(holder.marked_datum)
 		holder.UnregisterSignal(holder.marked_datum, COMSIG_QDELETING)
