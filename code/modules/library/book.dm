@@ -43,43 +43,28 @@
 	if(carved)
 		. += span_notice("[src] has been hollowed out.")
 
-/obj/item/book/ui_static_data(mob/user)
-	var/list/data = list()
-	data["author"] = book_data.get_author()
-	data["title"] = book_data.get_title()
-	data["content"] = book_data.get_content()
-	return data
+/obj/item/book/proc/on_read(mob/living/user)
+	if(book_data?.content)
+		user << browse("<meta charset=UTF-8><TT><I>Penned by [book_data.author].</I></TT> <BR>" + "[book_data.content]", "window=book[window_size != null ? ";size=[window_size]" : ""]")
 
-/obj/item/book/ui_interact(mob/living/user, datum/tgui/ui)
-	if(carved)
-		balloon_alert(user, "book is carved out!")
-		return
-	if(!length(book_data.get_content()))
-		balloon_alert(user, "book is blank!")
-		return
+		LAZYINITLIST(user.mind?.book_titles_read)
+		var/has_not_read_book = isnull(user.mind?.book_titles_read[starting_title])
 
-	if(istype(user) && !isnull(user.mind))
-		LAZYINITLIST(user.mind.book_titles_read)
-		var/has_not_read_book = !(starting_title in user.mind.book_titles_read)
-		if(has_not_read_book)
+		if(has_not_read_book) // any new books give bonus mood
 			user.add_mood_event("book_nerd", /datum/mood_event/book_nerd)
-			user.mind.book_titles_read[starting_title] = TRUE
-
-	ui = SStgui.try_update_ui(user, src, ui)
-	if(!ui)
-		ui = new(user, src, "MarkdownViewer", name)
-		ui.open()
+			user.mind?.book_titles_read[starting_title] = TRUE
+		onclose(user, "book")
+	else
+		to_chat(user, span_notice("This book is completely blank!"))
 
 /obj/item/book/attack_self(mob/user)
 	if(user.is_blind())
 		to_chat(user, span_warning("You are blind and can't read anything!"))
 		return
-
 	if(!user.can_read(src))
 		return
-
 	user.visible_message(span_notice("[user] opens a book titled \"[book_data.title]\" and begins reading intently."))
-	ui_interact(user)
+	on_read(user)
 
 /obj/item/book/attackby(obj/item/attacking_item, mob/living/user, params)
 	if(burn_paper_product_attackby_check(attacking_item, user))
