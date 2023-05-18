@@ -71,7 +71,7 @@
 	set name = "Reload Admins"
 	set category = "Admin"
 
-	if(!src.holder)
+	if(!check_rights(R_ADMIN))
 		return
 
 	var/confirm = tgui_alert(usr, "Are you sure you want to reload all admins?", "Confirm", list("Yes", "No"))

@@ -2,7 +2,7 @@
 	set category = "Admin"
 	set name = "Asay" //Gave this shit a shorter name so you only have to time out "asay" rather than "admin say" to use it --NeoFite
 	set hidden = TRUE
-	if(!check_rights(0))
+	if(!check_rights(R_ADMIN))
 		return
 
 	msg = emoji_parse(copytext_char(sanitize(msg), 1, MAX_MESSAGE_LEN))

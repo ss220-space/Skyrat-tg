@@ -32,6 +32,9 @@
 	set category = "Admin.Game"
 	set desc = "Fixes air in specified radius."
 
+	if(!check_rights(R_ADMIN))
+		return
+
 	var/range = tgui_input_number(usr, "Enter range:", "Range selection", 2)
 
 	for(var/obj/effect/abstract/liquid_turf/liquid in range(range, epicenter))
