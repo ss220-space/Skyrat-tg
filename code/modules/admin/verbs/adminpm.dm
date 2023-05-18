@@ -17,11 +17,7 @@
 /client/proc/cmd_admin_pm_context(mob/M in GLOB.mob_list)
 	set category = null
 	set name = "Admin PM Mob"
-	if(!holder)
-		to_chat(src,
-			type = MESSAGE_TYPE_ADMINPM,
-			html = span_danger("Error: Admin-PM-Context: Only administrators may use this command."),
-			confidential = TRUE)
+	if(!check_rights(R_ADMIN))
 		return
 	if(!ismob(M))
 		to_chat(src,
@@ -36,11 +32,7 @@
 /client/proc/cmd_admin_pm_panel()
 	set category = "Admin"
 	set name = "Admin PM"
-	if(!holder)
-		to_chat(src,
-			type = MESSAGE_TYPE_ADMINPM,
-			html = span_danger("Error: Admin-PM-Panel: Only administrators may use this command."),
-			confidential = TRUE)
+	if(!check_rights(R_ADMIN))
 		return
 
 	var/list/targets = list()
