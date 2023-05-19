@@ -73,7 +73,7 @@
 		if(!hearing.client)
 			continue
 		var/client/hearing_client = hearing.client
-		if (hearing_client.holder)
+		if (GLOB.admins[hearing_client])
 			admin_seen[hearing_client] = TRUE
 			continue //they are handled after that
 
