@@ -356,7 +356,7 @@ GLOBAL_PROTECT(admin_verbs_poll)
 /client/proc/admin_ghost()
 	set category = "Admin.Game"
 	set name = "Aghost"
-	if(!holder)
+	if(!check_rights(R_ADMIN))
 		return
 	. = TRUE
 	if(isobserver(mob))
@@ -388,7 +388,11 @@ GLOBAL_PROTECT(admin_verbs_poll)
 	set name = "Invisimin"
 	set category = "Admin.Game"
 	set desc = "Toggles ghost-like invisibility (Don't abuse this)"
-	if(holder && mob)
+
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(mob)
 		if(initial(mob.invisibility) == INVISIBILITY_OBSERVER)
 			to_chat(mob, span_boldannounce("Invisimin toggle failed. You are already an invisible mob like a ghost."), confidential = TRUE)
 			return
