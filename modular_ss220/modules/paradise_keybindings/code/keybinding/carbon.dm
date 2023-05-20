@@ -5,4 +5,4 @@
 	hotkey_keys = list("Space")
 
 /datum/keybinding/carbon/give
-	hotkey_keys = list("V")
+	hotkey_keys = list("G")
