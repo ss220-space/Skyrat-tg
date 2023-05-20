@@ -330,7 +330,7 @@
 /**
  * Truncate a string to the given length
  *
- * Will only truncate if the string is larger than the length and *ignores unicode concerns*
+ * Will only truncate if the string is larger than the length
  *
  * This exists soley because trim does other stuff too.
  *
@@ -339,8 +339,8 @@
  * * max_length - integer length to truncate at
  */
 /proc/truncate(text, max_length)
-	if(length(text) > max_length)
-		return copytext(text, 1, max_length)
+	if(length_char(text) > max_length)
+		return copytext_char(text, 1, max_length)
 	return text
 
 //Returns a string with reserved characters and spaces before the first word and after the last word removed.
