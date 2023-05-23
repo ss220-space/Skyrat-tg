@@ -53,6 +53,7 @@
 	var/exp_requirements = 0
 	/// Experience required to play this job, if the config is enabled, and `exp_required_type_department` is not enabled with the proper config.
 	var/exp_required_type = ""
+	var/exp_required_half_head = FALSE //Workaround for jobs like warden that reqire half of the head time
 	/// Department experience required to play this job, if the config is enabled.
 	var/exp_required_type_department = ""
 	/// Experience type granted by playing in this job.
