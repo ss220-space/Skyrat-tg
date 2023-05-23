@@ -11,6 +11,7 @@
 	exp_requirements = 120
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_SECURITY
+	exp_required_half_head = TRUE
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "SECURITY_MEDIC"
 
