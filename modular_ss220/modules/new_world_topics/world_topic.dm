@@ -18,7 +18,7 @@
 
 
 /datum/world_topic/fixtts/Run(list/input)
-	var/datum/tts_provider/silero = SStts.tts_providers["Silero"]
+	var/datum/tts_provider/silero = SSttsSilero.tts_providers["Silero"]
 	log_topic("SStts.tts_providers\[Silero].is_enabled = [silero.is_enabled]")
 	if(!silero.is_enabled)
 		silero.is_enabled = TRUE
