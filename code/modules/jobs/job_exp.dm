@@ -30,6 +30,8 @@ GLOBAL_PROTECT(exp_to_update)
 	if(exp_required_type_department)
 		var/uerhh = CONFIG_GET(number/use_exp_restrictions_heads_hours)
 		if(uerhh)
+			if(exp_required_half_head)
+				return uerhh * 30
 			return uerhh * 60
 	return exp_requirements
 
