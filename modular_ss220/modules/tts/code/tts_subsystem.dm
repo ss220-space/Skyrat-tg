@@ -308,16 +308,16 @@ SUBSYSTEM_DEF(ttsSilero)
 	// Bail if it errored
 	if(response.errored)
 		provider.failed_requests++
-		if(provider.failed_requests >= provider.failed_requests_limit)
-			provider.is_enabled = FALSE
+		// if(provider.failed_requests >= provider.failed_requests_limit)
+		// 	provider.is_enabled = FALSE
 		log_game("<span class='warning'>Error connecting to [provider.name] TTS API. Please inform a maintainer or server host.</span>")
 		message_admins("<span class='warning'>Error connecting to [provider.name] TTS API. Please inform a maintainer or server host.</span>")
 		return
 
 	if(response.status_code != 200)
 		provider.failed_requests++
-		if(provider.failed_requests >= provider.failed_requests_limit)
-			provider.is_enabled = FALSE
+		// if(provider.failed_requests >= provider.failed_requests_limit)
+		// 	provider.is_enabled = FALSE
 		log_game("<span class='warning'>Error performing [provider.name] TTS API request (Code: [response.status_code])</span>")
 		message_admins("<span class='warning'>Error performing [provider.name] TTS API request (Code: [response.status_code])</span>")
 		tts_request_failed++
