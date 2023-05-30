@@ -7,7 +7,8 @@ export type Channel =
   | 'LOOC'
   // SKYRAT EDIT ADDITION END
   | 'OOC'
-  | 'Admin';
+  | 'Admin'
+  | 'Mentor'; // SS220 ADD
 
 /**
  * ### ChannelIterator
@@ -27,20 +28,27 @@ export class ChannelIterator {
     // SKYRAT EDIT ADDITION
     'OOC',
     'Admin',
+    'Mentor', // SS220 ADD
   ];
-  private readonly blacklist: Channel[] = ['Admin'];
-  private readonly quiet: Channel[] = ['OOC', 'LOOC', 'Admin']; // SKYRAT EDIT CHANGE (Add LOOC)
+  private readonly adminlist: Channel[] = ['Admin', 'Mentor']; // SS220 blacklist->adminlist EDIT
+  private readonly quiet: Channel[] = ['OOC', 'LOOC', 'Admin', 'Mentor']; // SKYRAT EDIT CHANGE (Add LOOC)
 
   public next(): Channel {
-    if (this.blacklist.includes(this.channels[this.index])) {
-      return this.channels[this.index];
-    }
-
-    for (let index = 1; index <= this.channels.length; index++) {
-      let nextIndex = (this.index + index) % this.channels.length;
-      if (!this.blacklist.includes(this.channels[nextIndex])) {
-        this.index = nextIndex;
-        break;
+    if (this.adminlist.includes(this.channels[this.index])) { // SS220 opposite to usual changing index. But only for adminlist group channels
+      for (let index = 1; index <= this.channels.length; index++) {
+        let nextIndex = (this.index + index) % this.channels.length;
+        if (this.adminlist.includes(this.channels[nextIndex])) {
+          this.index = nextIndex;
+          break;
+        }
+      }
+    } else {
+      for (let index = 1; index <= this.channels.length; index++) {
+        let nextIndex = (this.index + index) % this.channels.length;
+        if (!this.adminlist.includes(this.channels[nextIndex])) {
+          this.index = nextIndex;
+          break;
+        }
       }
     }
 
