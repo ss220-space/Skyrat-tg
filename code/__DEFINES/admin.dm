@@ -41,10 +41,11 @@
 #define R_SPAWN (1<<12)
 #define R_AUTOADMIN (1<<13)
 #define R_DBRANKS (1<<14)
+#define R_MENTOR (1<<15)
 
 #define R_DEFAULT R_AUTOADMIN
 
-#define R_EVERYTHING (1<<15)-1 //the sum of all other rank permissions, used for +EVERYTHING
+#define R_EVERYTHING (1<<16)-1 //the sum of all other rank permissions, used for +EVERYTHING
 
 #define ADMIN_QUE(user) "(<a href='?_src_=holder;[HrefToken(forceGlobal = TRUE)];adminmoreinfo=[REF(user)]'>?</a>)"
 #define ADMIN_FLW(user) "(<a href='?_src_=holder;[HrefToken(forceGlobal = TRUE)];adminplayerobservefollow=[REF(user)]'>FLW</a>)"
@@ -64,6 +65,7 @@
 #define ADMIN_FULLMONTY_NONAME(user) "[ADMIN_QUE(user)] [ADMIN_PP(user)] [ADMIN_VV(user)] [ADMIN_SM(user)] [ADMIN_FLW(user)] [ADMIN_TP(user)] [ADMIN_INDIVIDUALLOG(user)] [ADMIN_SMITE(user)]"
 #define ADMIN_FULLMONTY(user) "[key_name_admin(user)] [ADMIN_FULLMONTY_NONAME(user)]"
 #define ADMIN_JMP(src) "(<a href='?_src_=holder;[HrefToken(forceGlobal = TRUE)];adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>)"
+#define ADMIN_MENTORMONTY(user) "[key_name_mentor(user, FALSE, FALSE, TRUE, TRUE)]"
 #define COORD(src) "[src ? src.Admin_Coordinates_Readable() : "nonexistent location"]"
 #define AREACOORD(src) "[src ? src.Admin_Coordinates_Readable(TRUE) : "nonexistent location"]"
 #define ADMIN_COORDJMP(src) "[src ? src.Admin_Coordinates_Readable(FALSE, TRUE) : "nonexistent location"]"

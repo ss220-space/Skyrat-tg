@@ -20,3 +20,9 @@
 						winset(src, "default-[REF(key)]", "parent=default;name=[key];command=[asay]")
 					else
 						winset(src, "default-[REF(key)]", "parent=default;name=[key];command=")
+				if(MENTOR_CHANNEL)
+					if(holder)
+						var/msay = tgui_say_create_open_command(MENTOR_CHANNEL)
+						winset(src, "default-[REF(key)]", "parent=default;name=[key];command=[msay]")
+					else
+						winset(src, "default-[REF(key)]", "parent=default;name=[key];command=")

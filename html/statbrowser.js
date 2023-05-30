@@ -24,6 +24,7 @@ var spell_tabs = [];
 var verb_tabs = [];
 var verbs = [["", ""]]; // list with a list inside
 var tickets = [];
+var mentor_tickets = [];
 var interviewManager = { status: "", interviews: [] };
 var sdql2 = [];
 var permanent_tabs = []; // tabs that won't be cleared by wipes
@@ -261,6 +262,8 @@ function tab_change(tab) {
 	} else if (tab == "Tickets") {
 		draw_tickets();
 		draw_interviews();
+	} else if (tab == "M Tickets") {
+		draw_mentor_tickets();
 	} else if (tab == "SDQL2") {
 		draw_sdql2();
 	} else if (tab == turfname) {
@@ -398,6 +401,16 @@ function remove_tickets() {
 		tickets = [];
 		removePermanentTab("Tickets");
 		if (current_tab == "Tickets")
+			tab_change("Status");
+	}
+	checkStatusTab();
+}
+
+function remove_mentor_tickets() {
+	if (mentor_tickets) {
+		mentor_tickets = [];
+		removePermanentTab("M Tickets");
+		if (current_tab == "M Tickets")
 			tab_change("Status");
 	}
 	checkStatusTab();
@@ -566,6 +579,37 @@ function draw_tickets() {
 	document.getElementById("statcontent").appendChild(table);
 }
 
+function draw_mentor_tickets() {
+	statcontentdiv.textContent = "";
+	var table = document.createElement("table");
+	if (!mentor_tickets) {
+		return;
+	}
+	for (var i = 0; i < mentor_tickets.length; i++) {
+		var part = mentor_tickets[i];
+		var tr = document.createElement("tr");
+		var td1 = document.createElement("td");
+		td1.textContent = part[0];
+		var td2 = document.createElement("td");
+		if (part[2]) {
+			var a = document.createElement("a");
+			a.href = "?_src_=holder;admin_token=" + href_token + ";ahelp=" + part[2] + ";ahelp_action=ticket;statpanel_item_click=left;action=ticket";
+			a.textContent = part[1];
+			td2.appendChild(a);
+		} else if (part[3]) {
+			var a = document.createElement("a");
+			a.href = "?src=" + part[3] + ";statpanel_item_click=left";
+			a.textContent = part[1];
+			td2.appendChild(a);
+		} else {
+			td2.textContent = part[1];
+		}
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		table.appendChild(tr);
+	}
+	document.getElementById("statcontent").appendChild(table);
+}
 function draw_interviews() {
 	var body = document.createElement("div");
 	var header = document.createElement("h3");
@@ -938,6 +982,11 @@ Byond.subscribeTo('remove_admin_tabs', function () {
 	remove_interviews();
 });
 
+Byond.subscribeTo('remove_mentor_tabs', function () {
+	href_token = null;
+	remove_mentor_tickets();
+});
+
 Byond.subscribeTo('update_listedturf', function (TC) {
 	turfcontents = TC;
 	if (current_tab == turfname) {
@@ -972,6 +1021,11 @@ Byond.subscribeTo('add_admin_tabs', function (ht) {
 	addPermanentTab("Tickets");
 });
 
+Byond.subscribeTo('add_mentor_tabs', function (ht) {
+	href_token = ht;
+	addPermanentTab("M Tickets");
+});
+
 Byond.subscribeTo('update_sdql2', function (S) {
 	sdql2 = S;
 	if (sdql2.length > 0 && !verb_tabs.includes("SDQL2")) {
@@ -994,6 +1048,16 @@ Byond.subscribeTo('update_tickets', function (T) {
 	}
 });
 
+Byond.subscribeTo('update_mentor_tickets', function (T) {
+	tickets = T;
+	if (!verb_tabs.includes("M Tickets")) {
+		verb_tabs.push("M Tickets");
+		addPermanentTab("M Tickets");
+	}
+	if (current_tab == "M Tickets") {
+		draw_tickets();
+	}
+});
 Byond.subscribeTo('remove_listedturf', remove_listedturf);
 
 Byond.subscribeTo('remove_sdql2', remove_sdql2);

@@ -20,6 +20,7 @@ $looc: #ffceb6; // SKYRAT EDIT ADDITION - CUSTOMIZATION
 // Subchannel chat colors
 $ai: #d65d95;
 $admin: #ffbbff;
+$mentor: #85008a; // SS220 EDIT ADDITION - CUSTOMIZATION
 $binary: #1e90ff;
 $centcom: #2681a5;
 $command: #fcdf03;
@@ -43,6 +44,7 @@ $_channel_map: (
   'ooc': $ooc,
   'ai': $ai,
   'admin': $admin,
+  'mentor': $mentor,
   'binary': $binary,
   'centcom': $centcom,
   'command': $command,

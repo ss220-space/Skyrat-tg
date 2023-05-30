@@ -237,6 +237,69 @@ GLOBAL_LIST_INIT(testing_global_profiler, list("_PROFILE_NAME" = "Global"))
 /proc/key_name_admin(whom, include_name = TRUE)
 	return key_name(whom, TRUE, include_name)
 
+/proc/key_name_mentor(whom, include_link = null, include_name = FALSE, include_follow = FALSE, char_name_only = FALSE)
+	var/mob/target_mob
+	var/client/target_client
+	var/key
+	var/ckey
+
+	if(!whom)
+		return "*null*"
+	if(istype(whom, /client))
+		target_client = whom
+		target_mob = target_client?.mob
+		key = target_client?.key
+		ckey = target_client?.ckey
+	else if(ismob(whom))
+		target_mob = whom
+		target_client = target_mob.client
+		key = target_mob.key
+		ckey = target_mob.ckey
+	else if(istext(whom))
+		key = whom
+		ckey = ckey(whom)
+		target_client = GLOB.directory[ckey]
+		if(target_client)
+			target_mob = target_client?.mob
+	else
+		return "*invalid*"
+
+	. = ""
+
+	if(!ckey)
+		include_link = FALSE
+
+	if(key)
+		if(include_link)
+			if(CONFIG_GET(flag/mentors_mobname_only))
+				. += "<a href='?_src_=mentor;mentor_msg=[REF(target_mob)];[HrefToken(TRUE)]'>"
+			else
+				. += "<a href='?_src_=mentor;mentor_msg=[ckey];[HrefToken(TRUE)]'>"
+
+		if(target_client && target_client?.holder && target_client?.holder.fakekey)
+			. += "Administrator"
+		else if (char_name_only && CONFIG_GET(flag/mentors_mobname_only))
+			if(istype(target_client?.mob,/mob/dead/new_player) || istype(target_client?.mob, /mob/dead/observer)) //If they're in the lobby or observing, display their ckey
+				. += key
+			else if(target_client && target_client?.mob) //If they're playing/in the round, only show the mob name
+				. += target_client?.mob.name
+			else //If for some reason neither of those are applicable and they're mentorhelping, show ckey
+				. += key
+		else
+			. += key
+		if(!target_client)
+			. += "\[DC\]"
+
+		if(include_link)
+			. += "</a>"
+	else
+		. += "*no key*"
+
+	if(include_follow)
+		. += " (<a href='?_src_=mentor;mentor_follow=[REF(target_mob)];[HrefToken(TRUE)]'>F</a>)"
+
+	return .
+
 /proc/loc_name(atom/A)
 	if(!istype(A))
 		return "(INVALID LOCATION)"

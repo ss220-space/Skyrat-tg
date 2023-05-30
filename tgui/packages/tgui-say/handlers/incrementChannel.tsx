@@ -2,9 +2,9 @@ import { CHANNELS } from '../constants';
 import { Modal } from '../types';
 
 // Insert the names of channels you want to not cycle on tab here
-const BLACKLIST = ['Admin'];
-const BLACKLISTED_CHANNEL_INDICES = CHANNELS.map((channel, index) => {
-  if (BLACKLIST.includes(channel)) {
+const ADMINLIST = ['Admin', 'Mentor'];
+const ADMINLISTED_CHANNEL_INDICES = CHANNELS.map((channel, index) => {
+  if (ADMINLIST.includes(channel)) {
     return index;
   }
 }).filter((x) => x !== undefined);
@@ -21,23 +21,37 @@ export const handleIncrementChannel = function (this: Modal) {
     this.timers.channelDebounce({ mode: true });
   }
   this.fields.radioPrefix = '';
-  if (BLACKLISTED_CHANNEL_INDICES.includes(channel)) {
-    return;
-  }
-  if (BLACKLISTED_CHANNEL_INDICES.length === CHANNELS.length) {
+  if (ADMINLISTED_CHANNEL_INDICES.includes(channel)) {
+    do { // changes 1 time. also checks for adminlisted to skip
+      channel++;
+      if (channel === CHANNELS.length) {
+        this.timers.channelDebounce({ mode: true });
+        channel = 0;
+      }
+    } while (!ADMINLISTED_CHANNEL_INDICES.includes(channel)); // not included in adminlist. keep skipping
     this.setState({
       buttonContent: CHANNELS[channel],
       channel,
     });
     return;
   }
-  do {
+
+  if (ADMINLISTED_CHANNEL_INDICES.length === CHANNELS.length) {
+    this.setState({
+      buttonContent: CHANNELS[channel],
+      channel,
+    });
+    return;
+  }
+
+  do { // changes 1 time. also checks for adminlisted to skip
     channel++;
     if (channel === CHANNELS.length) {
       this.timers.channelDebounce({ mode: true });
       channel = 0;
     }
-  } while (BLACKLISTED_CHANNEL_INDICES.includes(channel));
+  } while (ADMINLISTED_CHANNEL_INDICES.includes(channel));
+
   if (channel === CHANNELS.indexOf('OOC')) {
     // Disables thinking indicator for OOC channel
     this.timers.channelDebounce({ mode: false });

@@ -37,10 +37,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 /client/Topic(href, href_list, hsrc, hsrc_command)
 	if(!usr || usr != mob) //stops us calling Topic for somebody else's client. Also helps prevent usr=null
 		return
-	//SKYRAT EDIT ADDITION BEGIN - MENTOR
-	if(mentor_client_procs(href_list))
-		return
-	//SKYRAT EDIT ADDITION END
 
 #ifndef TESTING
 	if (lowertext(hsrc_command) == "_debug") //disable the integrated byond vv in the client side debugging tools since it doesn't respect vv read protections
@@ -1138,6 +1134,13 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 						winset(src, "default-[REF(key)]", "parent=default;name=[key];command=[asay]")
 					else
 						winset(src, "default-[REF(key)]", "parent=default;name=[key];command=")
+				if(MENTOR_CHANNEL)
+					if(holder)
+						var/msay = tgui_say_create_open_command(MENTOR_CHANNEL)
+						winset(src, "default-[REF(key)]", "parent=default;name=[key];command=[msay]")
+					else
+						winset(src, "default-[REF(key)]", "parent=default;name=[key];command=")
+
 
 /client/proc/change_view(new_size)
 	if (isnull(new_size))

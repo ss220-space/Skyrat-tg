@@ -47,6 +47,9 @@ GLOBAL_PROTECT(href_token)
 
 	var/given_profiling = FALSE
 
+	/// SS220 Mentor edit
+	var/following
+
 /datum/admins/New(list/datum/admin_rank/ranks, ckey, force_active = FALSE, protected)
 	if(IsAdminAdvancedProcCall())
 		var/msg = " has tried to elevate permissions!"
