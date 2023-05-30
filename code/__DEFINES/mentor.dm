@@ -1,0 +1,2 @@
+#define MHELP_ACTIVE 1
+#define MHELP_RESOLVED 2

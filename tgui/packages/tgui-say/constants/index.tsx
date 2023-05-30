@@ -7,6 +7,7 @@ export const CHANNELS = [
   'LOOC', // SKYRAT EDIT ADDITION - CUSTOMIZATION
   'OOC',
   'Admin',
+  'Mentor',
 ] as const;
 
 /** Window sizes in pixels */

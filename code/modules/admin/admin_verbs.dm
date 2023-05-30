@@ -267,6 +267,8 @@ GLOBAL_LIST_INIT(admin_verbs_permissions, list(
 GLOBAL_PROTECT(admin_verbs_permissions)
 GLOBAL_LIST_INIT(admin_verbs_poll, list(/client/proc/poll_panel))
 GLOBAL_PROTECT(admin_verbs_poll)
+GLOBAL_LIST_INIT(admin_mentor_verbs, list(/client/proc/cmd_mentor_say))
+GLOBAL_PROTECT(admin_mentor_verbs)
 
 /client/proc/add_admin_verbs()
 	if(holder)
@@ -300,6 +302,8 @@ GLOBAL_PROTECT(admin_verbs_poll)
 				add_verb(src, /client/proc/play_web_sound)
 		if(rights & R_SPAWN)
 			add_verb(src, GLOB.admin_verbs_spawn)
+		if(rights & R_MENTOR)
+			add_verb(src, GLOB.admin_mentor_verbs)
 
 /client/proc/remove_admin_verbs()
 	remove_verb(src, list(

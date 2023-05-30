@@ -206,6 +206,14 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	var/list/admins_involved = list()
 	/// Has the player replied to this ticket yet?
 	var/player_replied = FALSE
+	/// Have we requested this ticket to stop being part of the Ticket Ping subsystem?
+	var/ticket_ping_stop = FALSE
+	/// Are we added to the ticket ping subsystem in the first place
+	var/ticket_ping = FALSE
+	/// Who is handling this admin help?
+	var/handler
+	/// All sanitized text
+	var/full_text
 
 /**
  * Call this on its own to create a ticket, don't manually assign current_ticket
@@ -397,6 +405,9 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	. += " (<A HREF='?_src_=holder;[HrefToken(forceGlobal = TRUE)];ahelp=[ref_src];ahelp_action=icissue'>IC</A>)"
 	. += " (<A HREF='?_src_=holder;[HrefToken(forceGlobal = TRUE)];ahelp=[ref_src];ahelp_action=close'>CLOSE</A>)"
 	. += " (<A HREF='?_src_=holder;[HrefToken(forceGlobal = TRUE)];ahelp=[ref_src];ahelp_action=resolve'>RSLVE</A>)"
+	. += " (<A HREF='?_src_=holder;[HrefToken(forceGlobal = TRUE)];ahelp=[ref_src];ahelp_action=handle_issue'>HANDLE</A>)" //SKYRAT EDIT ADDITION
+	. += " (<A HREF='?_src_=holder;[HrefToken(forceGlobal = TRUE)];ahelp=[ref_src];ahelp_action=pingmute'>PING MUTE</A>)" //SKYRAT EDIT ADDITION
+	. += " (<A HREF='?_src_=holder;[HrefToken(forceGlobal = TRUE)];ahelp=[ref_src];ahelp_action=convert'>MHELP</A>)"
 
 //private
 /datum/admin_help/proc/LinkedReplyName(ref_src)
@@ -717,6 +728,54 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	var/datum/browser/player_panel = new(usr, "ahelp[id]", 0, 620, 480)
 	player_panel.set_content(dat.Join())
 	player_panel.open()
+
+//Let the initiator know their ahelp is being handled
+/datum/admin_help/proc/handle_issue(key_name = key_name_admin(usr))
+	if(state != AHELP_ACTIVE)
+		return FALSE
+
+	if(handler && handler == usr.ckey) // No need to handle it twice as the same person ;)
+		return TRUE
+
+	if(handler && handler != usr.ckey)
+		var/response = tgui_alert(usr, "This ticket is already being handled by [handler]. Do you want to continue?", "Ticket already assigned", list("Yes", "No"))
+		if(!response || response == "No")
+			return FALSE
+
+	var/msg = span_adminhelp("Your ticket is now being handled by [usr?.client?.holder?.fakekey ? usr?.client?.holder?.fakekey : "an administrator"]! Please wait while they type their response and/or gather relevant information.")
+
+	if(initiator)
+		to_chat(initiator, msg)
+
+	SSblackbox.record_feedback("tally", "ahelp_stats", 1, "handling")
+	msg = "Ticket [TicketHref("#[id]")] is being handled by [key_name]"
+	message_admins(msg)
+	log_admin_private(msg)
+	AddInteraction("Being handled by [key_name]", "Being handled by [key_name_admin(usr, FALSE)]")
+
+	handler = "[usr.ckey]"
+	return TRUE
+
+///Proc which converts an admin_help ticket to a mentorhelp
+/datum/admin_help/proc/convert_to_mentorhelp(key_name = key_name_admin(usr))
+	if(state != AHELP_ACTIVE)
+		return FALSE
+
+	if(handler && handler != usr.ckey)
+		var/response = tgui_alert(usr, "This ticket is already being handled by [handler]. Do you want to continue?", "Ticket already assigned", list("Yes", "No"))
+		if(!response || response == "No")
+			return FALSE
+
+	add_verb(initiator, /client/verb/mentorhelp) // Way to override mentorhelp cooldown.
+
+	to_chat(initiator, span_adminhelp("Your ticket was converted to Mentorhelp"))
+	initiator.mentorhelp(full_text)
+	initiator.giveadminhelpverb()
+
+	message_admins("[key_name] converted Ticket #[id] from [initiator_key_name] into Mentorhelp")
+	log_admin("[usr.client] converted Ticket #[id] from [initiator_ckey] into Mentorhelp")
+
+	Close(key_name, TRUE)
 
 
 //
