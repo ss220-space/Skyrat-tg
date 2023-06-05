@@ -165,6 +165,13 @@ SUBSYSTEM_DEF(ttsSilero)
 	msg += "F:[tts_request_failed] "
 	msg += "S:[tts_request_succeeded] "
 	msg += "R:[tts_reused] "
+	msg += "Q:[LAZYLEN(tts_requests_queue)]/[tts_requests_queue_limit] |"
+
+	var/datum/tts_provider/silero/_silero = tts_providers["Silero"]
+	msg += "Shared: "
+	msg += "RPS:[_silero.tts_shared_rps] "
+	msg += "Q:[_silero.tts_shared_requests_in_queue] "
+
 	return ..()
 
 /datum/controller/subsystem/ttsSilero/PreInit()
