@@ -7592,6 +7592,8 @@
 #include "modular_skyrat\modules\xenos_skyrat_redo\code\xeno_types\spitter.dm"
 #include "modular_skyrat\modules\xenos_skyrat_redo\code\xeno_types\warrior.dm"
 #include "modular_ss220\master_files_skyrat\code\modules\client\preferences\emote_panel.dm"
+#include "modular_ss220\modules\auto_cryo\autocryo.dm"
+#include "modular_ss220\modules\auto_cryo\autocryo_config.dm"
 #include "modular_ss220\modules\cyrillic_key_fixes\code\client_procs.dm"
 #include "modular_ss220\modules\cyrillic_key_fixes\code\communication.dm"
 #include "modular_ss220\modules\cyrillic_key_fixes\code\keybindings.dm"
