@@ -7,3 +7,5 @@
 ## CPU Affinity for FFmpeg. Check out taskset man page.
 ## Example valid values: "0-3" or "1,4-7"
 #FFMPEG_CPUAFFINITY 24-31
+
+AUTO_CRYO_SSD_MIN 10
