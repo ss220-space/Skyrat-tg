@@ -13,7 +13,8 @@
 
 /mob/living/carbon/Logout()
 	. = ..()
-	is_logout = TRUE
+	if(mind.active)
+		is_logout = TRUE
 
 /mob/living/carbon/Login()
 	. = ..()
