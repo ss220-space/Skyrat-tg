@@ -188,20 +188,13 @@
 	to_chat(target, txt_changed_vars())
 #endif
 
-/// Return a list of data which can be used to investigate the datum, also ensure that you set the semver in the options list
-/datum/proc/serialize_list(list/options, list/semvers)
-	SHOULD_CALL_PARENT(TRUE)
+///Return a LIST for serialize_datum to encode! Not the actual json!
+/datum/proc/serialize_list(list/options)
+	CRASH("Attempted to serialize datum [src] of type [type] without serialize_list being implemented!")
 
-	. = list()
-	.["tag"] = tag
-
-	SET_SERIALIZATION_SEMVER(semvers, "1.0.0")
-	return .
-
-///Accepts a LIST from deserialize_datum. Should return whether or not the deserialization was successful.
+///Accepts a LIST from deserialize_datum. Should return src or another datum.
 /datum/proc/deserialize_list(json, list/options)
-	SHOULD_CALL_PARENT(TRUE)
-	return TRUE
+	CRASH("Attempted to deserialize datum [src] of type [type] without deserialize_list being implemented!")
 
 ///Serializes into JSON. Does not encode type.
 /datum/proc/serialize_json(list/options)
@@ -253,10 +246,11 @@
 			return
 	var/typeofdatum = jsonlist["DATUM_TYPE"] //BYOND won't directly read if this is just put in the line below, and will instead runtime because it thinks you're trying to make a new list?
 	var/datum/D = new typeofdatum
-	if(!D.deserialize_list(jsonlist, options))
+	var/datum/returned = D.deserialize_list(jsonlist, options)
+	if(!isdatum(returned))
 		qdel(D)
 	else
-		return D
+		return returned
 
 /**
  * Callback called by a timer to end an associative-list-indexed cooldown.

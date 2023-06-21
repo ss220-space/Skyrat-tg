@@ -226,7 +226,7 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 		"raw_materials" = get_raw_materials(""),
 		"direction" = amount < 0 ? "withdrawn" : "deposited",
 	)
-	logger.Log(
+	GLOB.logger.Log(
 		LOG_CATEGORY_SILO,
 		"[machine_name] in \[[AREACOORD(M)]\] [action] [abs(amount)]x [noun] | [get_raw_materials("")]",
 		data,
