@@ -1523,17 +1523,15 @@
 	else if(href_list["slowquery"])
 		if(!check_rights(R_ADMIN))
 			return
-
-		var/data = list("key" = usr.key)
 		var/answer = href_list["slowquery"]
 		if(answer == "yes")
+			log_query_debug("[usr.key] | Reported a server hang")
 			if(tgui_alert(usr, "Did you just press any admin buttons?", "Query server hang report", list("Yes", "No")) == "Yes")
 				var/response = input(usr,"What were you just doing?","Query server hang report") as null|text
 				if(response)
-					data["response"] = response
-			logger.Log(LOG_CATEGORY_DEBUG_SQL, "server hang", data)
+					log_query_debug("[usr.key] | [response]")
 		else if(answer == "no")
-			logger.Log(LOG_CATEGORY_DEBUG_SQL, "no server hang", data)
+			log_query_debug("[usr.key] | Reported no server hang")
 
 	else if(href_list["ctf_toggle"])
 		if(!check_rights(R_ADMIN))
