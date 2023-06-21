@@ -17,7 +17,7 @@
 	var/secret = FALSE
 
 	/// Whether the readable version of the log message is formatted internally instead of by rustg
-	var/internal_formatting = FALSE
+	var/internal_formatting = TRUE
 
 GENERAL_PROTECT_DATUM(/datum/log_category)
 
