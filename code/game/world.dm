@@ -49,8 +49,8 @@ GLOBAL_VAR(restart_counter)
  * - Dominion/Cyberboss
  *
  * Where to put init shit quick guide:
- * If you need it to happen before the mc is created: world/Genesis. 
- * If you need it to happen last: world/New(), 
+ * If you need it to happen before the mc is created: world/Genesis.
+ * If you need it to happen last: world/New(),
  * Otherwise, in a subsystem preinit or init. Subsystems can set an init priority.
  */
 
@@ -327,6 +327,7 @@ GLOBAL_VAR(restart_counter)
 	#endif
 
 /world/proc/auxcleanup()
+	rustg_close_async_http_client() // Close the HTTP client. If you dont do this, youll get phantom threads which can crash DD from memory access violations
 	AUXTOOLS_FULL_SHUTDOWN(AUXLUA)
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
