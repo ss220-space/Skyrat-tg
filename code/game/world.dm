@@ -346,6 +346,7 @@ GLOBAL_VAR(tracy_log)
 	#endif
 
 /world/proc/auxcleanup()
+	rustg_close_async_http_client() // Close the HTTP client. If you dont do this, youll get phantom threads which can crash DD from memory access violations
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
 		call_ext(debug_server, "auxtools_shutdown")()
