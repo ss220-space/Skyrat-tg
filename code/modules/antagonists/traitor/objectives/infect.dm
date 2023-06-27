@@ -1,4 +1,4 @@
-/datum/traitor_objective_category/infect
+/*/datum/traitor_objective_category/infect
 	name = "Infect with Disease"
 	objectives = list(
 		/datum/traitor_objective/target_player/infect = 1,
@@ -146,7 +146,7 @@
 	if(objective_state == OBJECTIVE_STATE_INACTIVE)
 		//don't take an objective target of someone who is already dead
 		fail_objective()
-
+*/
 /obj/item/reagent_containers/hypospray/medipen/manifoldinjector
 	name = "EHMS autoinjector"
 	desc = "Experimental Hereditary Manifold Sickness autoinjector."
