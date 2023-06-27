@@ -1,9 +1,9 @@
-/datum/traitor_objective_category/infect
+/*/datum/traitor_objective_category/infect
 	name = "Infect with Disease"
 	objectives = list(
 		/datum/traitor_objective/target_player/infect = 1,
 	)
-
+*/
 /datum/traitor_objective/target_player/infect
 	name = "Infect %TARGET% the %JOB TITLE%"
 	description = "Infect your target with the experimental Hereditary Manifold Sickness."
