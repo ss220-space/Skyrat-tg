@@ -60,6 +60,10 @@ endmap
 
 ##SKYRAT MAPS##
 
+map kilostation2
+	votable
+endmap
+
 map voidraptor
 	maxplayers 100
 	votable
