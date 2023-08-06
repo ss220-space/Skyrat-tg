@@ -7,7 +7,7 @@
 	/// Takes the four cardinal direction defines. Any atoms moving into this atom's tile will be allowed to from the added directions.
 	var/passthroughable = NONE
 	/// The maximum amount of pixels allowed to move in the turf.
-	var/maximum_pixel_shift = 16
+	var/maximum_pixel_shift = 12
 	/// The amount of pixel shift required to make the parent passthroughable.
 	var/passable_shift_threshold = 8
 
