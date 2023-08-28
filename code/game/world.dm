@@ -333,7 +333,16 @@ GLOBAL_VAR(restart_counter)
 	shutdown_logging() // Past this point, no logging procs can be used, at risk of data loss.
 	auxcleanup()
 
-	TgsReboot() // TGS can decide to kill us right here, so it's important to do it last
+	//SS220 EDIT CHANGE BEGIN - SHUTDOWN
+	if(CONFIG_GET(flag/shutdown_on_reboot))
+		if(CONFIG_GET(string/shutdown_shell_command))
+			shell(CONFIG_GET(string/shutdown_shell_command))
+		del(world)
+		TgsEndProcess()
+		return
+	else
+		TgsReboot() // TGS can decide to kill us right here, so it's important to do it last
+	//SS220 EDIT CHANGE END
 
 	..()
 	#endif
