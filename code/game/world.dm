@@ -350,7 +350,16 @@ GLOBAL_VAR(restart_counter)
 	QDEL_NULL(Tracy)
 	QDEL_NULL(Debugger)
 
-	TgsReboot() // TGS can decide to kill us right here, so it's important to do it last
+	//SS220 EDIT CHANGE BEGIN - SHUTDOWN
+	if(CONFIG_GET(flag/shutdown_on_reboot))
+		if(CONFIG_GET(string/shutdown_shell_command))
+			shell(CONFIG_GET(string/shutdown_shell_command))
+		del(world)
+		TgsEndProcess()
+		return
+	else
+		TgsReboot() // TGS can decide to kill us right here, so it's important to do it last
+	//SS220 EDIT CHANGE END
 
 	..()
 	#endif
