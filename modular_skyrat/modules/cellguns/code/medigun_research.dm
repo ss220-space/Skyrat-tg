@@ -23,7 +23,7 @@
 
 /datum/design/medicell/brute2
 	name = "Brute II Medicell"
-	desc = "Gives cell-loaded mediguns improved brute damage healing functionality."
+	desc = "Gives cell-loaded mediguns improved brute damage healing functionality. Requires libital to construct."
 	id = "brute2medicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT)
 	reagents_list = list(/datum/reagent/medicine/c2/libital = 10)
@@ -31,7 +31,7 @@
 
 /datum/design/medicell/burn2
 	name = "Burn II Medicell"
-	desc = "Gives cell-loaded mediguns improved burn damage healing functionality."
+	desc = "Gives cell-loaded mediguns improved burn damage healing functionality. Requires aiuri to construct."
 	id = "burn2medicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT)
 	reagents_list = list(/datum/reagent/medicine/c2/aiuri = 10)
@@ -39,7 +39,7 @@
 
 /datum/design/medicell/toxin2
 	name = "Toxin II Medicell"
-	desc = "Gives cell-loaded mediguns improved toxin damage healing functionality."
+	desc = "Gives cell-loaded mediguns improved toxin damage healing functionality. Requires multiver to construct."
 	id = "toxin2medicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT)
 	reagents_list = list(/datum/reagent/medicine/c2/multiver = 10)
@@ -47,7 +47,7 @@
 
 /datum/design/medicell/oxy2
 	name = "Oxygen II Medicell"
-	desc = "Gives cell-loaded mediguns improved oxygen deprivation healing functionality."
+	desc = "Gives cell-loaded mediguns improved oxygen deprivation healing functionality. Requires convermol to construct."
 	id = "oxy2medicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT)
 	reagents_list = list(/datum/reagent/medicine/c2/convermol = 10)
@@ -57,7 +57,7 @@
 
 /datum/design/medicell/brute3
 	name = "Brute III Medicell"
-	desc = "Gives cell-loaded mediguns advanced brute damage healing functionality."
+	desc = "Gives cell-loaded mediguns advanced brute damage healing functionality. Requires salicylic acid to construct."
 	id = "brute3medicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SMALL_MATERIAL_AMOUNT * 5)
 	reagents_list = list(/datum/reagent/medicine/sal_acid = 10)
@@ -65,7 +65,7 @@
 
 /datum/design/medicell/burn3
 	name = "Burn III Medicell"
-	desc = "Gives cell-loaded mediguns advanced burn damage healing functionality."
+	desc = "Gives cell-loaded mediguns advanced burn damage healing functionality. Requires oxandrolone to construct."
 	id = "burn3medicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SMALL_MATERIAL_AMOUNT * 5)
 	reagents_list = list(/datum/reagent/medicine/oxandrolone = 10)
@@ -73,7 +73,7 @@
 
 /datum/design/medicell/toxin3
 	name = "Toxin III Medicell"
-	desc = "Gives cell-loaded mediguns advanced toxin damage healing functionality."
+	desc = "Gives cell-loaded mediguns advanced toxin damage healing functionality. Requires pentetic acid to construct."
 	id = "toxin3medicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SMALL_MATERIAL_AMOUNT * 5)
 	reagents_list = list(/datum/reagent/medicine/pen_acid = 10)
@@ -81,7 +81,7 @@
 
 /datum/design/medicell/oxy3
 	name = "Oxygen III Medicell"
-	desc = "Gives cell-loaded mediguns advanced oxygen deprivation healing functionality."
+	desc = "Gives cell-loaded mediguns advanced oxygen deprivation healing functionality. Requires salbutamol to construct."
 	id = "oxy3medicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SMALL_MATERIAL_AMOUNT * 5)
 	build_path = /obj/item/weaponcell/medical/oxygen/tier_3
@@ -95,7 +95,7 @@
 
 /datum/design/medicell/utility/clot
 	name = "Clotting Medicell"
-	desc = "Gives cell-loaded mediguns projectile-based coagulation functionality."
+	desc = "Gives cell-loaded mediguns projectile-based coagulation functionality. Requires saline-glucose solution and blood to construct."
 	id = "clotmedicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SMALL_MATERIAL_AMOUNT * 5)
 	build_path = /obj/item/weaponcell/medical/utility/clotting
@@ -103,7 +103,7 @@
 
 /datum/design/medicell/utility/temp
 	name = "Temperature Adjustment Medicell"
-	desc = "Gives cell loaded-mediguns projectile-based body temperature regulation functionality."
+	desc = "Gives cell loaded-mediguns projectile-based body temperature regulation functionality. Requires leporazine to construct."
 	id = "tempmedicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SMALL_MATERIAL_AMOUNT * 5)
 	build_path = /obj/item/weaponcell/medical/utility/temperature
@@ -139,7 +139,7 @@
 
 /datum/design/medicell/utility/relocation
 	name = "Oppressive Force Relocation Medicell"
-	desc = "Gives cell-loaded mediguns projectile-based rubbernecker relocation functionality, by dumping them into the Medbay lobby via eigenstate manipulation. Only works in Medbay when fired by authorized users."
+	desc = "Gives cell-loaded mediguns projectile-based rubbernecker relocation functionality, by dumping them into the Medbay lobby via eigenstate manipulation. Only works in Medbay when fired by authorized users. Requires eigenstasium to construct."
 	id = "relocatemedicell"
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SMALL_MATERIAL_AMOUNT * 5, /datum/material/bluespace = SHEET_MATERIAL_AMOUNT)
 	reagents_list = list(/datum/reagent/eigenstate = 10)
