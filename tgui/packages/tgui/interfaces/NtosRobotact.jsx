@@ -183,6 +183,12 @@ export const NtosRobotactContent = (props) => {
                         onClick={() => act('toggleSensors')}
                       />
                     </LabeledList.Item>
+                    <LabeledList.Item label="Change Voice">
+                      <Button
+                        content="SELECT"
+                        onClick={() => act('changeVoice')}
+                      />
+                    </LabeledList.Item>
                     <LabeledList.Item
                       label={'Stored Photos (' + printerPictures + ')'}
                     >
