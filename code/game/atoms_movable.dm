@@ -1662,3 +1662,8 @@
 */
 /atom/movable/proc/keybind_face_direction(direction)
 	setDir(direction)
+
+/atom/movable/proc/change_voice(mob/user)
+	var/selected_tts_seed = tgui_input_list(usr, "Select a TTS voice to change to", "[src.name] TTS voice selection", SSttsSilero.tts_seeds_names)
+	if(selected_tts_seed)
+		tts_seed = selected_tts_seed
