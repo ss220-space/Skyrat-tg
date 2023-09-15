@@ -1079,6 +1079,11 @@
 		return ai_voicechanger.say_name
 	return
 
+/mob/living/silicon/ai/verb/ai_change_voice()
+	set name = "Change Voice"
+	set category = "AI Commands"
+	change_voice()
+
 #undef HOLOGRAM_CHOICE_CHARACTER
 #undef CHARACTER_TYPE_SELF
 #undef CHARACTER_TYPE_CREWMEMBER
