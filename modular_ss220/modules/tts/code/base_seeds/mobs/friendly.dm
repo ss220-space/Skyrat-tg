@@ -1,6 +1,6 @@
 //Farm and friendly creatures.
 
-/mob/living/simple_animal/parrot
+/mob/living/basic/parrot
 	tts_seed = "Sniper"
 
 /mob/living/simple_animal/pet/cat
@@ -9,22 +9,22 @@
 /mob/living/basic/cockroach
 	tts_seed = "Villagerm"
 
-/mob/living/simple_animal/crab
+/mob/living/basic/crab
 	tts_seed = "Riki"
 
 /mob/living/basic/pet/dog
 	tts_seed = "Stetmann"
 
-/mob/living/simple_animal/hostile/retaliate/goat
+/mob/living/basic/goat
 	tts_seed = "Muradin"
 
 /mob/living/basic/cow
 	tts_seed = "Cairne"
 
-/mob/living/simple_animal/chick
+/mob/living/basic/chick
 	tts_seed = "Meepo"
 
-/mob/living/simple_animal/chicken
+/mob/living/basic/chicken
 	tts_seed = "Windranger"
 
 /mob/living/basic/pig
@@ -33,13 +33,13 @@
 /mob/living/simple_animal/hostile/retaliate/goose
 	tts_seed = "pantheon"
 
-/mob/living/simple_animal/pet/fox
+/mob/living/basic/pet/fox
 	tts_seed = "Barney"
 
 /mob/living/basic/frog
 	tts_seed = "pantheon"
 
-/mob/living/simple_animal/hostile/lizard
+/mob/living/basic/lizard
 	tts_seed = "Shaker"
 
 /mob/living/basic/mouse
@@ -51,11 +51,11 @@
 /mob/living/basic/mouse/brown
 	tts_seed = "Clockwerk"
 
-/mob/living/simple_animal/pet/penguin
+/mob/living/basic/pet/penguin
 	tts_seed = "Narrator"
 
-/mob/living/simple_animal/sloth
+/mob/living/basic/sloth
 	tts_seed = "Peon"
 
-/mob/living/simple_animal/butterfly
+/mob/living/basic/butterfly
 	tts_seed = "Meepo"
