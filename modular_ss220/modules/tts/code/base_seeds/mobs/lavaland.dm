@@ -6,10 +6,10 @@
 /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner
 	tts_seed = "Chen"
 
-/mob/living/simple_animal/hostile/asteroid/basilisk
+/mob/living/basic/mining/basilisk
 	tts_seed = "Antimage"
 
-/mob/living/simple_animal/hostile/asteroid/goliath
+/mob/living/basic/mining/goliath
 	tts_seed = "Bloodseeker"
 
 /mob/living/simple_animal/hostile/asteroid/hivelord

@@ -9,13 +9,13 @@
 /mob/living/basic/cortical_borer
 	tts_seed = "Gman_e2"
 
-/mob/living/simple_animal/hostile/morph
+/mob/living/basic/morph
 	tts_seed = "Treant"
 
 /mob/living/simple_animal/revenant
 	tts_seed = "Sylvanas"
 
-/mob/living/simple_animal/hostile/imp/slaughter
+/mob/living/basic/demon
 	tts_seed = "Mannoroth"
 
 /mob/living/simple_animal/hostile/construct
@@ -27,7 +27,7 @@
 /mob/living/simple_animal/hostile/retaliate/snake
 	tts_seed = "Ladyvashj"
 
-/mob/living/simple_animal/hostile/bear
+/mob/living/basic/bear
 	tts_seed = "Shaker"
 
 /mob/living/basic/carp
