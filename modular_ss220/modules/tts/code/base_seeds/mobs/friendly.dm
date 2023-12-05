@@ -3,7 +3,7 @@
 /mob/living/basic/parrot
 	tts_seed = "Sniper"
 
-/mob/living/simple_animal/pet/cat
+/mob/living/basic/pet/cat
 	tts_seed = "Valerian"
 
 /mob/living/basic/cockroach
