@@ -15,7 +15,6 @@ import { MainPage } from './MainPage';
 import { PageButton } from './PageButton';
 import { QuirksPage } from './QuirksPage';
 import { SpeciesPage } from './SpeciesPage';
-
 import { VoicePage } from './VoicePage';
 
 enum Page {
@@ -205,7 +204,8 @@ export const CharacterPreferenceWindow = (props) => {
                   <PageButton
                     currentPage={currentPage}
                     page={Page.Voice}
-                    setPage={setCurrentPage}>
+                    setPage={setCurrentPage}
+                  >
                     Voice
                   </PageButton>
                 </Stack.Item>
