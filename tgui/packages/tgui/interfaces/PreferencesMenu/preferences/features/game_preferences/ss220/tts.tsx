@@ -1,10 +1,10 @@
-import { Feature, FeatureValueProps, FeatureNumericData } from '../../base';
 import { Box, Slider } from '../../../../../../components';
+import { Feature, FeatureNumericData, FeatureValueProps } from '../../base';
 
 const SLIDER_STEP_SIZE_FOR_SETTINGS_WINDOW_WIDTH = 4.1;
 
 const FeatureSlider = (
-  props: FeatureValueProps<number, number, FeatureNumericData>
+  props: FeatureValueProps<number, number, FeatureNumericData>,
 ) => {
   if (!props.serverData) {
     return <Box>Loading...</Box>;
