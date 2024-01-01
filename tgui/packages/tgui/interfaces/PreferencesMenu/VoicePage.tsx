@@ -1,5 +1,15 @@
 import { useBackend, useLocalState } from '../../backend';
-import { Button, LabeledList, Table, Section, Dropdown, Input, BlockQuote, Box, Icon } from '../../components';
+import {
+  BlockQuote,
+  Box,
+  Button,
+  Dropdown,
+  Icon,
+  Input,
+  LabeledList,
+  Section,
+  Table,
+} from '../../components';
 import { PreferencesMenuData } from './data';
 
 const donatorTiers = {
@@ -11,15 +21,15 @@ const donatorTiers = {
 };
 
 const gendersIcons = {
-  'Мужской': {
+  Мужской: {
     icon: 'mars',
     color: 'blue',
   },
-  'Женский': {
+  Женский: {
     icon: 'venus',
     color: 'purple',
   },
-  'Любой': {
+  Любой: {
     icon: 'venus-mars',
     color: 'white',
   },
@@ -29,7 +39,7 @@ const getCheckboxGroup = (
   itemsList,
   selectedList,
   setSelected,
-  contentKey: string | null = null
+  contentKey: string | null = null,
 ) => {
   return itemsList.map((item) => {
     const title = (contentKey && item[contentKey]) ?? item;
@@ -42,8 +52,8 @@ const getCheckboxGroup = (
           if (selectedList.includes(item)) {
             setSelected(
               selectedList.filter(
-                (i) => ((contentKey && i[contentKey]) ?? i) !== item
-              )
+                (i) => ((contentKey && i[contentKey]) ?? i) !== item,
+              ),
             );
           } else {
             setSelected([item, ...selectedList]);
@@ -54,8 +64,8 @@ const getCheckboxGroup = (
   });
 };
 
-export const VoicePage = (props, context) => {
-  const { act, data } = useBackend<PreferencesMenuData>(context);
+export const VoicePage = (props) => {
+  const { act, data } = useBackend<PreferencesMenuData>();
 
   const {
     providers,
@@ -80,52 +90,47 @@ export const VoicePage = (props, context) => {
     .map((level) => donatorTiers[level]);
 
   const [selectedProviders, setSelectedProviders] = useLocalState(
-    context,
     'selectedProviders',
-    providers
+    providers,
   );
   const [selectedGenders, setSelectedGenders] = useLocalState(
-    context,
     'selectedGenders',
-    genders
+    genders,
   );
   const [selectedCategories, setSelectedCategories] = useLocalState(
-    context,
     'selectedCategories',
-    categories
+    categories,
   );
   const [selectedDonatorLevels, setSelectedDonatorLevels] = useLocalState(
-    context,
     'selectedDonatorLevels',
-    donatorLevels
+    donatorLevels,
   );
   const [selectedPhrase, setSelectedPhrase] = useLocalState(
-    context,
     'selectedPhrase',
-    phrases[0]
+    phrases[0],
   );
-  const [searchtext, setSearchtext] = useLocalState(context, 'searchtext', '');
+  const [searchtext, setSearchtext] = useLocalState('searchtext', '');
 
   let providerCheckboxes = getCheckboxGroup(
     providers,
     selectedProviders,
     setSelectedProviders,
-    'name'
+    'name',
   );
   let genderesCheckboxes = getCheckboxGroup(
     genders,
     selectedGenders,
-    setSelectedGenders
+    setSelectedGenders,
   );
   let categoriesCheckboxes = getCheckboxGroup(
     categories,
     selectedCategories,
-    setSelectedCategories
+    setSelectedCategories,
   );
   let donatorLevelsCheckboxes = getCheckboxGroup(
     donatorLevels,
     selectedDonatorLevels,
-    setSelectedDonatorLevels
+    setSelectedDonatorLevels,
   );
 
   let phrasesSelect = (
@@ -163,14 +168,15 @@ export const VoicePage = (props, context) => {
         selectedGenders.includes(seed.gender) &&
         selectedCategories.includes(seed.category) &&
         selectedDonatorLevels.includes(donatorTiers[seed.donator_level]) &&
-        seed.name.toLowerCase().includes(searchtext.toLowerCase())
+        seed.name.toLowerCase().includes(searchtext.toLowerCase()),
     );
 
   let seedsRow = availableSeeds.map((seed) => {
     return (
       <Table.Row
         key={seed.name}
-        backgroundColor={tts_seed === seed.name ? 'green' : 'transparent'}>
+        backgroundColor={tts_seed === seed.name ? 'green' : 'transparent'}
+      >
         <Table.Cell collapsing textAlign="center">
           <Button
             fluid
@@ -203,13 +209,15 @@ export const VoicePage = (props, context) => {
             seed.donator_level > 0 && tts_seed !== seed.name
               ? 'orange'
               : 'white'
-          }>
+          }
+        >
           {seed.name}
         </Table.Cell>
         <Table.Cell
           collapsing
           opacity={tts_seed === seed.name ? 0.5 : 0.25}
-          textAlign="left">
+          textAlign="left"
+        >
           {seed.category}
         </Table.Cell>
         <Table.Cell
@@ -218,14 +226,16 @@ export const VoicePage = (props, context) => {
           textColor={
             tts_seed === seed.name ? 'white' : gendersIcons[seed.gender].color
           }
-          textAlign="left">
+          textAlign="left"
+        >
           <Icon mx={1} size={1.2} name={gendersIcons[seed.gender].icon} />
         </Table.Cell>
         <Table.Cell
           collapsing
           opacity={0.5}
           textColor="white"
-          textAlign="right">
+          textAlign="right"
+        >
           {seed.donator_level > 0 && (
             <>
               {donatorTiers[seed.donator_level]}
@@ -255,9 +265,7 @@ export const VoicePage = (props, context) => {
           <LabeledList.Item label="Поиск">{searchBar}</LabeledList.Item>
         </LabeledList>
       </Section>
-      <Section
-        title={`Голоса (${availableSeeds.length}/${seeds.length})`}
-        flexGrow="1">
+      <Section title={`Голоса (${availableSeeds.length}/${seeds.length})`}>
         <Table>{seedsRow}</Table>
       </Section>
       <Section>
