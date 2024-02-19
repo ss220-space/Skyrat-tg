@@ -9,7 +9,7 @@
 /obj/singularity/proc/hawking_pulse(delta_time)
 	// Calculate the pulse strength based on the singularity's current size.
 	var/base_pulse_strength = 100 // Base strength, can be adjusted
-	var/strength_multiplier = 1.5 // Multiplier per size level above the base
+	var/strength_multiplier = 2 // Multiplier per size level above the base
 	var/calculated_pulse_strength = base_pulse_strength * (current_size * strength_multiplier)
 
 	// Calculate the pulse range based on pulse strength
