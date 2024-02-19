@@ -1,5 +1,5 @@
-#define TESLA_DEFAULT_POWER 6.95304e8
-#define TESLA_MINI_POWER 3.47652e8
+#define TESLA_DEFAULT_POWER 5214780
+#define TESLA_MINI_POWER 1738260
 //Zap constants, speeds up targeting
 #define BIKE (COIL + 1)
 #define COIL (ROD + 1)
@@ -236,6 +236,13 @@
 		/obj/structure/lattice = FALSE,
 		/obj/structure/grille = FALSE,
 		/obj/structure/frame/machine = FALSE,
+		/obj/machinery/particle_accelerator/control_box = FALSE,
+		/obj/structure/particle_accelerator/fuel_chamber = FALSE,
+		/obj/structure/particle_accelerator/particle_emitter/center = FALSE,
+		/obj/structure/particle_accelerator/particle_emitter/left = FALSE,
+		/obj/structure/particle_accelerator/particle_emitter/right = FALSE,
+		/obj/structure/particle_accelerator/power_box = FALSE,
+		/obj/structure/particle_accelerator/end_cap = FALSE,
 	))
 
 	//Ok so we are making an assumption here. We assume that view() still calculates from the center out.
