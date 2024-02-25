@@ -152,6 +152,13 @@
 	new /obj/item/clothing/suit/chaplainsuit/armor/studentuni(src)
 	new /obj/item/clothing/head/helmet/chaplain/cage(src)
 
+/obj/item/storage/box/holy/techpriest
+	name = "Techpriest Kit"
+	typepath_for_preview = /obj/item/clothing/suit/hooded/techpriest
+
+/obj/item/storage/box/holy/techpriest/PopulateContents()
+	new /obj/item/clothing/suit/hooded/chaplainsuit/techchapel(src)
+	new /obj/item/clothing/head/hooded/techchapel(src)
 /obj/item/storage/box/holy/sentinel
 	name = "Stone Sentinel Kit"
 	typepath_for_preview = /obj/item/clothing/suit/chaplainsuit/armor/ancient
