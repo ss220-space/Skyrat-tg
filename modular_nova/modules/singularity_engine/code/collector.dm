@@ -6,7 +6,7 @@
 /obj/machinery/power/energy_accumulator/rad_collector
 	name = "Hawking Radiation Collector Array"
 	desc = "A device which uses hawking radiation generated from singularities and plasma to produce power."
-	icon = 'modular_skyrat/modules/aesthetics/emitter/icons/emitter.dmi'
+	icon = 'modular_nova/modules/aesthetics/emitter/icons/emitter.dmi'
 	icon_state = "ca"
 	req_access = list(ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS)
 	max_integrity = 350
