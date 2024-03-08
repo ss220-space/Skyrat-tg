@@ -50,6 +50,8 @@
 	/// What the game tells ghosts when you make one
 	var/ghost_notification_message = "IT'S LOOSE"
 
+	invisibility = INVISIBILITY_MAXIMUM
+
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF | PASSMACHINE | PASSSTRUCTURE | PASSDOORS
 	flags_1 = SUPERMATTER_IGNORES_1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF | SHUTTLE_CRUSH_PROOF
@@ -57,6 +59,10 @@
 
 /obj/singularity/Initialize(mapload, starting_energy)
 	. = ..()
+
+	new /obj/effect/singularity_creation(loc)
+
+	addtimer(CALLBACK(src, PROC_REF(make_visible)), SINGULARITY_EFFECT_ANIM_TIME)
 
 	energy = starting_energy || energy
 
@@ -167,13 +173,14 @@
 		if(prob(event_chance))
 			event()
 	dissipate(seconds_per_tick)
+	hawking_pulse(seconds_per_tick)
 	check_energy()
 
 /obj/singularity/proc/dissipate(seconds_per_tick)
 	if (!dissipate)
 		return
 
-	time_since_last_dissipiation += seconds_per_tick
+	time_since_last_dissipiation += seconds_per_tick SECONDS
 
 	// Uses a while in case of especially long delta times
 	while (time_since_last_dissipiation >= dissipate_delay)
@@ -466,7 +473,7 @@
 	)
 
 /obj/singularity/proc/emp_area()
-	empulse(src, 8, 10)
+	empulse(src, 5, 8)
 
 /obj/singularity/singularity_act()
 	var/gain = (energy/2)
