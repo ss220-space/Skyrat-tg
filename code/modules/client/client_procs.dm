@@ -428,11 +428,8 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		to_chat_immediate(src, "Your version: [byond_version].[byond_build]")
 		to_chat_immediate(src, "Required version: [breaking_version].[breaking_build] or later")
 		to_chat_immediate(src, "Visit <a href=\"https://secure.byond.com/download\">BYOND's website</a> to get the latest version of BYOND.")
-		if (connecting_admin)
-			to_chat_immediate(src, "Because you are an admin, you are being allowed to walk past this limitation, But it is still STRONGLY suggested you upgrade")
-		else
-			qdel(src)
-			return
+		qdel(src)
+		return
 	else if (byond_version < warn_version || (byond_version == warn_version && byond_build < warn_build)) //We have words for this client.
 		if(CONFIG_GET(flag/client_warn_popup))
 			var/msg = "<b>Your version of byond may be getting out of date:</b><br>"
