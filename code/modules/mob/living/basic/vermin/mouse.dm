@@ -242,6 +242,8 @@
 	held_state = "mouse_brown"
 
 /mob/living/basic/mouse/white
+	name = "Space rat"
+	desc = "A cute little guy with a cute little spacesuit!"
 	body_color = "space_white"
 	icon_state = "mouse_white"
 	held_state = "mouse_white"
@@ -252,6 +254,8 @@
 	)
 
 /mob/living/basic/mouse/brown
+	name = "Space rat"
+	desc = "A cute little guy with a cute little spacesuit!"
 	body_color = "space_brown"
 	icon_state = "mouse_brown"
 	held_state = "mouse_brown"
@@ -262,6 +266,8 @@
 	)
 
 /mob/living/basic/mouse/gray
+	name = "Space rat"
+	desc = "A cute little guy with a cute little spacesuit!"
 	body_color = "space_gray"
 	icon_state = "mouse_gray"
 	unsuitable_atmos_damage = 0
