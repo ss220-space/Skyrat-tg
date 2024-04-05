@@ -47,7 +47,7 @@
 	if(!isnull(new_body_color))
 		body_color = new_body_color
 	if(isnull(body_color))
-		body_color = pick("brown", "gray", "white","space_brown","space_gray","space_white")
+		body_color = pick("brown", "gray", "white")
 	held_state = "mouse_[body_color]" // not handled by variety element
 	AddElement(/datum/element/animal_variety, "mouse", body_color, FALSE)
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOUSE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 10)
@@ -241,35 +241,10 @@
 	icon_state = "mouse_brown"
 	held_state = "mouse_brown"
 
-/mob/living/basic/mouse/white
-	name = "Space rat"
+/mob/living/basic/mouse/space
+	name = "Space mouse"
 	desc = "A cute little guy with a cute little spacesuit!"
-	body_color = "space_white"
-	icon_state = "mouse_white"
-	held_state = "mouse_white"
-	unsuitable_atmos_damage = 0
-	minimum_survivable_temperature = TCMB
-	overlays = list(
-		"space_suit"
-	)
-
-/mob/living/basic/mouse/brown
-	name = "Space rat"
-	desc = "A cute little guy with a cute little spacesuit!"
-	body_color = "space_brown"
-	icon_state = "mouse_brown"
-	held_state = "mouse_brown"
-	unsuitable_atmos_damage = 0
-	minimum_survivable_temperature = TCMB
-	overlays = list(
-		"space_suit"
-	)
-
-/mob/living/basic/mouse/gray
-	name = "Space rat"
-	desc = "A cute little guy with a cute little spacesuit!"
-	body_color = "space_gray"
-	icon_state = "mouse_gray"
+	body_color = null
 	unsuitable_atmos_damage = 0
 	minimum_survivable_temperature = TCMB
 	overlays = list(
