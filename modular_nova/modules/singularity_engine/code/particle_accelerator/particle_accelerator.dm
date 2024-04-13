@@ -128,10 +128,8 @@
 	return ..()
 
 
-/obj/structure/particle_accelerator/deconstruct(disassembled = TRUE)
-	if(!(obj_flags & NO_DECONSTRUCTION))
-		new /obj/item/stack/sheet/iron (loc, 5)
-	qdel(src)
+/obj/structure/particle_accelerator/atom_deconstruct(disassembled)
+	new /obj/item/stack/sheet/iron(loc, 5)
 
 /obj/structure/particle_accelerator/Move()
 	. = ..()
