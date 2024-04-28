@@ -241,6 +241,16 @@
 	icon_state = "mouse_brown"
 	held_state = "mouse_brown"
 
+/mob/living/basic/mouse/space
+	name = "Space mouse"
+	desc = "A cute little guy with a cute little spacesuit!"
+	body_color = null
+	unsuitable_atmos_damage = 0
+	minimum_survivable_temperature = TCMB
+	overlays = list(
+		"space_suit"
+	)
+
 //TOM IS ALIVE! SQUEEEEEEEE~K :)
 /mob/living/basic/mouse/brown/tom
 	name = "Tom"
