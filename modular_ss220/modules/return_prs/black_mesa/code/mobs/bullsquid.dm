@@ -28,7 +28,7 @@
 	melee_damage_upper = 18
 	attack_sound = 'modular_ss220/modules/return_prs/black_mesa/sound/mobs/bullsquid/attack1.ogg'
 	gold_core_spawnable = HOSTILE_SPAWN
-		atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	alert_sounds = list(
 		'modular_ss220/modules/return_prs/black_mesa/sound/mobs/bullsquid/detect1.ogg',
 		'modular_ss220/modules/return_prs/black_mesa/sound/mobs/bullsquid/detect2.ogg',
