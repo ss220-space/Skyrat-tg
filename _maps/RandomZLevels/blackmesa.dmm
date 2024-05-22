@@ -2314,16 +2314,6 @@
 /area/awaymission/black_mesa/security_outpost)
 "aDS" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/left/directional/west{
-	base_state = "right";
-	dir = 1;
-	icon_state = "right";
-	name = "Outer Window"
-	},
-/obj/machinery/door/window/brigdoor{
-	name = "Brig Control Desk";
-	req_access = list("armory")
-	},
 /obj/item/folder/red,
 /obj/item/folder/red,
 /obj/item/poster/random_official,
@@ -2332,6 +2322,12 @@
 	pixel_y = 5
 	},
 /obj/structure/cable,
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Brig Control Desk"
+	},
+/obj/machinery/door/window/right/directional/north{
+	name = "Reception Window"
+	},
 /turf/open/floor/iron/dark,
 /area/awaymission/black_mesa/security_outpost)
 "aEa" = (
@@ -2585,22 +2581,13 @@
 /area/awaymission/black_mesa/cryo_room)
 "aHd" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/left/directional/west{
-	base_state = "right";
-	dir = 2;
-	icon_state = "right";
-	name = "Reception Window"
-	},
-/obj/machinery/door/window/brigdoor{
-	dir = 1;
-	name = "Brig Control Desk";
-	req_access = list("armory")
-	},
 /obj/item/paper,
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /obj/item/storage/fancy/donut_box,
 /obj/item/paper,
+/obj/machinery/door/window/brigdoor/left/directional/south,
+/obj/machinery/door/window/brigdoor/right/directional/north,
 /turf/open/floor/iron,
 /area/awaymission/black_mesa/security_outpost)
 "aHk" = (
@@ -9165,10 +9152,10 @@
 /turf/open/floor/iron/smooth_large,
 /area/awaymission/black_mesa/deep_sci_chem)
 "kRp" = (
-/obj/machinery/door/window/brigdoor/security{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/machinery/door/window/brigdoor/security/cell/left/directional/east{
+	req_access = null
+	},
 /turf/open/floor/iron/dark,
 /area/awaymission/black_mesa/science_internal)
 "kRK" = (
