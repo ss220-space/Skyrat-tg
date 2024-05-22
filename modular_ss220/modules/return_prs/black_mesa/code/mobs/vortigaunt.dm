@@ -31,6 +31,7 @@
 	minimum_distance = 5
 	attack_sound = 'sound/weapons/bite.ogg'
 	gold_core_spawnable = FRIENDLY_SPAWN
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	loot = list(/obj/item/stack/sheet/bone)
 	alert_sounds = list(
 		'modular_ss220/modules/return_prs/black_mesa/sound/mobs/vortigaunt/alert01.ogg',
@@ -62,3 +63,4 @@
 	desc = "Bound by the shackles of a sinister force. He does not want to hurt you."
 	icon_state = "vortigaunt_slave"
 	faction = list(FACTION_XEN)
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
