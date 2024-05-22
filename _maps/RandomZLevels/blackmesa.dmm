@@ -259,13 +259,6 @@
 /obj/structure/alien/weeds/xen,
 /turf/open/floor/iron/textured,
 /area/awaymission/black_mesa/entrance_hall)
-"adl" = (
-/obj/machinery/door/window/brigdoor/security/cell{
-	dir = 8;
-	id = "Mesa 3"
-	},
-/turf/open/floor/iron,
-/area/awaymission/black_mesa/security_outpost)
 "ado" = (
 /obj/structure/table,
 /obj/item/pen,
@@ -408,10 +401,7 @@
 /turf/open/floor/plating,
 /area/awaymission/black_mesa/entrance_tunnel)
 "aeK" = (
-/obj/machinery/door/window/brigdoor/security/cell{
-	dir = 4;
-	id = "Mesa 6"
-	},
+/obj/machinery/door/window/brigdoor/security/cell/right/directional/east,
 /turf/open/floor/iron,
 /area/awaymission/black_mesa/security_outpost)
 "aeR" = (
@@ -2676,13 +2666,6 @@
 /obj/item/gun/ballistic/automatic/pistol/sol,
 /turf/open/floor/iron,
 /area/awaymission/black_mesa/entrance_lobby)
-"aHX" = (
-/obj/machinery/door/window/brigdoor/security/cell{
-	dir = 4;
-	id = "Mesa 5"
-	},
-/turf/open/floor/iron,
-/area/awaymission/black_mesa/security_outpost)
 "aIk" = (
 /obj/machinery/light/dim{
 	dir = 8
@@ -2873,10 +2856,7 @@
 /turf/open/floor/iron/textured_large,
 /area/awaymission/black_mesa/entrance_hall)
 "aKJ" = (
-/obj/machinery/door/window/brigdoor/security/cell{
-	dir = 8;
-	id = "Mesa 1"
-	},
+/obj/machinery/door/window/brigdoor/security/cell/left/directional/west,
 /turf/open/floor/iron,
 /area/awaymission/black_mesa/security_outpost)
 "aKM" = (
@@ -2909,13 +2889,6 @@
 /obj/item/poster/random_contraband,
 /obj/effect/spawner/random/contraband/permabrig_gear,
 /obj/effect/spawner/random/exotic/antag_gear_weak,
-/turf/open/floor/iron,
-/area/awaymission/black_mesa/security_outpost)
-"aLb" = (
-/obj/machinery/door/window/brigdoor/security/cell{
-	dir = 8;
-	id = "Mesa 2"
-	},
 /turf/open/floor/iron,
 /area/awaymission/black_mesa/security_outpost)
 "aLk" = (
@@ -3395,10 +3368,8 @@
 /area/awaymission/black_mesa/entrance_hall)
 "aRk" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/brigdoor{
-	dir = 4
-	},
 /obj/item/paper,
+/obj/machinery/door/window/brigdoor/left/directional/east,
 /turf/open/floor/iron,
 /area/awaymission/black_mesa/entrance_lobby)
 "aRp" = (
@@ -4061,13 +4032,6 @@
 /obj/effect/spawner/random/bioluminescent_plant,
 /turf/open/misc/xen,
 /area/awaymission/black_mesa/xen/freeman_arena)
-"aZE" = (
-/obj/machinery/door/window/brigdoor/security/cell{
-	dir = 4;
-	id = "Mesa 4"
-	},
-/turf/open/floor/iron,
-/area/awaymission/black_mesa/security_outpost)
 "aZH" = (
 /obj/machinery/door/airlock/science,
 /obj/structure/alien/weeds/xen,
@@ -5090,9 +5054,6 @@
 /turf/open/floor/iron/smooth,
 /area/awaymission/black_mesa/entrance_internal_hall)
 "cTO" = (
-/obj/machinery/power/emitter/energycannon{
-	dir = 8
-	},
 /obj/machinery/power/emitter/energycannon{
 	dir = 8
 	},
@@ -6329,9 +6290,6 @@
 /turf/open/floor/iron/smooth_large,
 /area/awaymission/black_mesa/lambda_teleporter)
 "fjj" = (
-/obj/machinery/power/emitter/energycannon{
-	dir = 4
-	},
 /obj/machinery/power/emitter/energycannon{
 	dir = 4
 	},
@@ -45146,10 +45104,10 @@ aHK
 aKJ
 agI
 aHK
-aLb
+aKJ
 agI
 aHK
-adl
+aKJ
 agI
 aVW
 aNo
@@ -46171,10 +46129,10 @@ aKl
 aSV
 aVW
 aHK
-aZE
+aeK
 agI
 aHK
-aHX
+aeK
 agI
 aHK
 aeK
