@@ -17,7 +17,6 @@
 	melee_damage_upper = 21
 	attack_sound = 'modular_ss220/modules/return_prs/black_mesa/sound/mobs/zombies/claw_strike.ogg'
 	gold_core_spawnable = HOSTILE_SPAWN
-	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	alert_cooldown_time = 8 SECONDS
 	alert_sounds = list(
 		'modular_ss220/modules/return_prs/black_mesa/sound/mobs/zombies/alert1.ogg',

@@ -21,7 +21,6 @@
 	attack_sound = 'modular_nova/master_files/sound/weapons/crowbar2.ogg'
 	loot = list(/obj/item/crowbar/freeman/ultimate, /obj/item/keycard/freeman_boss_exit)
 	gold_core_spawnable = NO_SPAWN
-	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 
 /obj/structure/xen_pylon/freeman
 	shield_range = 30
