@@ -64,9 +64,9 @@
 	belt = /obj/item/storage/belt/security/full
 	back = /obj/item/storage/backpack
 	backpack_contents = list(/obj/item/radio,
-							/obj/item/gun/ballistic/automatic/pistol/sol,
-							/obj/item/ammo_box/magazine/c35sol_pistol,
-							/obj/item/ammo_box/magazine/c35sol_pistol,
+							/obj/item/gun/ballistic/automatic/pistol/g18,
+							/obj/item/ammo_box/magazine/g18,
+							/obj/item/ammo_box/magazine/g18,
 	)
 	id = /obj/item/card/id
 	id_trim = /datum/id_trim/security_guard

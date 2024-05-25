@@ -13,7 +13,8 @@
 	max_purchase = 4
 
 /datum/armament_entry/hecu/secondary/pistol/pistol
-	item_type = /obj/item/gun/ballistic/automatic/pistol/sol
+	item_type = /obj/item/gun/ballistic/automatic/pistol/g18
+	cost = 6
 	max_purchase = 4
 	mags_to_spawn = 3
 

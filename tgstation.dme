@@ -8364,6 +8364,7 @@
 #include "modular_ss220\modules\return_prs\black_mesa\code\lambda_teleporter.dm"
 #include "modular_ss220\modules\return_prs\black_mesa\code\m16_variations.dm"
 #include "modular_ss220\modules\return_prs\black_mesa\code\mapping_fluff.dm"
+#include "modular_ss220\modules\return_prs\black_mesa\code\miscguns.dm"
 #include "modular_ss220\modules\return_prs\black_mesa\code\objects.dm"
 #include "modular_ss220\modules\return_prs\black_mesa\code\projectiles.dm"
 #include "modular_ss220\modules\return_prs\black_mesa\code\rationpacks.dm"
