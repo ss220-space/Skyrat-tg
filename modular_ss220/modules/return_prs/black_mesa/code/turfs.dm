@@ -44,6 +44,7 @@
 	desc = "It's mirky and filled with strange organisms."
 	name = "xen water"
 	icon = 'modular_ss220/modules/return_prs/black_mesa/icons/xen_turfs.dmi'
+	icon_state = "sandwater_t"
 	baseturfs = /turf/open/misc/beach/coastline_t/xen
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = TRUE
@@ -52,6 +53,7 @@
 	desc = "It's mirky and filled with strange organisms."
 	name = "xen water"
 	icon = 'modular_ss220/modules/return_prs/black_mesa/icons/xen_turfs.dmi'
+	icon_state = "sandwater_inner"
 	baseturfs = /turf/open/misc/beach/coastline_t/sandwater_inner/xen
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = TRUE
@@ -60,6 +62,7 @@
 	name = "xen water"
 	desc = "It's mirky and filled with strange organisms."
 	icon = 'modular_ss220/modules/return_prs/black_mesa/icons/xen_turfs.dmi'
+	icon_state = "sandwater_b"
 	baseturfs = /turf/open/misc/beach/coastline_b/xen
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = TRUE
