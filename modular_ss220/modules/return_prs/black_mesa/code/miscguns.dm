@@ -105,3 +105,78 @@
 	caliber = CALIBER_10MM
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	max_ammo = 15
+
+#define COMPANY_CANTALAN "It has <b>[span_purple("Cantalan Federal Arms")]</b> etched into it."
+/// The caliber used by the Catanheim.
+#define CALIBER_A68 "a68"
+/*
+*	6.8x43mm
+*/
+
+/obj/item/ammo_casing/a68
+	name = "6.8mm bullet casing"
+	desc = "A 6.8mm bullet casing."
+	icon_state = "762-casing"
+	caliber = CALIBER_A68
+	projectile_type = /obj/projectile/bullet/a68
+
+/obj/projectile/bullet/a68
+	name = "6.8 bullet"
+	damage = 55
+	armour_penetration = 10
+	wound_bonus = -45
+	wound_falloff_tile = 0
+
+/obj/item/ammo_box/magazine/cm68
+	name = "rifle magazine (6.8mm)"
+	icon = 'modular_ss220/modules/return_prs/black_mesa/icons/miscweapon/mags.dmi'
+	icon_state = "6.8"
+	ammo_type = /obj/item/ammo_casing/a68
+	caliber = CALIBER_A68
+	max_ammo = 10
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/cm68/empty
+	start_empty = 1
+
+
+/*
+*	CFA RIFLE
+*/
+
+/obj/item/gun/ballistic/automatic/cfa_rifle
+	name = "Cantanheim 6.8mm rifle"
+	desc = "A simple semi-automatic rifle chambered in 6.8mm. The letters 'XJP' are crossed out in the receiver." //Different 6.8mm than the FTU's propietary pulse ballistics
+	icon = 'modular_ss220/modules/return_prs/black_mesa/icons/miscweapon/guns.dmi'
+	icon_state = "cfa_rifle"
+	inhand_icon_state = "irifle"
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	lefthand_file = 'modular_ss220/modules/return_prs/black_mesa/icons/miscweapon/64x_guns_left.dmi'
+	righthand_file = 'modular_ss220/modules/return_prs/black_mesa/icons/miscweapon/64x_guns_right.dmi'
+	worn_icon_state = "gun"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/cm68
+	fire_delay = 54
+	can_suppress = FALSE
+	burst_size = 1
+	actions_types = list()
+	mag_display = FALSE
+	mag_display_ammo = FALSE
+	empty_indicator = FALSE
+	recoil = 1
+	weapon_weight = WEAPON_HEAVY
+	pixel_x = -8
+	w_class = WEIGHT_CLASS_BULKY
+
+/obj/item/gun/ballistic/automatic/cfa_rifle/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/scope, range_modifier = 1.5)
+
+/obj/item/gun/ballistic/automatic/cfa_rifle/give_manufacturer_examine()
+	AddElement(/datum/element/manufacturer_examine, COMPANY_CANTALAN)
+
+/obj/item/gun/ballistic/automatic/cfa_rifle/give_gun_safeties()
+	return
+
+/obj/item/gun/ballistic/automatic/cfa_rifle/empty
+	spawnwithmagazine = FALSE

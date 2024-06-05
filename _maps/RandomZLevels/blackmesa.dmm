@@ -4863,9 +4863,9 @@
 /area/awaymission/black_mesa/black_ops_downstairs_atrium)
 "cEy" = (
 /obj/structure/rack/shelf,
-/obj/item/ammo_box/magazine/c40sol_rifle,
-/obj/item/ammo_box/magazine/c40sol_rifle,
-/obj/item/ammo_box/magazine/c40sol_rifle,
+/obj/item/ammo_box/magazine/cm68,
+/obj/item/ammo_box/magazine/cm68,
+/obj/item/ammo_box/magazine/cm68,
 /turf/open/floor/wood/parquet,
 /area/awaymission/black_mesa/employee_dorm_room)
 "cFH" = (
@@ -7494,7 +7494,7 @@
 /area/awaymission/black_mesa/resonant_chamber)
 "hGV" = (
 /obj/structure/rack/shelf,
-/obj/item/gun/ballistic/automatic/sol_rifle,
+/obj/item/gun/ballistic/automatic/cfa_rifle,
 /turf/open/floor/wood/parquet,
 /area/awaymission/black_mesa/employee_dorm_room)
 "hHb" = (

@@ -41,7 +41,7 @@
 	magazine_cost = 4
 
 /datum/armament_entry/hecu/primary/shotgun/shotgun_highcap
-	item_type = /obj/item/gun/ballistic/shotgun/riot/sol
+	item_type = /obj/item/gun/ballistic/shotgun/m23
 	max_purchase = 2
 	cost = 5
 
@@ -55,7 +55,7 @@
 	mags_to_spawn = 2
 
 /datum/armament_entry/hecu/primary/special/sniper_rifle
-	item_type = /obj/item/gun/ballistic/automatic/sol_rifle/marksman
+	item_type = /obj/item/gun/ballistic/automatic/cfa_rifle
 	max_purchase = 1
 	cost = 16
 
