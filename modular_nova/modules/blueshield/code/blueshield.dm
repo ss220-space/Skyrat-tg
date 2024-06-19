@@ -47,7 +47,7 @@
 	jobtype = /datum/job/blueshield
 	uniform = /obj/item/clothing/under/rank/blueshield
 	suit = /obj/item/clothing/suit/armor/vest/blueshield/jacket
-	gloves = /obj/item/clothing/gloves/tackler/security
+	gloves = /obj/item/clothing/gloves/tackler/combat/insulated/blueshield
 	id = /obj/item/card/id/advanced/centcom
 	shoes = /obj/item/clothing/shoes/jackboots
 	ears = /obj/item/radio/headset/headset_bs/alt
@@ -65,6 +65,9 @@
 	box = /obj/item/storage/box/survival/security
 	belt = /obj/item/modular_computer/pda/security
 	l_pocket = /obj/item/sensor_device/blueshield
+	backpack_contents = list(
+							/obj/item/storage/medkit/tactical/blueshield
+	)
 
 	id_trim = /datum/id_trim/job/blueshield
 
@@ -104,3 +107,16 @@
 	)
 
 	return selectable_gun_types
+
+/obj/item/storage/medkit/tactical/blueshield
+	name = "blueshield combat medical kit"
+	desc = "Combat medic to the rescue!"
+	color = "#AAAAFF"
+
+/obj/item/storage/medkit/tactical/blueshield/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/stack/medical/bruise_pack(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/healthanalyzer(src)

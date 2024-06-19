@@ -10,10 +10,15 @@
 		fires, electrical shocks, and contempt from the rest of the crew."
 
 	default_skin = "praetorian"
-	armor_type = /datum/armor/mod_theme_security
+	armor_type = /datum/armor/mod_theme_blueshield
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
-	slowdown_inactive = 1
-	slowdown_active = 0.5
+	slowdown_inactive = 0.75
+	slowdown_active = 0.25
+	resistance_flags = FIRE_PROOF|ACID_PROOF
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	siemens_coefficient = 0
+	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
+	inbuilt_modules = list(/obj/item/mod/module/shove_blocker/locked)
 	allowed_suit_storage = list(
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/restraints/handcuffs,
@@ -57,3 +62,14 @@
 			),
 		),
 	)
+
+/datum/armor/mod_theme_blueshield
+	melee = 40
+	bullet = 30
+	laser = 30
+	energy = 40
+	bomb = 50
+	bio = 100
+	fire = 100
+	acid = 100
+	wound = 20
