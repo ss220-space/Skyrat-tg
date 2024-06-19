@@ -41,7 +41,7 @@
 	attack_verb_simple = list("shove", "bash")
 	transparent = TRUE
 	max_integrity = 150
-	repairable_by = /obj/item/stack/sheet/iron //what to repair the shield with
+	//repairable_by = /obj/item/stack/sheet/iron //what to repair the shield with
 
 
 /// /obj/item/shield/riot/pointman/hecu/shatter(mob/living/carbon/human/owner)
