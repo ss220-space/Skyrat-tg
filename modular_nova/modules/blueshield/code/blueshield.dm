@@ -65,6 +65,9 @@
 	box = /obj/item/storage/box/survival/security
 	belt = /obj/item/modular_computer/pda/blueshield
 	l_pocket = /obj/item/sensor_device/blueshield
+	backpack_contents = list(
+							/obj/item/storage/medkit/tactical/blueshield
+	)
 
 	id_trim = /datum/id_trim/job/blueshield
 
@@ -119,3 +122,16 @@
 	)
 
 	return selectable_gun_types
+
+/obj/item/storage/medkit/tactical/blueshield
+	name = "blueshield combat medical kit"
+	desc = "Combat medic to the rescue!"
+	color = "#AAAAFF"
+
+/obj/item/storage/medkit/tactical/blueshield/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/stack/medical/bruise_pack(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/healthanalyzer(src)
