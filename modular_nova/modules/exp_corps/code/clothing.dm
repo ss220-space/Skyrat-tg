@@ -11,8 +11,15 @@
 	random_sensor = FALSE
 
 /datum/armor/clothing_under/rank_expeditionary_corps
-	fire = 15
-	acid = 15
+	melee = 10
+	bullet = 0
+	laser = 0
+	energy = 0
+	bomb = 10
+	bio = 10
+	fire = 30
+	acid = 30
+	wound = 10
 
 /obj/item/storage/belt/military/expeditionary_corps
 	name = "expeditionary corps chest rig"
@@ -81,6 +88,18 @@
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/feet.dmi'
 	icon_state = "exp_corps"
 	inhand_icon_state = "jackboots"
+	armor_type = /datum/armor/clothing_under/rank_expeditionary_corps_boots
+
+/datum/armor/clothing_under/rank_expeditionary_corps_boots
+	melee = 40
+	bullet = 40
+	laser = 40
+	energy = 40
+	bomb = 40
+	bio = 0
+	fire = 80
+	acid = 100
+	wound = 30
 
 /obj/item/clothing/gloves/color/black/expeditionary_corps
 	name = "expeditionary corps gloves"
@@ -147,7 +166,7 @@
 
 /obj/item/clothing/suit/armor/vest/expeditionary_corps
 	name = "expeditionary corps armor vest"
-	desc = "An armored vest that provides okay protection against most types of damage. Includes concealable sleeves for your arms."
+	desc = "An armored vest that provides decent protection against most types of damage."
 	icon = 'modular_nova/master_files/icons/obj/clothing/suits/armor.dmi'
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/suits/armor.dmi'
 	icon_state = "exp_corps"
@@ -172,14 +191,14 @@
 
 
 /datum/armor/vest_expeditionary_corps
-	melee = 30
-	bullet = 30
-	laser = 30
-	energy = 30
+	melee = 40
+	bullet = 40
+	laser = 40
+	energy = 40
 	bomb = 40
 	fire = 80
 	acid = 100
-	wound = 10
+	wound = 30
 
 /obj/item/clothing/head/helmet/expeditionary_corps
 	name = "expeditionary corps helmet"
@@ -194,14 +213,14 @@
 	actions_types = list(/datum/action/item_action/toggle_nv_helmet)
 
 /datum/armor/helmet_expeditionary_corps
-	melee = 20
-	bullet = 20
-	laser = 20
-	energy = 20
+	melee = 30
+	bullet = 30
+	laser = 30
+	energy = 30
 	bomb = 30
 	fire = 80
 	acid = 100
-	wound = 10
+	wound = 30
 
 /datum/action/item_action/toggle_nv_helmet
 	name = "Toggle Nightvision"

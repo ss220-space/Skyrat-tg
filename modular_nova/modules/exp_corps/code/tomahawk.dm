@@ -1,6 +1,6 @@
 /obj/item/melee/tomahawk
 	name = "expeditionary tomahawk"
-	desc = "A decently sharp axe blade upon a short fibremetal handle. "
+	desc = "A very sharp axe blade upon a short fibremetal handle."
 	icon = 'modular_nova/modules/exp_corps/icons/tomahawk.dmi'
 	icon_state = "tomahawk"
 	inhand_icon_state = "tomahawk"
@@ -8,9 +8,9 @@
 	righthand_file = 'modular_nova/modules/exp_corps/icons/tomahawk_r.dmi'
 	worn_icon = 'modular_nova/modules/exp_corps/icons/tomahawk_worn.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
-	force = 15 //Equivalent to a survival knife
+	force = 25
 	w_class = WEIGHT_CLASS_SMALL
-	throwforce = 18
+	throwforce = 25
 	throw_speed = 4
 	throw_range = 8
 	embed_type = /datum/embed_data/tomahawk

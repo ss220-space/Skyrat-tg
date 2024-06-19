@@ -155,6 +155,7 @@
 	var/range_flame = 0
 	/// The flash range of the resulting explosion.
 	var/range_flash = 3
+	arm_delay = 1.5 SECONDS
 
 /obj/effect/mine/explosive/mineEffect(mob/victim)
 	explosion(src, range_devastation, range_heavy, range_light, range_flame, range_flash)
