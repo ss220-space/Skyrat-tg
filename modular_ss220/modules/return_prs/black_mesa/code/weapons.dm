@@ -22,7 +22,11 @@
 
 /obj/item/shield/riot/pointman/hecu
 	name = "ballistic shield"
+<<<<<<< HEAD
+	desc = "A shield fit for those that want to sprint headfirst into the unknown! Cumbersome as hell."
+=======
 	desc = "A shield fit for those that want to sprint headfirst into the unknown! Cumbersome as hell. Repair with iron."
+>>>>>>> 6e2be405148081ed7a93dbaf5509158f92940212
 	icon_state = "ballistic"
 	icon = 'modular_ss220/modules/return_prs/black_mesa/icons/misc/ballistic.dmi'
 	worn_icon_state = "ballistic_worn"
@@ -42,11 +46,17 @@
 	transparent = TRUE
 	max_integrity = 150
 	//repairable_by = /obj/item/stack/sheet/iron //what to repair the shield with
+<<<<<<< HEAD
+	shield_break_leftover = /obj/item/ballistic_broken
+
+
+=======
 
 
 /// /obj/item/shield/riot/pointman/hecu/shatter(mob/living/carbon/human/owner)
 ///	 playsound(owner, 'sound/effects/glassbr3.ogg', 100)
 ///	 new /obj/item/ballistic_broken((get_turf(src)))
+>>>>>>> 6e2be405148081ed7a93dbaf5509158f92940212
 
 /obj/item/ballistic_broken
 	name = "broken ballistic shield"

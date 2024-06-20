@@ -66,7 +66,12 @@
 	belt = /obj/item/modular_computer/pda/security
 	l_pocket = /obj/item/sensor_device/blueshield
 	backpack_contents = list(
+<<<<<<< HEAD
+							/obj/item/storage/medkit/tactical/blueshield,
+							/obj/item/choice_beacon/blueshield = 1,
+=======
 							/obj/item/storage/medkit/tactical/blueshield
+>>>>>>> 6e2be405148081ed7a93dbaf5509158f92940212
 	)
 
 	id_trim = /datum/id_trim/job/blueshield
