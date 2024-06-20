@@ -5965,7 +5965,7 @@
 /area/awaymission/black_mesa/hecu_zone_camp)
 "eGs" = (
 /obj/structure/table,
-/obj/item/knife/combat/marksman,
+/obj/item/knife/combat/throwing,
 /turf/open/floor/iron/textured,
 /area/awaymission/black_mesa/hecu_zone_test_chambers)
 "eHg" = (
@@ -9118,7 +9118,7 @@
 "kOl" = (
 /obj/structure/table,
 /obj/item/folder/red,
-/obj/item/knife/combat/marksman,
+/obj/item/knife/combat/throwing,
 /turf/open/floor/iron/smooth,
 /area/awaymission/black_mesa/dorm_computers)
 "kPC" = (
@@ -9128,7 +9128,7 @@
 /area/awaymission/black_mesa/hecu_zone_bathroom)
 "kQc" = (
 /obj/structure/closet/crate/bin,
-/obj/item/knife/combat/marksman,
+/obj/item/knife/combat/throwing,
 /turf/open/floor/carpet/blue,
 /area/awaymission/black_mesa/high_security_hallway)
 "kQo" = (
@@ -13127,7 +13127,7 @@
 /area/awaymission/black_mesa/hecu_zone_infirmary)
 "szt" = (
 /obj/machinery/light/broken/directional/north,
-/obj/item/knife/combat/marksman,
+/obj/item/knife/combat/throwing,
 /obj/structure/table,
 /turf/open/floor/plating,
 /area/awaymission/black_mesa/equipment_room)
