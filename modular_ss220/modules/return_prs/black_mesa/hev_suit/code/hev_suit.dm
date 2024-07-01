@@ -44,6 +44,8 @@
 	visor_flags = STOPSPRESSUREDAMAGE
 	dog_fashion = null
 	slowdown = 0
+	max_heat_protection_temperature = 25000
+	min_cold_protection_temperature = 2
 
 /datum/armor/space_hev_suit
 	melee = 20
@@ -84,6 +86,8 @@
 	actions_types = list(/datum/action/item_action/hev_toggle, /datum/action/item_action/hev_toggle_notifs, /datum/action/item_action/toggle_spacesuit)
 	resistance_flags = LAVA_PROOF|FIRE_PROOF|UNACIDABLE|ACID_PROOF|INDESTRUCTIBLE|FREEZE_PROOF
 	clothing_flags = STOPSPRESSUREDAMAGE|THICKMATERIAL|SNUG_FIT|LAVAPROTECT
+	max_heat_protection_temperature = 25000
+	min_cold_protection_temperature = 2
 
 	///Whether or not the suit is activated/activating.
 	var/activated = FALSE

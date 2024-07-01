@@ -23,7 +23,7 @@
 	backpack_contents = list(/obj/item/radio,
 							/obj/item/reagent_containers/cup/beaker,
 	)
-	id = /obj/item/card/id
+	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/science_team
 
 /datum/outfit/science_team/post_equip(mob/living/carbon/human/equipped_human, visualsOnly)
@@ -68,7 +68,7 @@
 							/obj/item/ammo_box/magazine/g18,
 							/obj/item/ammo_box/magazine/g18,
 	)
-	id = /obj/item/card/id
+	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/security_guard
 
 /datum/outfit/security_guard/post_equip(mob/living/carbon/human/equipped_human, visualsOnly)
@@ -168,7 +168,7 @@
 							/obj/item/storage/medkit/emergency,
 							/obj/item/armament_points_card/hecu,
 	)
-	id = /obj/item/card/id
+	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/hecu
 
 /datum/outfit/hecu/post_equip(mob/living/carbon/human/equipped_human, visualsOnly)
@@ -226,7 +226,7 @@
 							/obj/item/book/granter/martial/cqc,
 							/obj/item/grenade/smokebomb,
 	)
-	id = /obj/item/card/id
+	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/hecu_leader
 
 /datum/outfit/hecu/leader/post_equip(mob/living/carbon/human/equipped_human, visualsOnly)
