@@ -53,20 +53,17 @@
 	ears = /obj/item/radio/headset/headset_bs/alt
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 	implants = list(/obj/item/implant/mindshield)
-	backpack_contents = list(
-		/obj/item/choice_beacon/blueshield = 1,
-	)
 	backpack = /obj/item/storage/backpack/blueshield
 	satchel = /obj/item/storage/backpack/satchel/blueshield
 	duffelbag = /obj/item/storage/backpack/duffelbag/blueshield
 	messenger = /obj/item/storage/backpack/messenger/blueshield
-
 	head = /obj/item/clothing/head/beret/blueshield
 	box = /obj/item/storage/box/survival/security
 	belt = /obj/item/modular_computer/pda/security
 	l_pocket = /obj/item/sensor_device/blueshield
 	backpack_contents = list(
-							/obj/item/storage/medkit/tactical/blueshield
+							/obj/item/storage/medkit/tactical/blueshield,
+							/obj/item/choice_beacon/blueshield = 1,
 	)
 
 	id_trim = /datum/id_trim/job/blueshield
