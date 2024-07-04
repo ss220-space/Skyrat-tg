@@ -1,3 +1,10 @@
+/datum/outfit/bitrunning/
+	name = "bitrunning monitor"
+	uniform = /obj/item/clothing/under/rank/cargo/bitrunner
+	shoes = /obj/item/clothing/shoes/sneakers/black
+	belt = /obj/item/bitrunning_host_monitor
+	id = /obj/item/card/id/advanced
+
 /datum/outfit/bitrunning/cop
 	name = "alcoholic cop"
 	neck = /obj/item/clothing/neck/tie/horrible
