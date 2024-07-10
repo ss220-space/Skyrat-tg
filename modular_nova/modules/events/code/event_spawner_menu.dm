@@ -12,7 +12,7 @@
 	var/list/additional_equipment = list()
 	var/disappear_after_spawn = FALSE
 	var/prompt_players = FALSE
-
+	var/infinite = FALSE
 	var/show_outfit_equipment = FALSE
 
 /datum/event_spawner_instance/New(_id, template_id)
@@ -35,6 +35,7 @@
 	CES.gets_loadout = gets_loadout
 	CES.headset_override = headset_override
 	CES.flavor_text = flavor_text
+	CES.infinite = infinite
 	CES.disappear_after_spawn = disappear_after_spawn
 	CES.name = "[job_name] cryogenic sleeper"
 	if(prompt_players)
@@ -58,6 +59,7 @@
 	blocks["gender_whitelist"] = gender_whitelist.Copy()
 	blocks["ckey_whitelist"] = ckey_whitelist.Copy()
 	blocks["disappear_after_spawn"] = disappear_after_spawn
+	blocks["infinite"] = infinite
 	blocks["prompt_players"] = prompt_players
 	return json_encode(blocks)
 
@@ -77,6 +79,7 @@
 	species_whitelist = blocks["species_whitelist"]
 	gender_whitelist = blocks["gender_whitelist"]
 	ckey_whitelist = blocks["ckey_whitelist"]
+	infinite = blocks["infinite"]
 	disappear_after_spawn = blocks["disappear_after_spawn"]
 	prompt_players = blocks["prompt_players"]
 
@@ -206,6 +209,7 @@
 			dat += "<a href='?src=[REF(src)];inst_pref=remove_ckey;id=[ESI.id];ckey=[ckey]'>[ckey]</a>"
 		dat += " <- <a href='?src=[REF(src)];inst_pref=add_ckey;id=[ESI.id]'>Add</a>"
 		dat += "<BR><font color='#777777'><i>If no ckeys are in the list, then any ckey can join as this role.</i></font>"
+		dat += "<BR>Spawner can spawn infinite peoples: <a href='?src=[REF(src)];inst_pref=infinite;id=[ESI.id]'>[ESI.infinite ? "Yes" : "No"]</a>"
 		dat += "<BR>Spawner disappears after spawn: <a href='?src=[REF(src)];inst_pref=disappear_after_spawn;id=[ESI.id]'>[ESI.disappear_after_spawn ? "Yes" : "No"]</a>"
 		dat += "<BR>Prompt players when spawner created: <a href='?src=[REF(src)];inst_pref=prompt_players;id=[ESI.id]'>[ESI.prompt_players ? "Yes" : "No"]</a> <font color='#777777'><i>This will only prompt ckeys which can access the spawner.</i></font>"
 		dat += "<HR><center><a href='?src=[REF(src)];inst_pref=make_spawner;id=[ESI.id]'>Create spawner on current location</a></center>"
@@ -260,6 +264,8 @@
 				ESI.show_outfit_equipment = !ESI.show_outfit_equipment
 			if("loadout")
 				ESI.gets_loadout = !ESI.gets_loadout
+			if("infinite")
+				ESI.infinite = !ESI.infinite
 			if("disappear_after_spawn")
 				ESI.disappear_after_spawn = !ESI.disappear_after_spawn
 			if("prompt_players")
@@ -360,6 +366,7 @@
 				ESI2.gets_loadout = ESI.gets_loadout
 				ESI2.headset_override = ESI.headset_override
 				ESI2.flavor_text = ESI.flavor_text
+				ESI2.infinite = ESI.infinite
 				ESI2.disappear_after_spawn = ESI.disappear_after_spawn
 				ESI2.prompt_players = ESI.prompt_players
 
