@@ -1,3 +1,6 @@
+/// The caliber used by the Oldarms 'Mk.11.4 rifle', designed to be worse .223.
+#define CALIBER_223S ".223 Stinger"
+
 /obj/item/gun/ballistic/automatic/m16/oldarms
 	name = "\improper Mk-11.4 Rifle"
 	desc = "An old-fashioned rifle from Sol-3's bygone era. Rumor has it that it can shoot apart an entire jungle (or desert, given the time). It has \"Keep out of water\" laser-engraved on the side. Now including a free reflex sight!"
