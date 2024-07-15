@@ -47,7 +47,17 @@
 	name = "RIP shotgun slug"
 	damage = 50
 	weak_against_armour = TRUE
-	embedding = list(embed_chance=80, pain_chance=40, fall_chance=5, jostle_chance=5, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.5, pain_mult=5, rip_time=30)
+	embed_type = /datum/embed_data/shotgun_slug
+
+/datum/embed_data/shotgun_slug
+	embed_chance = 80
+	pain_chance=40
+	fall_chance=5
+	jostle_chance=5
+	ignore_throwspeed_threshold=TRUE
+	pain_stam_pct=0.5
+	pain_mult=5
+	rip_time=30
 
 /obj/item/ammo_casing/shotgun/iceblox
 	name = "Iceshot shell"

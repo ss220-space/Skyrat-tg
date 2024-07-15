@@ -168,7 +168,7 @@
 	ricochet_decay_damage = 0.7
 	shrapnel_type = null
 	sharpness = NONE
-	embedding = null
+	embed_type = null
 	wound_bonus = -50
 
 /obj/item/ammo_casing/realistic/a762x39/civilian/hunting
@@ -214,4 +214,4 @@
 	range = 0.01
 	shrapnel_type = null
 	sharpness = NONE
-	embedding = null
+	embed_type = null
