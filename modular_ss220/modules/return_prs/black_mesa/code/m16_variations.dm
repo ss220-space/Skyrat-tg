@@ -65,4 +65,4 @@
 	ricochet_decay_damage = 0.5
 	shrapnel_type = null
 	sharpness = NONE
-	embedding = null
+	embed_type = null
