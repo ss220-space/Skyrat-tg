@@ -81,6 +81,7 @@
 	icon_state = "akm_civ"
 	max_ammo = 15
 	ammo_type = /obj/item/ammo_casing/realistic/a762x39/civilian
+	caliber = "a762x39civ"
 
 /obj/item/gun/ballistic/automatic/akm/modern
 	name = "\improper Bubba's Krinkov"

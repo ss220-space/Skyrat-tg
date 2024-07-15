@@ -141,6 +141,7 @@
 	desc = "A 5.6x40mm civilian-grade surplus bullet casing."
 	special_desc = "CIVILIAN: Non-military ammunition with a low powder load. Performs worse in every aspect in comparison to its military variant."
 	projectile_type = /obj/projectile/bullet/a762x39/civilian
+	caliber = "a762x39civ"
 
 /obj/projectile/bullet/a762x39/civilian
 	name = "5.6mm civilian bullet"

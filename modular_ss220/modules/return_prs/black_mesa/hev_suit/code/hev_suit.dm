@@ -786,7 +786,7 @@
 	flags_inv = null
 	allowed = list(/obj/item/gun, /obj/item/ammo_box,/obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/melee/energy/sword, /obj/item/restraints/handcuffs, /obj/item/tank/internals)
 	cell = /obj/item/stock_parts/power_store/cell/super
-	actions_types = list(/datum/action/item_action/hev_toggle, /datum/action/item_action/hev_toggle_notifs)
+	actions_types = list(/datum/action/item_action/hev_toggle, /datum/action/item_action/hev_toggle_notifs, /datum/action/item_action/toggle_spacesuit)
 	resistance_flags = FIRE_PROOF|ACID_PROOF|FREEZE_PROOF
 	clothing_flags = SNUG_FIT
 	show_hud = FALSE

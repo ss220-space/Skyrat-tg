@@ -13,7 +13,7 @@
 	var/flavor_text = ""
 	var/list/additional_equipment
 	var/disappear_after_spawn
-
+	var/infinite = TRUE
 	var/used = FALSE
 
 /obj/character_event_spawner/attack_ghost(mob/user)
@@ -78,9 +78,10 @@
 	if(!user || !user.client)
 		return
 	message_admins("[ADMIN_LOOKUPFLW(user)] spawned as a [job_name] by using a spawner.")
-	used = TRUE
-	icon_state = "cryopod-open"
-	name = "opened cryogenic sleeper"
+	if(!infinite)
+		used = TRUE
+		icon_state = "cryopod-open"
+		name = "opened cryogenic sleeper"
 	//Spawn and copify prefs
 	var/mob/living/carbon/human/H = new(src)
 	user.client.prefs.safe_transfer_prefs_to(H)

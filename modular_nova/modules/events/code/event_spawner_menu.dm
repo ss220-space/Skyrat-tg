@@ -12,7 +12,7 @@
 	var/list/additional_equipment = list()
 	var/disappear_after_spawn = FALSE
 	var/prompt_players = FALSE
-
+	var/infinite = FALSE
 	var/show_outfit_equipment = FALSE
 
 /datum/event_spawner_instance/New(_id, template_id)
@@ -35,6 +35,7 @@
 	CES.gets_loadout = gets_loadout
 	CES.headset_override = headset_override
 	CES.flavor_text = flavor_text
+	CES.infinite = infinite
 	CES.disappear_after_spawn = disappear_after_spawn
 	CES.name = "[job_name] cryogenic sleeper"
 	if(prompt_players)
@@ -58,6 +59,7 @@
 	blocks["gender_whitelist"] = gender_whitelist.Copy()
 	blocks["ckey_whitelist"] = ckey_whitelist.Copy()
 	blocks["disappear_after_spawn"] = disappear_after_spawn
+	blocks["infinite"] = infinite
 	blocks["prompt_players"] = prompt_players
 	return json_encode(blocks)
 
@@ -77,6 +79,7 @@
 	species_whitelist = blocks["species_whitelist"]
 	gender_whitelist = blocks["gender_whitelist"]
 	ckey_whitelist = blocks["ckey_whitelist"]
+	infinite = blocks["infinite"]
 	disappear_after_spawn = blocks["disappear_after_spawn"]
 	prompt_players = blocks["prompt_players"]
 
@@ -260,6 +263,8 @@
 				ESI.show_outfit_equipment = !ESI.show_outfit_equipment
 			if("loadout")
 				ESI.gets_loadout = !ESI.gets_loadout
+			if("infinite")
+				ESI.infinite = !ESI.infinite
 			if("disappear_after_spawn")
 				ESI.disappear_after_spawn = !ESI.disappear_after_spawn
 			if("prompt_players")
@@ -360,6 +365,7 @@
 				ESI2.gets_loadout = ESI.gets_loadout
 				ESI2.headset_override = ESI.headset_override
 				ESI2.flavor_text = ESI.flavor_text
+				ESI2.infinite = ESI.infinite
 				ESI2.disappear_after_spawn = ESI.disappear_after_spawn
 				ESI2.prompt_players = ESI.prompt_players
 
