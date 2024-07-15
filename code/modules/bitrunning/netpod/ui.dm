@@ -21,6 +21,7 @@
 
 	if(!length(cached_outfits))
 		cached_outfits += make_outfit_collection("Jobs", subtypesof(/datum/outfit/job))
+		cached_outfits += make_outfit_collection("Addon", subtypesof(/datum/outfit/bitrunning))
 
 	data["collections"] = cached_outfits
 
