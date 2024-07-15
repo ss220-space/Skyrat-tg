@@ -3679,6 +3679,7 @@
 #include "code\modules\bitrunning\abilities.dm"
 #include "code\modules\bitrunning\alerts.dm"
 #include "code\modules\bitrunning\areas.dm"
+#include "code\modules\bitrunning\bitrunoutfits.dm"
 #include "code\modules\bitrunning\designs.dm"
 #include "code\modules\bitrunning\event.dm"
 #include "code\modules\bitrunning\job.dm"
