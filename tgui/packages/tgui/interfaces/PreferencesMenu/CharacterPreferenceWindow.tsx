@@ -107,7 +107,7 @@ export const CharacterPreferenceWindow = (props) => {
     case Page.Voice:
       pageContents = <VoicePage />;
       break;
-      
+
     default:
       exhaustiveCheck(currentPage);
   }
