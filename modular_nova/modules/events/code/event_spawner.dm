@@ -13,7 +13,7 @@
 	var/flavor_text = ""
 	var/list/additional_equipment
 	var/disappear_after_spawn
-	var/infinite = TRUE
+	var/infinite = FALSE
 	var/used = FALSE
 
 /obj/character_event_spawner/attack_ghost(mob/user)
