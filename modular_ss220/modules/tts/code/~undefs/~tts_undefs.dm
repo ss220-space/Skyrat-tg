@@ -13,19 +13,6 @@
 
 #undef rustg_file_write_b64decode
 
-#undef rustg_hash_string
-#undef rustg_hash_file
-
-#undef RUSTG_HASH_MD5
-
-#ifdef RUSTG_OVERRIDE_BUILTINS
-	#undef md5
-#endif
-
-// Text Operations //
-#undef rustg_cyrillic_to_latin
-#undef rustg_latin_to_cyrillic
-
 #undef TTS_CATEGORY_OTHER
 #undef TTS_CATEGORY_WARCRAFT3
 #undef TTS_CATEGORY_HALFLIFE2
