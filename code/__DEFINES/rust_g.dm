@@ -52,6 +52,7 @@
 /// Gets the version of rust_g
 /proc/rustg_get_version() return RUSTG_CALL(RUST_G, "get_version")()
 
+// Aho-Corasick Replace //
 
 /**
  * Sets up the Aho-Corasick automaton with its default options.
@@ -95,6 +96,8 @@
  */
 #define rustg_acreplace_with_replacements(key, text, replacements) RUSTG_CALL(RUST_G, "acreplace_with_replacements")(key, text, json_encode(replacements))
 
+// Cellular Noise //
+
 /**
  * This proc generates a cellular automata noise grid which can be used in procedural generation methods.
  *
@@ -110,6 +113,8 @@
  */
 #define rustg_cnoise_generate(percentage, smoothing_iterations, birth_limit, death_limit, width, height) \
 	RUSTG_CALL(RUST_G, "cnoise_generate")(percentage, smoothing_iterations, birth_limit, death_limit, width, height)
+
+// Grid Perlin Noise //
 
 /**
  * This proc generates a grid of perlin-like noise
@@ -128,6 +133,8 @@
 	RUSTG_CALL(RUST_G, "dbp_generate")(seed, accuracy, stamp_size, world_size, lower_range, upper_range)
 
 
+// DMI Operations //
+
 #define rustg_dmi_strip_metadata(fname) RUSTG_CALL(RUST_G, "dmi_strip_metadata")(fname)
 #define rustg_dmi_create_png(path, width, height, data) RUSTG_CALL(RUST_G, "dmi_create_png")(path, width, height, data)
 #define rustg_dmi_resize_png(path, width, height, resizetype) RUSTG_CALL(RUST_G, "dmi_resize_png")(path, width, height, resizetype)
@@ -137,6 +144,8 @@
  * output: json_encode'd list. json_decode to get a flat list with icon states in the order they're in inside the .dmi
  */
 #define rustg_dmi_icon_states(fname) RUSTG_CALL(RUST_G, "dmi_icon_states")(fname)
+
+// File Operations //
 
 #define rustg_file_read(fname) RUSTG_CALL(RUST_G, "file_read")(fname)
 #define rustg_file_exists(fname) (RUSTG_CALL(RUST_G, "file_exists")(fname) == "true")
@@ -149,6 +158,8 @@
 	#define file2text(fname) rustg_file_read("[fname]")
 	#define text2file(text, fname) rustg_file_append(text, "[fname]")
 #endif
+
+// Git Operations //
 
 /// Returns the git hash of the given revision, ex. "HEAD".
 #define rustg_git_revparse(rev) RUSTG_CALL(RUST_G, "rg_git_revparse")(rev)
@@ -279,10 +290,15 @@
 #define RUSTG_JOB_NO_SUCH_JOB "NO SUCH JOB"
 #define RUSTG_JOB_ERROR "JOB PANICKED"
 
+// JSON Operations //
+
 #define rustg_json_is_valid(text) (RUSTG_CALL(RUST_G, "json_is_valid")(text) == "true")
 
+// Logging Operations //
 #define rustg_log_write(fname, text, format) RUSTG_CALL(RUST_G, "log_write")(fname, text, format)
 /proc/rustg_log_close_all() return RUSTG_CALL(RUST_G, "log_close_all")()
+
+// Noise Operations //
 
 #define rustg_noise_get_at_coordinates(seed, x, y) RUSTG_CALL(RUST_G, "noise_get_at_coordinates")(seed, x, y)
 
@@ -360,6 +376,13 @@
 #define rustg_sql_disconnect_pool(handle) RUSTG_CALL(RUST_G, "sql_disconnect_pool")(handle)
 #define rustg_sql_check_query(job_id) RUSTG_CALL(RUST_G, "sql_check_query")("[job_id]")
 
+// Text Operations //
+
+#define rustg_cyrillic_to_latin(text) RUSTG_CALL(RUST_G, "cyrillic_to_latin")("[text]")
+#define rustg_latin_to_cyrillic(text) RUSTG_CALL(RUST_G, "latin_to_cyrillic")("[text]")
+
+// Time Tracking Functions //
+
 #define rustg_time_microseconds(id) text2num(RUSTG_CALL(RUST_G, "time_microseconds")(id))
 #define rustg_time_milliseconds(id) text2num(RUSTG_CALL(RUST_G, "time_milliseconds")(id))
 #define rustg_time_reset(id) RUSTG_CALL(RUST_G, "time_reset")(id)
@@ -367,6 +390,12 @@
 /// Returns the timestamp as a string
 /proc/rustg_unix_timestamp()
 	return RUSTG_CALL(RUST_G, "unix_timestamp")()
+
+// Toast Operations //
+
+#define rustg_create_toast(title, body) RUSTG_CALL(RUST_G, "create_toast")(title, body)
+
+// TOML Operations //
 
 #define rustg_raw_read_toml_file(path) json_decode(RUSTG_CALL(RUST_G, "toml_file_to_json")(path) || "null")
 
@@ -386,6 +415,13 @@
 	else
 		CRASH(output["content"])
 
+// ZIP File Operations //
+
+#define rustg_unzip_download_async(url, unzip_directory) RUSTG_CALL(RUST_G, "unzip_download_async")(url, unzip_directory)
+#define rustg_unzip_check(job_id) RUSTG_CALL(RUST_G, "unzip_check")("[job_id]")
+
+// URL Operations //
+
 #define rustg_url_encode(text) RUSTG_CALL(RUST_G, "url_encode")("[text]")
 #define rustg_url_decode(text) RUSTG_CALL(RUST_G, "url_decode")(text)
 
@@ -393,4 +429,23 @@
 	#define url_encode(text) rustg_url_encode(text)
 	#define url_decode(text) rustg_url_decode(text)
 #endif
+
+// Worley Noise Operations //
+
+/**
+ * This proc generates a noise grid using worley noise algorithm
+ *
+ * Returns a single string that goes row by row, with values of 1 representing an alive cell, and a value of 0 representing a dead cell.
+ *
+ * Arguments:
+ * * region_size: The size of regions
+ * * threshold: the value that determines wether a cell is dead or alive
+ * * node_per_region_chance: chance of a node existiing in a region
+ * * size: size of the returned grid
+ * * node_min: minimum amount of nodes in a region (after the node_per_region_chance is applied)
+ * * node_max: maximum amount of nodes in a region
+ */
+#define rustg_worley_generate(region_size, threshold, node_per_region_chance, size, node_min, node_max) \
+	RUSTG_CALL(RUST_G, "worley_generate")(region_size, threshold, node_per_region_chance, size, node_min, node_max)
+
 
