@@ -1,6 +1,7 @@
 /obj/character_event_spawner
 	icon = 'modular_nova/modules/cryosleep/icons/cryogenics.dmi'
 	icon_state = "cryopod"
+	anchored = 1
 
 	var/list/species_whitelist
 	var/list/gender_whitelist
