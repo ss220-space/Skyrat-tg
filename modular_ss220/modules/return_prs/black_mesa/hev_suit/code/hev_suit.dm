@@ -97,6 +97,7 @@
 	clothing_flags = STOPSPRESSUREDAMAGE|THICKMATERIAL|SNUG_FIT|LAVAPROTECT
 	max_heat_protection_temperature = 25000
 	min_cold_protection_temperature = 2
+	var/radio_key = /obj/item/encryptionkey
 
 	///Whether or not the suit is activated/activating.
 	var/activated = FALSE
@@ -199,6 +200,7 @@
 /obj/item/clothing/suit/space/hev_suit/Initialize(mapload)
 	. = ..()
 	internal_radio = new(src)
+	internal_radio.keyslot = new radio_key
 	internal_radio.subspace_transmission = TRUE
 	internal_radio.canhear_range = 0 // anything greater will have the bot broadcast the channel as if it were saying it out loud.
 	internal_radio.recalculateChannels()
@@ -577,14 +579,6 @@
 			current_user.adjustStaminaLoss(-heal_amount)
 			healing_current_cooldown = world.time + health_static_cooldown * 2
 
-	if(new_oxyloss)
-		if(use_hev_power(HEV_POWERUSE_HEAL))
-			current_user.adjustOxyLoss(-heal_amount)
-			healing_current_cooldown = world.time + health_static_cooldown
-			send_message("ADRENALINE ADMINISTERED", HEV_COLOR_BLUE)
-			send_hev_sound(morphine_sound)
-		return
-
 	if(new_bruteloss)
 		if(use_hev_power(HEV_POWERUSE_HEAL))
 			current_user.adjustBruteLoss(-heal_amount)
@@ -599,6 +593,14 @@
 			healing_current_cooldown = world.time + health_static_cooldown
 			send_message("BURN MEDICAL ATTENTION ADMINISTERED", HEV_COLOR_BLUE)
 			send_hev_sound(wound_sound)
+		return
+
+	if(new_oxyloss)
+		if(use_hev_power(HEV_POWERUSE_HEAL))
+			current_user.adjustOxyLoss(-heal_amount)
+			healing_current_cooldown = world.time + health_static_cooldown
+			send_message("ADRENALINE ADMINISTERED", HEV_COLOR_BLUE)
+			send_hev_sound(morphine_sound)
 		return
 
 	if(new_toxloss)
@@ -803,6 +805,8 @@
 	resistance_flags = FIRE_PROOF|ACID_PROOF|FREEZE_PROOF
 	clothing_flags = SNUG_FIT
 	show_hud = FALSE
+	radio_key = /obj/item/encryptionkey/headset_faction
+	radio_channel = RADIO_CHANNEL_FACTION
 	uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Basic" = list(
