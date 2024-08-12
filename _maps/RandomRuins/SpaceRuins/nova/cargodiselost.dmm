@@ -2686,16 +2686,6 @@
 "NV" = (
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/space/has_grav/cargodise_freighter/quarters)
-"NY" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
-/obj/machinery/door/poddoor{
-	id = "freighterwlockdown"
-	},
-/obj/machinery/door/poddoor{
-	id = "freighterwlockdown"
-	},
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/cargodise_freighter/bridge)
 "NZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -5943,7 +5933,7 @@ Gh
 Gh
 Zk
 ux
-NY
+ux
 ux
 ux
 ux
