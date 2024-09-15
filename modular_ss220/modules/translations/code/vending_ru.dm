@@ -3,7 +3,7 @@
 	vend_reply = "Спасибо, что выбрали наши детали!"
 
 /obj/machinery/vending/autodrobe
-	product_slogans = "Самая лучшая ткань на станции!;Одетый и обутый!;Зачем ты носить эту безвкусицу? Закупись в AutoDrobe!"
+	product_slogans = "Дрип – важная часть вашего экстерьера!;Одетый и конечно обутый!;Ну и зачем носить этакую безвкусицу? AutoDrobe – скрасит ваш вид!"
 	vend_reply = "Носите на здоровье!"
 
 /obj/machinery/vending/boozeomat
