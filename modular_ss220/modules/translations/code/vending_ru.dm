@@ -104,7 +104,8 @@
 	vend_reply = "Нравится твой новый стиль?"
 
 /obj/machinery/vending/deforest_medvend
-	product_slogans = "Медицинский уход за разумные цены!;DeForest не несёт ответственности за несчастные случаи при поставках своего товара!"
+	product_slogans = "Медицина за разумные деньги!;DeForest не несёт ответственности за несчастные случаи при использовании своего товара!"
+
 	vend_reply = "Безопасного вам дня!"
 
 /obj/machinery/vending/imported/nt
