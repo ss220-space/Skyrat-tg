@@ -100,8 +100,7 @@
 	vend_reply = "Приходите ещё!"
 
 /obj/machinery/vending/barbervend
-	product_slogans = " Покрась их в самые незабываемые цвета!"
-	product_ads = "Постриги их всех!; Слишком длинно!; Долой лишний волос!; Восхитительно!"
+	product_slogans = "Покрась их в самые незабываемые цвета!;Постриги их всех!;Слишком длинно!;Долой мохнатость!; Восхитительно!"
 	vend_reply = "Нравится твой новый стиль?"
 
 /obj/machinery/vending/deforest_medvend
