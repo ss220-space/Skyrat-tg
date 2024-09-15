@@ -5818,6 +5818,16 @@
 	planetary_atmos = 1
 	},
 /area/awaymission/black_mesa/lambda_teleporter)
+"eoL" = (
+/obj/machinery/button/door/directional/south{
+	id = "chemiguess";
+	name = "Science Lockdown";
+	normaldoorcontrol = 1;
+	pixel_y = -37;
+	specialfunctions = 4
+	},
+/turf/open/floor/iron/dark,
+/area/awaymission/black_mesa/science_labs)
 "eoM" = (
 /obj/structure/chair/sofa/corp{
 	dir = 1
@@ -15968,7 +15978,7 @@
 /area/awaymission/black_mesa/black_ops_button)
 "xZR" = (
 /obj/structure/fluff/bus/passable{
-	icon_state = "bottomdoor";
+	icon_state = "bottomdoor"
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/awaymission/black_mesa/black_ops_bus)
@@ -76333,7 +76343,7 @@ eKW
 rbu
 rbu
 bEa
-rfj
+eoL
 rbu
 lgz
 fgR
