@@ -42,7 +42,7 @@
 
 /obj/item/gun/ballistic/automatic/cmg/click_ctrl(mob/user)
 	if((!user.is_holding(src)) || (item_flags & IN_STORAGE))
-		return
+		return CLICK_ACTION_BLOCKING
 	toggle_stock(user)
 
 /obj/item/gun/ballistic/automatic/cmg/proc/toggle_stock(mob/user, var/forced)
