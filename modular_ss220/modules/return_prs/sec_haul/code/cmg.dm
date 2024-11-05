@@ -1,4 +1,4 @@
-/**
+0/**
  * The CMG-2.
  *
  * It sure does exist. Comes with a projectile damage malus for some sense of parity with the old 9mm Peacekeeper round.
@@ -48,10 +48,8 @@
 	. = ..()
 	. += span_notice("<b>Ctrl-click</b> to [folded ? "extend" : "collapse"] the stock.")
 
-/obj/item/gun/ballistic/automatic/cmg/proc/click_ctrl(mob/user)
-	if(!user.is_holding(src))
-		return
-	if(item_flags & IN_STORAGE)
+/obj/item/gun/ballistic/automatic/cmg/click_ctrl(mob/user)
+	if((!user.is_holding(src)) || (item_flags & IN_STORAGE))
 		return
 	toggle_stock(user)
 
