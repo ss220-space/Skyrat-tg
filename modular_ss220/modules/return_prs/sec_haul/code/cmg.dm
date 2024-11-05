@@ -49,11 +49,10 @@
 	. += span_notice("<b>Ctrl-click</b> to [folded ? "extend" : "collapse"] the stock.")
 
 /obj/item/gun/ballistic/automatic/cmg/click_ctrl(mob/user)
-	. = ..()
 	if(!user.is_holding(src))
-		return // fuckin around w/ a collapsible stock without hands is Suboptimal
-	if(item_flags & IN_STORAGE)
-		return // if you could unfold it while it's stowed away that'd defeat the purpose
+		return
+	elif(item_flags & IN_STORAGE)
+		return
 	toggle_stock(user)
 
 /obj/item/gun/ballistic/automatic/cmg/proc/toggle_stock(mob/user, var/forced)
