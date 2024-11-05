@@ -40,7 +40,7 @@
 	. = ..()
 	. += span_notice("<b>Ctrl-click</b> to [folded ? "extend" : "collapse"] the stock.")
 
-/obj/item/gun/ballistic/automatic/cmg/click_ctrl(mob/user)
+/obj/item/gun/ballistic/automatic/cmg/proc/item_ctrl_click(mob/user)
 	if((!user.is_holding(src)) || (item_flags & IN_STORAGE))
 		return CLICK_ACTION_BLOCKING
 	toggle_stock(user)
