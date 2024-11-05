@@ -1,11 +1,3 @@
-0/**
- * The CMG-2.
- *
- * It sure does exist. Comes with a projectile damage malus for some sense of parity with the old 9mm Peacekeeper round.
- * Supposed to fill the niche of being a sidearm, apparently? But it's a longarm, but it also fires 9mm and has a damage malus
- * (slightly buffed from the usual 9mm PK -> 9x25mm + 0.5x damage multiplier).
- */
-
 /obj/item/gun/ballistic/automatic/cmg
 	name = "\improper NT CMG-2 PDW"
 	desc = "A bullpup, two-round burst PDW chambered in 9x25mm, developed by Nanotrasen R&D and based on a licensed Scarborough Arms design. \
