@@ -8840,6 +8840,7 @@
 #include "modular_ss220\modules\return_prs\gunsgalore\code\guns\scar.dm"
 #include "modular_ss220\modules\return_prs\gunsgalore\code\guns\stg.dm"
 #include "modular_ss220\modules\shutdown\shutdown_config.dm"
+#include "modular_ss220\modules\syndicate_teleporter_return\syndicate_teleporter_return.dm"
 #include "modular_ss220\modules\translations\code\customer_ru.dm"
 #include "modular_ss220\modules\tts\code\_tts_defines.dm"
 #include "modular_ss220\modules\tts\code\tts_configuration.dm"
