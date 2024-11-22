@@ -1,0 +1,8 @@
+#ifndef EVENT_EXAMPLE
+#define EVENT_EXAMPLE
+
+#include "event_example.dm"
+
+#include "code\m_crayon.dm"
+
+#endif

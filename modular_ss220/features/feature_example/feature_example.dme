@@ -1,0 +1,6 @@
+#ifndef FEATURE_EXAMPLE
+#define FEATURE_EXAMPLE
+
+#include "feature_example.dm"
+
+#endif
