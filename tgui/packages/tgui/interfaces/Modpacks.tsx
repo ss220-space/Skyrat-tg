@@ -1,18 +1,16 @@
-// THIS IS A MASSMETA UI FILE
+// THIS IS NOVARAT TGUI ADDITION
 
 import { useState } from 'react';
 
-import { useBackend, useLocalState } from '../backend';
+import { useBackend } from '../backend';
 import {
   Box,
-  Collapsible,
+  Button,
   Input,
   LabeledList,
   NoticeBox,
   Section,
   Stack,
-  Table,
-  Tabs,
 } from '../components';
 import { Window } from '../layouts';
 
@@ -29,333 +27,201 @@ type Modpack = {
   author: string;
   icon_class: string;
   id: string;
+  updates?: ModpackUpdate[];
+};
+
+type ModpackUpdate = {
+  version: string;
+  description: string;
+  date: string;
 };
 
 export const Modpacks = (props) => {
   const { data } = useBackend<Data>();
-  const { categories } = data;
+  const { categories, features, event, misc } = data;
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [selectedModpack, setSelectedModpack] = useState<Modpack | null>(null);
+  const [searchText, setSearchText] = useState('');
+
+  const getCategoryModpacks = () => {
+    switch (selectedCategory) {
+      case 'Features':
+        return features;
+      case 'Event':
+        return event;
+      case 'Misc':
+        return misc;
+      default:
+        return [];
+    }
+  };
+
+  const filteredModpacks = getCategoryModpacks().filter(
+    (modpack) =>
+      modpack.name &&
+      (searchText.length === 0 ||
+        modpack.name.toLowerCase().includes(searchText.toLowerCase()) ||
+        modpack.desc.toLowerCase().includes(searchText.toLowerCase()) ||
+        modpack.author.toLowerCase().includes(searchText.toLowerCase())),
+  );
+
   return (
-    <Window title="Список модификаций" width={480} height={580}>
+    <Window title="Список модификаций" width={900} height={600}>
       <Window.Content>
-        <NoticeBox>
-          В данный момент идёт наполнение меню модпаков, в игре модицикаций
-          больше чем вы можете тут видеть.
-        </NoticeBox>
-        <Tabs>
-          <Tabs.Tab
-            selected={selectedCategory === 'Features'}
-            onClick={() => setSelectedCategory('Features')}
-          >
-            Фичи и Приколы
-          </Tabs.Tab>
-          <Tabs.Tab
-            selected={selectedCategory === 'Event'}
-            onClick={() => setSelectedCategory('Event')}
-          >
-            Ивентовое
-          </Tabs.Tab>
-          <Tabs.Tab
-            selected={selectedCategory === 'Misc'}
-            onClick={() => setSelectedCategory('Misc')}
-          >
-            Разное
-          </Tabs.Tab>
-        </Tabs>
-        {(selectedCategory === 'Features' && <FeaturesTable />) ||
-          (selectedCategory === 'Event' && <EventTable />) ||
-          (selectedCategory === 'Misc' && <MiscTable />)}
+        <Stack fill>
+          {/* Left Column - Categories */}
+          <Stack.Item basis="20%">
+            <Section title="Категории" fill scrollable>
+              <Stack vertical>
+                {categories.map((category) => (
+                  <Stack.Item key={category}>
+                    <Button
+                      fluid
+                      selected={selectedCategory === category}
+                      onClick={() => {
+                        setSelectedCategory(category);
+                        setSelectedModpack(null);
+                      }}
+                    >
+                      {category === 'Features'
+                        ? 'Фичи и приколы'
+                        : category === 'Event'
+                          ? 'Ивентовое'
+                          : 'Разное (фиксы и удалённое)'}
+                    </Button>
+                  </Stack.Item>
+                ))}
+              </Stack>
+            </Section>
+          </Stack.Item>
+
+          {/* Middle Column - Modpack List */}
+          <Stack.Item basis="40%">
+            <Section
+              title={`${
+                selectedCategory === 'Features'
+                  ? 'Фичи и приколы'
+                  : selectedCategory === 'Event'
+                    ? 'Ивентовое'
+                    : 'Разное'
+              }`}
+              fill
+              scrollable
+            >
+              <Stack vertical>
+                <Stack.Item>
+                  <Input
+                    fluid
+                    placeholder="Искать модпак..."
+                    onInput={(e, value) => setSearchText(value)}
+                    mb={1}
+                  />
+                </Stack.Item>
+                {filteredModpacks.length === 0 ? (
+                  <NoticeBox>Модпаки не найдено</NoticeBox>
+                ) : (
+                  filteredModpacks.map((modpack) => (
+                    <Stack.Item key={modpack.id}>
+                      <Button
+                        fluid
+                        selected={selectedModpack?.id === modpack.id}
+                        onClick={() => setSelectedModpack(modpack)}
+                        style={{
+                          backgroundColor:
+                            selectedModpack?.id === modpack.id
+                              ? '#40628a'
+                              : '#2a2a2a',
+                        }}
+                      >
+                        <Stack align="center" fill>
+                          <Stack.Item>
+                            <Box className={modpack.icon_class} />
+                          </Stack.Item>
+                          <Stack.Item
+                            grow
+                            ml={1}
+                            color="white"
+                            style={{
+                              whiteSpace: 'nowrap',
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                            }}
+                          >
+                            {modpack.name}
+                          </Stack.Item>
+                        </Stack>
+                      </Button>
+                    </Stack.Item>
+                  ))
+                )}
+              </Stack>
+            </Section>
+          </Stack.Item>
+
+          {/* Right Column - Modpack Details */}
+          <Stack.Item basis="40%">
+            <Section
+              title={selectedModpack ? 'Детали модпака' : 'Выберете модпак'}
+              fill
+              scrollable
+            >
+              {selectedModpack ? (
+                <Stack vertical>
+                  <Stack.Item>
+                    <Box textAlign="center" mb={2} fontSize="16px" color="good">
+                      {selectedModpack.name}
+                    </Box>
+                  </Stack.Item>
+                  <Stack.Item>
+                    <LabeledList>
+                      <LabeledList.Item label="Описание">
+                        {selectedModpack.desc}
+                      </LabeledList.Item>
+                      <LabeledList.Item label="Автор">
+                        {selectedModpack.author}
+                      </LabeledList.Item>
+                    </LabeledList>
+                  </Stack.Item>
+                  <Stack.Item>
+                    <Box mt={2}>
+                      <Box bold mb={1}>
+                        История обновлений:
+                      </Box>
+                      {selectedModpack.updates &&
+                      selectedModpack.updates.length > 0 ? (
+                        selectedModpack.updates.map((update) => (
+                          <Box
+                            key={`${selectedModpack.id}-${update.version}`}
+                            className="candystripe"
+                            p={1}
+                            mb={1}
+                          >
+                            <Box bold>Версия {update.version}</Box>
+                            <Box>{update.description}</Box>
+                            <Box opacity={0.7} fontSize="12px">
+                              {update.date}
+                            </Box>
+                          </Box>
+                        ))
+                      ) : (
+                        <NoticeBox>
+                          История обновлений отсутствует для этого модпака
+                        </NoticeBox>
+                      )}
+                    </Box>
+                  </Stack.Item>
+                </Stack>
+              ) : (
+                <Box textAlign="center" opacity={0.5}>
+                  Выберете модпак из списка для просмотра деталей
+                </Box>
+              )}
+            </Section>
+          </Stack.Item>
+        </Stack>
       </Window.Content>
     </Window>
   );
 };
 
-const FeaturesTable = () => {
-  const { data } = useBackend<Data>();
-  const { features } = data;
-
-  const [searchText, setSearchText] = useLocalState('searchText', '');
-
-  const searchBar = (
-    <Input
-      placeholder="Искать модпак-фичу..."
-      fluid
-      onInput={(e, value) => setSearchText(value)}
-    />
-  );
-
-  if (features.length === 0) {
-    return (
-      <NoticeBox>
-        Этот сервер не использует какие-либо прикольные Фичи
-      </NoticeBox>
-    );
-  }
-
-  return (
-    <Stack fill vertical>
-      <Stack.Item>
-        <Section fill>{searchBar}</Section>
-      </Stack.Item>
-      <Stack.Item grow>
-        <Section
-          fill
-          scrollable
-          title={
-            searchText.length > 0 ? (
-              <span>Результаты поиска "{searchText}":</span>
-            ) : (
-              <span>Суммарно модификации &mdash; {features.length}</span>
-            )
-          }
-        >
-          <Stack fill vertical>
-            <Stack.Item>
-              {features
-                .filter(
-                  (feature) =>
-                    feature.name &&
-                    (searchText.length > 0
-                      ? feature.name
-                          .toLowerCase()
-                          .includes(searchText.toLowerCase()) ||
-                        feature.desc
-                          .toLowerCase()
-                          .includes(searchText.toLowerCase()) ||
-                        feature.author
-                          .toLowerCase()
-                          .includes(searchText.toLowerCase())
-                      : true),
-                )
-                .map((feature) => (
-                  <Collapsible
-                    color="transparent"
-                    key={feature.name}
-                    title={<span className="color-white">{feature.name}</span>}
-                  >
-                    <Table.Row key={feature.name}>
-                      <Table.Cell collapsing>
-                        <Box m={1} className={feature.icon_class} />
-                      </Table.Cell>
-                      <Table.Cell verticalAlign="top">
-                        <Box
-                          key={feature.id}
-                          style={{
-                            borderBottom: '1px solid #888',
-                            paddingBottom: '10px',
-                            fontSize: '14px',
-                            textAlign: 'center',
-                          }}
-                        >
-                          <LabeledList.Item label="Описание">
-                            {feature.desc}
-                          </LabeledList.Item>
-                          <LabeledList.Item label="Автор">
-                            {feature.author}
-                          </LabeledList.Item>
-                        </Box>
-                      </Table.Cell>
-                    </Table.Row>
-                  </Collapsible>
-                ))}
-            </Stack.Item>
-          </Stack>
-        </Section>
-      </Stack.Item>
-    </Stack>
-  );
-};
-
-const EventTable = () => {
-  const { data } = useBackend<Data>();
-  const { event } = data;
-
-  const [searchText, setSearchText] = useLocalState('searchText', '');
-
-  const searchBar = (
-    <Input
-      placeholder="Искать модпак-перевод..."
-      fluid
-      onInput={(e, value) => setSearchText(value)}
-    />
-  );
-
-  if (Event.length === 0) {
-    return (
-      <NoticeBox>
-        Этот сервер не использует какие-либо переводы на Русский
-      </NoticeBox>
-    );
-  }
-
-  return (
-    <Stack fill vertical>
-      <Stack.Item>
-        <Section fill>{searchBar}</Section>
-      </Stack.Item>
-      <Stack.Item grow>
-        <Section
-          fill
-          scrollable
-          title={
-            searchText.length > 0 ? (
-              <span>Результаты поиска "{searchText}":</span>
-            ) : (
-              <span>Суммарно модификации &mdash; {Event.length}</span>
-            )
-          }
-        >
-          <Stack fill vertical>
-            <Stack.Item>
-              {event
-                .filter(
-                  (translate) =>
-                    translate.name &&
-                    (searchText.length > 0
-                      ? translate.name
-                          .toLowerCase()
-                          .includes(searchText.toLowerCase()) ||
-                        translate.desc
-                          .toLowerCase()
-                          .includes(searchText.toLowerCase()) ||
-                        translate.author
-                          .toLowerCase()
-                          .includes(searchText.toLowerCase())
-                      : true),
-                )
-                .map((translate) => (
-                  <Collapsible
-                    color="transparent"
-                    key={translate.name}
-                    title={
-                      <span className="color-white">{translate.name}</span>
-                    }
-                  >
-                    <Table.Row key={translate.name}>
-                      <Table.Cell collapsing>
-                        <Box m={1} className={translate.icon_class} />
-                      </Table.Cell>
-                      <Table.Cell verticalAlign="top">
-                        <Box
-                          key={translate.id}
-                          style={{
-                            borderBottom: '1px solid #888',
-                            paddingBottom: '10px',
-                            fontSize: '14px',
-                            textAlign: 'center',
-                          }}
-                        >
-                          <LabeledList.Item label="Описание">
-                            {translate.desc}
-                          </LabeledList.Item>
-                          <LabeledList.Item label="Автор">
-                            {translate.author}
-                          </LabeledList.Item>
-                        </Box>
-                      </Table.Cell>
-                    </Table.Row>
-                  </Collapsible>
-                ))}
-            </Stack.Item>
-          </Stack>
-        </Section>
-      </Stack.Item>
-    </Stack>
-  );
-};
-
-const MiscTable = () => {
-  const { data } = useBackend<Data>();
-  const { misc } = data;
-
-  const [searchText, setSearchText] = useLocalState('searchText', '');
-
-  const searchBar = (
-    <Input
-      placeholder="Искать модпак-скилл ишуя ТГ к*дера..."
-      fluid
-      onInput={(e, value) => setSearchText(value)}
-    />
-  );
-
-  if (misc.length === 0) {
-    return (
-      <NoticeBox>
-        Этот сервер не использует какие-либо модификации баланса или ревертов
-      </NoticeBox>
-    );
-  }
-
-  return (
-    <Stack fill vertical>
-      <Stack.Item>
-        <Section fill>{searchBar}</Section>
-      </Stack.Item>
-      <Stack.Item grow>
-        <Section
-          fill
-          scrollable
-          title={
-            searchText.length > 0 ? (
-              <span>Результаты поиска "{searchText}":</span>
-            ) : (
-              <span>Суммарно модификации &mdash; {misc.length}</span>
-            )
-          }
-        >
-          <Stack fill vertical>
-            <Stack.Item>
-              {misc
-                .filter(
-                  (revert) =>
-                    revert.name &&
-                    (searchText.length > 0
-                      ? revert.name
-                          .toLowerCase()
-                          .includes(searchText.toLowerCase()) ||
-                        revert.desc
-                          .toLowerCase()
-                          .includes(searchText.toLowerCase()) ||
-                        revert.author
-                          .toLowerCase()
-                          .includes(searchText.toLowerCase())
-                      : true),
-                )
-                .map((revert) => (
-                  <Collapsible
-                    color="transparent"
-                    key={revert.name}
-                    title={<span className="color-white">{revert.name}</span>}
-                  >
-                    <Table.Row key={revert.name}>
-                      <Table.Cell collapsing>
-                        <Box m={1} className={revert.icon_class} />
-                      </Table.Cell>
-                      <Table.Cell verticalAlign="top">
-                        <Box
-                          key={revert.id}
-                          style={{
-                            borderBottom: '1px solid #888',
-                            paddingBottom: '10px',
-                            fontSize: '14px',
-                            textAlign: 'center',
-                          }}
-                        >
-                          <LabeledList.Item label="Описание">
-                            {revert.desc}
-                          </LabeledList.Item>
-                          <LabeledList.Item label="Автор">
-                            {revert.author}
-                          </LabeledList.Item>
-                        </Box>
-                      </Table.Cell>
-                    </Table.Row>
-                  </Collapsible>
-                ))}
-            </Stack.Item>
-          </Stack>
-        </Section>
-      </Stack.Item>
-    </Stack>
-  );
-};
+export default Modpacks;

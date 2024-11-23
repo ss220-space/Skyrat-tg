@@ -11,6 +11,8 @@
 	var/author
 	/// A string with group of this modpack. Choose between "Features", "Translations" and "Reverts"
 	var/group
+	/// A group accessible only to admins.
+	var/admin_group
 	/// A list of your modpack's dependencies. If you use obj from another modpack - put it here.
 	var/list/mod_depends = list()
 
@@ -62,6 +64,7 @@
 	.["features"] = list()
 	.["event"] = list()
 	.["misc"] = list()
+	.["updates"] = list()
 
 	var/datum/asset/spritesheet/simple/assets = get_asset_datum(/datum/asset/spritesheet/simple/modpacks)
 	for(var/datum/modpack/modpack as anything in SSmodpacks.loaded_modpacks)
@@ -74,6 +77,7 @@
 			"author" = modpack.author,
 			"icon_class" = assets.icon_class_name("modpack-[modpack.id]"),
 			"id" = modpack.id,
+			"updates" = modpack.update_data,
 			)
 
 		if (modpack.group == "Фичи" || modpack.group == "Features")
