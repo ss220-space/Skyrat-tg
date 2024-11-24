@@ -10,8 +10,8 @@
 
 #include "features\feature_example\feature_example.dme"
 
-/* --EVENTS-- */
+/* --TRANSLATIONS-- */
 
-#include "events\event_example\event_example.dme"
+#include "translations\translation_example\translation_example.dme"
 
 /* --MISC-- */

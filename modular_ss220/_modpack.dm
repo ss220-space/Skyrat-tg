@@ -11,16 +11,11 @@
 	var/author
 	/// A string with group of this modpack. Choose between "Features", "Translations" and "Reverts"
 	var/group
-	/// A group accessible only to admins.
-	var/admin_group
 	/// A list of your modpack's dependencies. If you use obj from another modpack - put it here.
 	var/list/mod_depends = list()
 
-	/// Is modpack visible, (for "Events" tab ONLY)
+	/// Is modpack visible,
 	var/visible = TRUE // by default set to TRUE
-
-	/// List of updates for modpack
-	var/list/update_data = list()
 
 // Modpacks initialization steps
 /datum/modpack/proc/pre_initialize() // Basic modpack fuctions
@@ -60,15 +55,14 @@
 
 /datum/modpack/ui_static_data(mob/user)
 	. = ..()
-	.["categories"] = list("Features", "Event", "Misc")
+	.["categories"] = list("Features", "Event", "Translations")
 	.["features"] = list()
-	.["event"] = list()
-	.["misc"] = list()
-	.["updates"] = list()
+	.["translations"] = list()
+	.["reverts"] = list()
 
 	var/datum/asset/spritesheet/simple/assets = get_asset_datum(/datum/asset/spritesheet/simple/modpacks)
 	for(var/datum/modpack/modpack as anything in SSmodpacks.loaded_modpacks)
-		if (!modpack.visible) // Временное решение (в будущем будет переписано для категории "Ивентовое")
+		if (!modpack.visible) // needed for examples (or for some kind of event)
 			continue
 
 		var/list/modpack_data = list(
@@ -77,14 +71,13 @@
 			"author" = modpack.author,
 			"icon_class" = assets.icon_class_name("modpack-[modpack.id]"),
 			"id" = modpack.id,
-			"updates" = modpack.update_data,
 			)
 
 		if (modpack.group == "Фичи" || modpack.group == "Features")
 			.["features"] += list(modpack_data)
-		else if (modpack.group == "Ивентовое" || modpack.group == "Event")
-			.["event"] += list(modpack_data)
-		else if (modpack.group == "Разное" || modpack.group == "Misc")
-			.["misc"] += list(modpack_data)
+		else if (modpack.group == "Переводы" || modpack.group == "Translations")
+			.["translations"] += list(modpack_data)
+		else if (modpack.group == "Баланс" || modpack.group == "Reverts")
+			.["reverts"] += list(modpack_data)
 		else
 			CRASH("Modpack [modpack.name] has bad group name or queued for deletion.")

@@ -1,4 +1,4 @@
-## Module ID: CHEBUREK_CAR
+## Module ID: FEATURES_EXAMPLE
 
 
 ### Defines:

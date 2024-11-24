@@ -1,4 +1,4 @@
-## Module ID: EVENT_EXAMPLE
+## Module ID: TRANSLATION_EXAMPLE
 
 ### Defines:
 
