@@ -9,6 +9,7 @@
 /* --FEATURE-- */
 
 #include "features\feature_example\feature_example.dme"
+#include "features\emote_panel\emote_panel.dme"
 
 /* --TRANSLATIONS-- */
 

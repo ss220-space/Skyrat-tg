@@ -5,3 +5,5 @@
 	group = "Translations"
 	desc = "Пример модпака для перевода."
 	author = "К*дер"
+
+	visible = FALSE

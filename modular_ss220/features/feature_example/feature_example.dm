@@ -5,3 +5,5 @@
 	group = "Features"
 	desc = "Пример написания модпаков для фич."
 	author = "К*дер"
+
+	visible = FALSE

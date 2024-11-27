@@ -10,10 +10,9 @@
 	for(var/datum/modpack/this_modpack as anything in subtypesof(/datum/modpack))
 		var/icon = initial(this_modpack.icon)
 		var/icon_state = initial(this_modpack.id)
-		if(!icon)
-			icon = 'modular_ss220/mods_icon_placeholder.dmi'
+		if(icon == MODPACKS_SET)
 			Insert("modpack-[icon_state]", icon, icon_state=icon_placeholder)
-		else if (icon != MODPACKS_SET)
+		else
 			Insert("modpack-[icon_state]", icon, icon_state=icon_state)
 
 #undef MODPACKS_SET
