@@ -26,7 +26,7 @@
 	// IHDF: 30 * 0.5 = 15 stam
 
 	/// what sound do we play when finished adjusting the stock?
-	var/folding_sound = 'sound/weapons/batonextend.ogg'
+	var/folding_sound = 'sound/items/weapons/batonextend.ogg'
 	/// is our stock collapsed?
 	var/folded = FALSE
 	/// how long does it take to extend/collapse the stock
