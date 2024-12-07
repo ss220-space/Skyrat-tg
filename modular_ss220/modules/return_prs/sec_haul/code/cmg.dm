@@ -10,7 +10,6 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/multi_sprite/cmg
 	fire_delay = 2
 	burst_size = 2
-	actions_types = list()
 	pin = /obj/item/firing_pin/implant/mindshield
 	mag_display = TRUE
 	mag_display_ammo = TRUE
