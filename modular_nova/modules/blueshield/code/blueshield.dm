@@ -88,12 +88,13 @@
 	name ="modified hellfire laser gun"
 	desc = "A lightly overtuned version of NT's Hellfire Laser rifle, scratches showing its age and the fact it has definitely been owned before. This one is more energy efficient without sacrificing damage."
 	icon_state = "hellgun"
+	pin = /obj/item/firing_pin/implant/mindshield
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/hellfire/blueshield)
 
 /obj/item/choice_beacon/blueshield
 	name = "gunset beacon"
 	desc = "A single use beacon to deliver a gunset of your choice. Please only call this in your office"
-	company_source = "Sol Defense Contracting"
+	company_source = "Sol and Nanotrasen collaboration in defense"
 	company_message = span_bold("Supply Pod incoming, please stand by.")
 
 /obj/item/choice_beacon/blueshield/generate_display_names()
