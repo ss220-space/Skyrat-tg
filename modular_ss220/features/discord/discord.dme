@@ -1,0 +1,10 @@
+#ifndef DISCORD
+#define DISCORD
+
+#include "discord.dm"
+
+#include "code\discord_auth.dm"
+#include "code\new_player.dm"
+#include "code\verb.dm"
+
+#endif

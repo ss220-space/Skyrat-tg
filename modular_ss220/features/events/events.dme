@@ -1,0 +1,8 @@
+#ifndef EVENTS
+#define EVENTS
+
+#include "events.dm"
+
+#include "code\round_event.dm"
+
+#endif

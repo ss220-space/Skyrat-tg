@@ -1,0 +1,8 @@
+#ifndef WORLD_TTS
+#define WORLD_TTS
+
+#include "world_tts.dm"
+
+#include "code\world_topic.dm"
+
+#endif

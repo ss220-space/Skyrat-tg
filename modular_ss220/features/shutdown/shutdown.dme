@@ -1,0 +1,8 @@
+#ifndef SHUTDOWN
+#define SHUTDOWN
+
+#include "shutdown.dm"
+
+#include "code/shutdown_config.dm"
+
+#endif

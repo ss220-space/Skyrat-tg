@@ -1,6 +1,4 @@
 // All new mod's includes here
-// Some modules can be easy excludes from code compile sequence by commenting #define you need to remove in code\__DEFINES\__meta_modpaks_includes.dm
-// Keep in mind, that module may not be only in modular folder but also embedded directly in TG code and covered with #ifdef - #endif structure
 
 #include "_assets_modpacks.dm" // modpack picture integration system
 #include "_modpack.dm" // modpack obj
@@ -10,9 +8,21 @@
 
 #include "features\feature_example\feature_example.dme"
 #include "features\emote_panel\emote_panel.dme"
+#include "features\auto_cryo\cryocool.dme"
+#include "features\cyrillic_key_fixes\cyrillic.dme"
+#include "features\discord\discord.dme"
+#include "features\events\events.dme"
+#include "features\world_tts\world_tts.dme"
+#include "features\shutdown\shutdown.dme"
+#include "features\paradise_keybindings\paradise_keybindings.dme"
+#include "features\tts\tts.dme"
+#include "features\akyla\akyla.dme"
 
 /* --TRANSLATIONS-- */
 
 #include "translations\translation_example\translation_example.dme"
+#include "translations\customer\customer.dme"
 
-/* --MISC-- */
+/* --REVERTS-- */
+
+#include "reverts\return_prs\return.dme"

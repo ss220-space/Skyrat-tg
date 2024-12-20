@@ -55,7 +55,7 @@
 
 /datum/modpack/ui_static_data(mob/user)
 	. = ..()
-	.["categories"] = list("Features", "Event", "Translations")
+	.["categories"] = list("Features", "Reverts", "Translations")
 	.["features"] = list()
 	.["translations"] = list()
 	.["reverts"] = list()
