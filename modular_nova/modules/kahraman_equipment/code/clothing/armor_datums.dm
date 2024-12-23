@@ -28,3 +28,14 @@
 	fire = 100
 	acid = ARMOR_LEVEL_MID
 	wound = WOUND_ARMOR_WEAK
+
+/datum/armor/colonist_mask
+	melee = ARMOR_LEVEL_TINY
+	bullet = ARMOR_LEVEL_TINY
+	laser = 5
+	energy = ARMOR_LEVEL_WEAK
+	bomb = ARMOR_LEVEL_MID
+	bio = 100
+	fire = 100
+	acid = ARMOR_LEVEL_MID
+	wound = WOUND_ARMOR_WEAK
