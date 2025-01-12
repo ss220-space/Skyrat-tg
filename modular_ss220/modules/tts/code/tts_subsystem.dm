@@ -288,7 +288,7 @@ SUBSYSTEM_DEF(ttsSilero)
 	if(traits & TTS_TRAIT_PITCH_WHISPER)
 		text = provider.pitch_whisper(text)
 
-	var/hash = rustg_hash_string(RUSTG_HASH_MD5, lowertext(text))
+	var/hash = rustg_hash_string(RUSTG_HASH_MD5, LOWER_TEXT(text))
 	var/filename = "sound/tts_cache/[seed.name]/[hash]"
 
 	if(fexists("[filename].ogg"))
@@ -580,7 +580,7 @@ SUBSYSTEM_DEF(ttsSilero)
 			"меде" = "м еде",
 			"кз" = "Кэ Зэ",
 		)
-	var/match = tts_replacement_list[lowertext(word)]
+	var/match = tts_replacement_list[LOWER_TEXT(word)]
 	if(match)
 		return match
 	return word
