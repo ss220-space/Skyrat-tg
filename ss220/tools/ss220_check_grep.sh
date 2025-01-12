@@ -9,4 +9,4 @@ NC="\033[0m" # No Color
 echo -e "${BLUE}Re-running grep checks, but looking in modular_ss220...${NC}"
 
 # Run the linters again, but modular skyrat code.
-sed "s|code/\*\*/\*\.dm|modular_ss220/\*\*/\*\.dm|g" <tools/ci/check_grep.sh | bash
+sed 's/code\/\*\*\/\*\*.dm/modular_ss220\/\*\*\/\*\*.dm/g' <tools/ci/check_grep.sh | bash
