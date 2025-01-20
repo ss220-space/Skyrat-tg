@@ -206,6 +206,7 @@
 	worn_icon_digi = 'modular_nova/modules/kahraman_equipment/icons/clothes/clothing_worn_digi.dmi'
 	worn_icon_teshari = 'modular_nova/modules/kahraman_equipment/icons/clothes/clothing_worn_teshari.dmi'
 	worn_icon_state = "mask"
+	armor_type = /datum/armor/colonist_mask
 	flags_inv = HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 
 /obj/item/clothing/mask/gas/atmos/frontier_colonist/Initialize(mapload)

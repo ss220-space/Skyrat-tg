@@ -1,6 +1,7 @@
 /obj/character_event_spawner
 	icon = 'modular_nova/modules/cryosleep/icons/cryogenics.dmi'
 	icon_state = "cryopod"
+	anchored = 1
 
 	var/list/species_whitelist
 	var/list/gender_whitelist
@@ -13,7 +14,7 @@
 	var/flavor_text = ""
 	var/list/additional_equipment
 	var/disappear_after_spawn
-	var/infinite = TRUE
+	var/infinite = FALSE
 	var/used = FALSE
 
 /obj/character_event_spawner/attack_ghost(mob/user)
