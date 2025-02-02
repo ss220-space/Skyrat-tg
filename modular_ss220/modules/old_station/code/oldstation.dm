@@ -137,6 +137,8 @@
 	icon = 'modular_nova/modules/cryosleep/icons/cryogenics.dmi'
 	icon_state = "cellconsole_1"
 	pixel_x = 32
+	icon_screen = null
+	icon_keyboard = null
 	circuit = /obj/item/circuitboard/computer
 
 /obj/machinery/computer/broken/acc
