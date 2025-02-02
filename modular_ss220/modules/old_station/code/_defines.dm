@@ -28,7 +28,7 @@ GLOBAL_LIST_EMPTY(safes)
 	var/owner
 
 /obj/item/paper/paperslip/corporate/fluff/safe_code/Initialize(mapload)
-	..()
+	. = ..()
 	for(var/safe in GLOB.safes)
 		var/obj/structure/safe/S = safe
 		if(owner in S.known_by)
