@@ -171,30 +171,32 @@
 	icon_state = "retro_sec"
 	worn_icon = 'modular_ss220/modules/old_station/icons/suitworn.dmi'
 	can_adjust = FALSE
+	armor_type = /datum/armor/clothing_under/retro
+
 
 /obj/item/clothing/under/retro/sec
 	desc = "A (now) retro corporate security jumpsuit."
 	name = "retro security officer's uniform"
 	icon_state = "retro_sec"
-	armor_type = /datum/armor/clothing_under/retro_sec
+	armor_type = /datum/armor/clothing_under/retro/sec
 
 /obj/item/clothing/under/retro/eng
 	desc = "A (now) retro engineering uniform and overall combo. It's coated with oil, dust, and grit."
 	name = "retro engineering uniform"
 	icon_state = "retro_eng"
-	armor_type = /datum/armor/clothing_under/retro_eng
+	armor_type = /datum/armor/clothing_under/retro/eng
 
 /obj/item/clothing/under/retro/sci
 	desc = "A (now) retro faded polo and set of distinct white slacks. What a ridiculous tie."
 	name = "retro scientist's uniform"
 	icon_state = "retro_sci"
-	armor_type = /datum/armor/clothing_under/retro_sci
+	armor_type = /datum/armor/clothing_under/retro/sci
 
 /obj/item/clothing/under/retro/med
 	desc = "A (now) retro medical uniform. The high-vis stripes are faded and unreflective."
 	name = "retro doctor's uniform"
 	icon_state = "retro_med"
-	armor_type = /datum/armor/clothing_under/retro_med
+	armor_type = /datum/armor/clothing_under/retro/med
 
 
 //damaged captains armor
