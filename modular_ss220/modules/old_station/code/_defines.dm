@@ -47,7 +47,7 @@ GLOBAL_LIST_EMPTY(safes)
 	owner = "charlie"
 
 // suits and armor datums
-/datum/armor/retro_sec
+/datum/armor/clothing_under/retro_sec
 	acid = 10
 	bio = 10
 	bomb = 0
@@ -59,7 +59,7 @@ GLOBAL_LIST_EMPTY(safes)
 	wound = 10
 	consume = 0
 
-/datum/armor/retro_eng
+/datum/armor/clothing_under/retro_eng
 	acid = 40
 	bio = 10
 	bomb = 15
@@ -71,7 +71,7 @@ GLOBAL_LIST_EMPTY(safes)
 	wound = 10
 	consume = 0
 
-/datum/armor/retro_sci
+/datum/armor/clothing_under/retro_sci
 	acid = 70
 	bio = 20
 	bomb = 5
@@ -83,7 +83,7 @@ GLOBAL_LIST_EMPTY(safes)
 	wound = 5
 	consume = 0
 
-/datum/armor/retro_med
+/datum/armor/clothing_under/retro_med
 	acid = 30
 	bio = 60
 	bomb = 0
