@@ -1,8 +1,0 @@
-#ifndef AKYLA
-#define AKYLA
-
-#include "akyla.dm"
-
-#include "code/tooth.dm"
-
-#endif

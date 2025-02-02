@@ -88,15 +88,6 @@
 	. = ..()
 	if(owner.stat != CONSCIOUS || !prob(0.1))
 		return
-
-	// SS1984 ADDITION START
-	if(owner.dna.species == /datum/species/akula)
-		owner.emote("cough")
-		var/turf/tooth_fairy = get_turf(owner)
-		if(tooth_fairy)
-			new /obj/item/knife/carp/akula(tooth_fairy)
-	// SS1984 ADDITION END
-
 	owner.emote("cough")
 	var/turf/tooth_fairy = get_turf(owner)
 	if(tooth_fairy)
