@@ -29,10 +29,6 @@ GLOBAL_LIST_EMPTY(safes)
 
 /obj/item/paper/paperslip/corporate/fluff/safe_code/Initialize(mapload)
 	..()
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/item/paper/paperslip/corporate/fluff/safe_code/LateInitialize(mapload)
-	. = ..()
 	for(var/safe in GLOB.safes)
 		var/obj/structure/safe/S = safe
 		if(owner in S.known_by)
