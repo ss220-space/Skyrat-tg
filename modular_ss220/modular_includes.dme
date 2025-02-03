@@ -16,7 +16,6 @@
 #include "features\shutdown\shutdown.dme"
 #include "features\paradise_keybindings\paradise_keybindings.dme"
 #include "features\tts\tts.dme"
-#include "features\akyla\akyla.dme"
 
 /* --TRANSLATIONS-- */
 
