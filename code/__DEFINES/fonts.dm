@@ -14,8 +14,7 @@
 
 /// Emoji icon set
 #define EMOJI_SET 'modular_ss220/features/emote_panel/icons/emoji.dmi' // SKYRAT EDIT - ORIGINAL: 'icons/ui_icons/emoji/emoji.dmi'
-// ex666 edit - skyrat: modular_skyrat/master_files/icons/emoji.dmi
-// SS1984 EDIT - real: modular_ss220\features\emote_panel\icons\emoji.dmi
+// SS1984 EDIT - skyrat original: modular_skyrat/master_files/icons/emoji.dmi
 
 // Font metrics bitfield
 /// Include leading A width and trailing C width in GetWidth() or in DrawText()

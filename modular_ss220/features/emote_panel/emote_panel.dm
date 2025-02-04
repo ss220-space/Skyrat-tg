@@ -2,5 +2,5 @@
 	id = "emote_panel"
 	name = "Панель с эмоутами"
 	group = "Features"
-	desc = "Добавляет вкладку с эмоутами"
-	author = "К*дер"
+	desc = "Вкладка с эмоциями по умолчанию включена в настройках игрока."
+	author = "larentoun и Bizzonium"

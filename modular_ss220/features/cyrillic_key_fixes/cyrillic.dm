@@ -3,4 +3,4 @@
 	name = "Фикс букв"
 	group = "Features"
 	desc = "Фиксит использование не английских букв."
-	author = "К*дер"
+	author = "Vallat и lebedev"

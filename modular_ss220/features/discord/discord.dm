@@ -2,5 +2,5 @@
 	id = "discord"
 	name = "Дискорд"
 	group = "Features"
-	desc = "Аутх через дискорд."
-	author = "К*дер"
+	desc = "Принудительная аутентификация Byond-аккаунта через дискорд для игры на сервере."
+	author = "Dimach и Bizzonium"

@@ -1,6 +1,6 @@
 /datum/modpack/events
 	id = "events"
-	name = "Ивенты"
+	name = "Изменения существующих ивентов"
 	group = "Features"
-	desc = "Изменяет некоторые ивенты."
-	author = "К*дер"
+	desc = "Изменяет поведение ивентов (\"Всплеск мощности Суперматерии\" и \"Плесень\")."
+	author = "Dimach и Bizzonium"

@@ -1,6 +1,6 @@
 /datum/modpack/tts
 	id = "tts"
-	name = "TTS"
+	name = "TTS озвучка станции 13"
 	group = "Features"
-	desc = "Озвучка станции 13."
+	desc = "Дает возможность выбрать уникальный голос для вашего персонажа."
 	author = "К*дер"
