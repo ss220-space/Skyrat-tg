@@ -1,0 +1,9 @@
+#ifndef AUTO_CRYO
+#define AUTO_CRYO
+
+#include "cryocool.dm"
+
+#include "code/autocryo.dm"
+#include "code/autocryo_config.dm"
+
+#endif

@@ -1,0 +1,8 @@
+#ifndef CUSTOMER_RU
+#define CUSTOMER_RU
+
+#include "customer.dm"
+
+#include "code/customer_ru.dm"
+
+#endif

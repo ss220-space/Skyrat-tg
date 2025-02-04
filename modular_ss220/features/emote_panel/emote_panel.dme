@@ -1,0 +1,8 @@
+#ifndef EMOTE_PANEL
+#define EMOTE_PANEL
+
+#include "emote_panel.dm"
+
+#include "code\m_emote_panel.dm"
+
+#endif

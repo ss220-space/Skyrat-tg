@@ -1,0 +1,26 @@
+// All new mod's includes here
+
+#include "_assets_modpacks.dm" // modpack picture integration system
+#include "_modpack.dm" // modpack obj
+#include "_modpacks_subsystem.dm" // actually mods subsystem + tgui in "tgui/packages/tgui/interfaces/Modpacks.tsx"
+
+/* --FEATURE-- */
+
+#include "features\feature_example\feature_example.dme"
+#include "features\emote_panel\emote_panel.dme"
+#include "features\auto_cryo\cryocool.dme"
+#include "features\cyrillic_key_fixes\cyrillic.dme"
+#include "features\discord\discord.dme"
+#include "features\events\events.dme"
+#include "features\shutdown\shutdown.dme"
+#include "features\paradise_keybindings\paradise_keybindings.dme"
+#include "features\tts\tts.dme"
+
+/* --TRANSLATIONS-- */
+
+#include "translations\translation_example\translation_example.dme"
+#include "translations\customer\customer.dme"
+
+/* --REVERTS-- */
+
+#include "reverts\return_prs\return.dme"

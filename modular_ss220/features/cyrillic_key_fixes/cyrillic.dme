@@ -1,0 +1,11 @@
+#ifndef CYRILLIC_KEY_FIXES
+#define CYRILLIC_KEY_FIXES
+
+#include "cyrillic.dm"
+
+#include "code\client_procs.dm"
+#include "code\communication.dm"
+#include "code\keybindings.dm"
+#include "code\text.dm"
+
+#endif

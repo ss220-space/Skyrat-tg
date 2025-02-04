@@ -1,0 +1,17 @@
+#ifndef PARADISE_KEYBINDINGS
+#define PARADISE_KEYBINDINGS
+
+#include "paradise_keybindings.dm"
+
+#include "code\keybinding\admin.dm"
+#include "code\keybinding\artificial_intelligence.dm"
+#include "code\keybinding\carbon.dm"
+#include "code\keybinding\client.dm"
+#include "code\keybinding\communication.dm"
+#include "code\keybinding\human.dm"
+#include "code\keybinding\living.dm"
+#include "code\keybinding\mob.dm"
+#include "code\keybinding\movement.dm"
+#include "code\keybinding\robot.dm"
+
+#endif

@@ -1,0 +1,43 @@
+#ifndef TTS
+#define TTS
+
+#include "tts.dm"
+
+// define
+#include "code\_tts_defines.dm"
+
+// base_seeds >> mobs
+#include "code\base_seeds\mobs\_base.dm"
+#include "code\base_seeds\mobs\alien.dm"
+#include "code\base_seeds\mobs\friendly.dm"
+#include "code\base_seeds\mobs\guardian.dm"
+#include "code\base_seeds\mobs\hostile.dm"
+#include "code\base_seeds\mobs\lavaland.dm"
+#include "code\base_seeds\mobs\other.dm"
+#include "code\base_seeds\mobs\pets.dm"
+
+// base_seeds >> objs
+#include "code\base_seeds\objs\objs.dm"
+
+// providers
+#include "code\providers\silero.dm"
+
+// seeds
+#include "code\seeds\silero.dm"
+
+// code
+#include "code\tts_configuration.dm"
+#include "code\tts_mob_Hear.dm"
+#include "code\tts_numbers.dm"
+#include "code\tts_preferences.dm"
+#include "code\tts_provider.dm"
+#include "code\tts_seed.dm"
+#include "code\tts_sound_TEMPORARY.dm"
+#include "code\tts_sound.dm"
+#include "code\tts_subsystem.dm"
+#include "code\world_topic.dm"
+
+// ~undefs
+#include "code\~undefs\~tts_undefs.dm"
+
+#endif

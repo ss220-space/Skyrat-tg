@@ -1,0 +1,8 @@
+#ifndef TRANSLATION_EXAMPLE
+#define TRANSLATION_EXAMPLE
+
+#include "translation_example.dm"
+
+#include "code\m_crayon.dm"
+
+#endif
