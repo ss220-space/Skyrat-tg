@@ -384,6 +384,16 @@
 
 //Lost Space Truckers: Six people stranded in deep space aboard a cargo freighter. They must survive their marooning and cooperate.
 
+//HEADSETS//
+/obj/item/radio/headset/headset_frontier_colonist/cargodise
+	name = "Freight Crew radio headset"
+	keyslot = /obj/item/encryptionkey/headset_mining
+
+/obj/item/radio/headset/headset_frontier_colonist/cargodise/qm
+	name = "Freight Chief radio headset"
+	keyslot2 = /obj/item/encryptionkey/headset_com
+	command = TRUE
+
 /obj/effect/mob_spawn/ghost_role/human/lostcargo
 	name = "freighter cryo crew pod"
 	prompt_name = "a lost cargo tech"
@@ -405,6 +415,7 @@
 	name = "Freighter Crew"
 	uniform = /obj/item/clothing/under/rank/cargo/tech/nova/casualman
 	shoes = /obj/item/clothing/shoes/workboots
+	ears = /obj/item/radio/headset/headset_frontier_colonist/cargodise
 	back = /obj/item/storage/backpack
 	id = /obj/item/card/id/away/freightcrew
 
@@ -439,6 +450,7 @@
 	name = "Freighter Excavator"
 	uniform = /obj/item/clothing/under/rank/cargo/tech/nova/gorka
 	shoes = /obj/item/clothing/shoes/workboots/mining
+	ears = /obj/item/radio/headset/headset_frontier_colonist/cargodise
 	back = /obj/item/storage/backpack
 	backpack_contents = list(/obj/item/flashlight/seclite=1,\
 		/obj/item/knife/combat/survival=1,
@@ -481,6 +493,7 @@
 	name = "Freighter Boss"
 	uniform = /obj/item/clothing/under/rank/cargo/tech/nova/turtleneck
 	shoes = /obj/item/clothing/shoes/workboots
+	ears = /obj/item/radio/headset/headset_frontier_colonist/cargodise/qm
 	neck = /obj/item/clothing/neck/cloak/qm
 	back = /obj/item/storage/backpack
 	backpack_contents = list(

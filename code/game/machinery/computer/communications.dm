@@ -33,6 +33,12 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 	/// Whether syndicate mode is enabled or not.
 	var/syndicate = FALSE
 
+	/// Whether away mode is enabled or not.
+	var/away = FALSE
+
+	/// Whether 911 can be called or not.
+	var/can_call_911 = TRUE
+
 	/// The current state of the UI
 	var/state = STATE_MAIN
 
@@ -190,7 +196,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 			message.answered = answer_index
 			message.answer_callback.InvokeAsync()
 		if ("callShuttle")
-			if (!authenticated(user) || syndicate)
+			if (!authenticated(user) || syndicate || away)
 				return
 			var/reason = trim(params["reason"], MAX_MESSAGE_LEN)
 			if (length(reason) < CALL_SHUTTLE_REASON_LENGTH)
@@ -239,7 +245,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				return
 			LAZYREMOVE(messages, LAZYACCESS(messages, message_index))
 		if ("makePriorityAnnouncement")
-			if (!authenticated_as_silicon_or_captain(user) && !syndicate)
+			if (!authenticated_as_silicon_or_captain(user) && !syndicate && !away)
 				return
 			make_announcement(user)
 		if ("messageAssociates")
@@ -258,6 +264,9 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 			else if(syndicate)
 				message_syndicate(message, user)
 				to_chat(user, span_danger("Message transmitted to Syndicate Command."))
+			else if(away)
+				message_centcom(message, user)
+				to_chat(user, span_danger("Message transmitted to Nanotrasen Navy."))
 			else
 				message_centcom(message, user)
 				to_chat(user, span_notice("Message transmitted to Central Command."))
@@ -301,10 +310,12 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 			state = STATE_MAIN
 		if ("recallShuttle")
 			// AIs cannot recall the shuttle
-			if (!authenticated(user) || HAS_SILICON_ACCESS(user) || syndicate)
+			if (!authenticated(user) || HAS_SILICON_ACCESS(user) || syndicate || away)
 				return
 			SSshuttle.cancelEvac(user)
 		if ("requestNukeCodes")
+			if (away)
+				return
 			if (!authenticated_as_non_silicon_captain(user))
 				return
 			if (!COOLDOWN_FINISHED(src, important_action_cooldown))
@@ -449,7 +460,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				to_chat(user, span_warning("The safe code has already been requested and is being delivered to your station!"))
 				return
 
-			if(SSjob.safe_code_requested)
+			if(SSjob.safe_code_requested || away)
 				to_chat(user, span_warning("The safe code has already been requested and delivered to your station!"))
 				return
 
@@ -465,18 +476,30 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 			minor_announce("Due to staff shortages, your station has been approved for delivery of access codes to secure the Captain's Spare ID. Delivery via drop pod at [get_area(pod_location)]. ETA 120 seconds.")
 		// NOVA EDIT ADDITION START
 		if ("callThePolice")
+			if(!can_call_911)
+				to_chat(user, span_warning("Error, unable to contact emergency response team!"))
+				return
 			if(!pre_911_check(usr))
 				return
 			calling_911(usr, "Marshals", EMERGENCY_RESPONSE_POLICE)
 		if ("callTheCatmos")
+			if(!can_call_911)
+				to_chat(user, span_warning("Error, unable to contact emergency response team!"))
+				return
 			if(!pre_911_check(usr))
 				return
 			calling_911(usr, "Advanced Atmospherics", EMERGENCY_RESPONSE_ATMOS)
 		if ("callTheParameds")
+			if(!can_call_911)
+				to_chat(user, span_warning("Error, unable to contact emergency response team!"))
+				return
 			if(!pre_911_check(usr))
 				return
 			calling_911(usr, "EMTs", EMERGENCY_RESPONSE_EMT)
 		if("callThePizza")
+			if(!can_call_911)
+				to_chat(user, span_warning("Error, unable to contact emergency response team!"))
+				return
 			if(!(obj_flags & EMAGGED))
 				return
 			if(!pre_911_check(usr))
@@ -593,7 +616,13 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				data["authorizeName"] = authorize_name
 				data["canLogOut"] = !HAS_SILICON_ACCESS(user)
 				data["shuttleCanEvacOrFailReason"] = SSshuttle.canEvac()
-				if(syndicate)
+				if(away)
+					data["away"] = TRUE
+					data["canMessageAssociates"] = TRUE
+					data["canRequestNuke"] = FALSE
+				if(!away)
+					data["away"] = FALSE
+				if(syndicate||away)
 					data["shuttleCanEvacOrFailReason"] = "You cannot summon the shuttle from this console!"
 
 				if (authenticated_as_non_silicon_captain(user))
@@ -629,7 +658,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 
 				if (SSshuttle.emergency.mode != SHUTTLE_IDLE && SSshuttle.emergency.mode != SHUTTLE_RECALL)
 					data["shuttleCalled"] = TRUE
-					data["shuttleRecallable"] = SSshuttle.canRecall() || syndicate
+					data["shuttleRecallable"] = SSshuttle.canRecall() || syndicate || away
 
 				if (SSshuttle.emergencyCallAmount)
 					data["shuttleCalledPreviously"] = TRUE
@@ -719,7 +748,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 /obj/machinery/computer/communications/proc/has_communication()
 	var/turf/current_turf = get_turf(src)
 	var/z_level = current_turf.z
-	if(syndicate)
+	if(syndicate||away)
 		return TRUE
 	return is_station_level(z_level) || is_centcom_level(z_level)
 

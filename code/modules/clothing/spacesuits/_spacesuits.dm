@@ -24,7 +24,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	resistance_flags = NONE
 	dog_fashion = null
-	slowdown = 0.5
+	slowdown = 0
 	sound_vary = TRUE
 	equip_sound = 'sound/items/handling/helmet/helmet_equip1.ogg'
 	pickup_sound = 'sound/items/handling/helmet/helmet_pickup1.ogg'
@@ -59,7 +59,7 @@
 		/obj/item/tank/internals,
 		/obj/item/tank/jetpack/oxygen/captain,
 		)
-	slowdown = 0.5
+	slowdown = 1
 	armor_type = /datum/armor/suit_space
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDESEXTOY|HIDETAIL|HIDETAUR //NOVA EDIT CHANGE - ADDED HIDETAIL, HIDETAUR. ADDED HIDESEXTOY TO PREVENT VISUAL BUGS.
 	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS

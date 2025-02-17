@@ -259,6 +259,7 @@ const PageMain = (props) => {
     canToggleEngineeringOverride, // NOVA EDIT - Engineering Override
     emagged,
     syndicate,
+    away,
     emergencyAccess,
     engineeringOverride, // NOVA EDIT - Engineering Override
     importantActionReady,
@@ -404,7 +405,7 @@ const PageMain = (props) => {
           )}
           {/* NOVA EDIT ADDITION END */}
 
-          {!syndicate && (
+          {!syndicate && !away && (
             <Button
               icon="desktop"
               content="Set Status Display"

@@ -7438,15 +7438,9 @@
 "Ht" = (
 /obj/effect/turf_decal/trimline/dark_red/line,
 /obj/effect/turf_decal/trimline/dark_red/mid_joiner,
-/obj/machinery/computer/shuttle{
-	desc = "A shuttle terminal which allows a connection to the DS-2 forward base's supply shuttle.";
-	icon_keyboard = "syndie_key";
-	icon_screen = "syndishuttle";
-	light_color = "#FA8282";
+/obj/machinery/computer/shuttle/interdyne_cargo{
 	name = "syndicate cargo shuttle terminal";
-	possible_destinations = "IP-DS-2";
-	req_access = list("syndicate");
-	shuttleId = "syndie_cargo"
+	desc = "A shuttle terminal which allows a connection to the DS-2 forward base's supply shuttle."
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/des_two/bridge)
