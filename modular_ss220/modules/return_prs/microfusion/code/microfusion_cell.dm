@@ -60,7 +60,7 @@ These are basically advanced cells.
 	/// Do we show the microfusion readout instead of KJ?
 	var/microfusion_readout = FALSE
 
-/obj/item/stock_parts/cell/microfusion/Initialize(mapload)
+/obj/item/stock_parts/power_store/cell/microfusion/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
