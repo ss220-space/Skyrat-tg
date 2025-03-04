@@ -12,6 +12,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/akm
 	can_suppress = FALSE
 	fire_delay = 2
+	burst_size = 1
 	actions_types = list()
 	worn_icon = 'modular_ss220/modules/return_prs/gunsgalore/icons/guns/gunsgalore_back.dmi'
 	worn_icon_state = "akm"
@@ -102,6 +103,11 @@
 	spread = 5
 	worn_icon_state = "akm_civ"
 	recoil = 0.2
+
+/obj/item/gun/ballistic/automatic/akm/civvie/Initialize(mapload)
+	. = ..()
+
+	qdel(GetComponent(/datum/component/automatic_fire))
 
 /obj/item/gun/ballistic/automatic/akm/nri
 	name = "\improper KV-62 carbine"

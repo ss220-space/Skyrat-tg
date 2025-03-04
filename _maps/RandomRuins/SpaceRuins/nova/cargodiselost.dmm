@@ -298,6 +298,7 @@
 /obj/machinery/door/poddoor{
 	id = "bridgelockdown"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/bridge)
 "ek" = (
@@ -325,11 +326,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/quarters)
-"ev" = (
-/obj/structure/lattice,
-/mob,
-/turf/template_noop,
-/area/template_noop)
 "ex" = (
 /obj/machinery/door/airlock/survival_pod/glass,
 /obj/structure/fans/tiny,
@@ -419,6 +415,13 @@
 "fO" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
+	},
+/obj/machinery/button/door/directional/north{
+	id = "freighterchief";
+	name = "Door lock";
+	pixel_y = -24;
+	specialfunctions = 4;
+	normaldoorcontrol = 1
 	},
 /turf/open/floor/wood/parquet,
 /area/ruin/space/has_grav/cargodise_freighter/bridge)
@@ -552,6 +555,13 @@
 "is" = (
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/cargodise_freighter/utility)
+"iv" = (
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/machinery/door/poddoor{
+	id = "freighterwlockdown"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
 "iz" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/effect/turf_decal/tile/brown/half{
@@ -640,6 +650,12 @@
 /area/ruin/space/has_grav/cargodise_freighter/kitchen)
 "jp" = (
 /obj/effect/mob_spawn/ghost_role/human/lostcargoqm,
+/obj/machinery/button/door/directional/east{
+	pixel_x = 32;
+	pixel_y = 4;
+	name = "Freighter Windows Blastdoors";
+	id = "freighterwlockdown"
+	},
 /turf/open/floor/wood/parquet,
 /area/ruin/space/has_grav/cargodise_freighter/bridge)
 "jC" = (
@@ -713,6 +729,9 @@
 /area/ruin/space/has_grav/cargodise_freighter/quarters)
 "kF" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/machinery/door/poddoor{
+	id = "freighterwlockdown"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/cargodise_freighter/primaryhall)
 "kH" = (
@@ -828,6 +847,7 @@
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/hydroponics)
 "mq" = (
@@ -877,6 +897,9 @@
 /area/ruin/space/has_grav/cargodise_freighter/quarters)
 "ne" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/machinery/door/poddoor{
+	id = "freighterwlockdown"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/cargodise_freighter/quarters)
 "nu" = (
@@ -976,6 +999,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/quarters)
 "oV" = (
@@ -1065,6 +1089,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/utility)
 "qG" = (
@@ -1321,6 +1346,9 @@
 /area/ruin/space/has_grav/cargodise_freighter/trauma)
 "ux" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/machinery/door/poddoor{
+	id = "freighterwlockdown"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/cargodise_freighter/bridge)
 "vb" = (
@@ -1502,6 +1530,10 @@
 "xC" = (
 /obj/structure/bed/double,
 /obj/item/bedsheet/qm/double,
+/obj/machinery/button/door/directional/east{
+	name = "Bridge/Armory Blastdoors";
+	id = "bridgelockdown"
+	},
 /turf/open/floor/carpet/orange,
 /area/ruin/space/has_grav/cargodise_freighter/bridge)
 "xE" = (
@@ -1587,6 +1619,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/mining)
 "yW" = (
@@ -1808,6 +1841,15 @@
 /obj/machinery/chem_master/condimaster,
 /turf/open/floor/iron/kitchen,
 /area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"BY" = (
+/obj/machinery/button/door/directional/east{
+	pixel_x = 32;
+	pixel_y = 4;
+	name = "Freighter Windows Blastdoors";
+	id = "freighterwlockdown"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
 "BZ" = (
 /obj/machinery/griddle,
 /turf/open/floor/iron/kitchen,
@@ -1823,6 +1865,7 @@
 /obj/machinery/door/poddoor{
 	id = "cargolockdown"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/cargo)
 "Cj" = (
@@ -1947,6 +1990,9 @@
 "Er" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
+/obj/machinery/door/poddoor{
+	id = "freighterwlockdown"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/cargodise_freighter/hydroponics)
 "Et" = (
@@ -2000,6 +2046,7 @@
 /obj/machinery/door/poddoor{
 	id = "bridgelockdown"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/vault)
 "EP" = (
@@ -2007,7 +2054,9 @@
 /area/ruin/space/has_grav/cargodise_freighter/bridge)
 "ES" = (
 /obj/structure/rack/gunrack,
-/obj/item/gun/ballistic/automatic/lanca,
+/obj/item/gun/ballistic/automatic/sol_rifle/marksman{
+	pixel_y = 8
+	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/cargodise_freighter/vault)
 "Fb" = (
@@ -2101,6 +2150,9 @@
 "GD" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
+/obj/machinery/door/poddoor{
+	id = "freighterwlockdown"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/cargodise_freighter/trauma)
 "GL" = (
@@ -2135,6 +2187,7 @@
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/trauma)
 "Hk" = (
@@ -2316,6 +2369,7 @@
 /obj/machinery/door/poddoor{
 	id = "cargolockdown"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/mining)
 "Jy" = (
@@ -2326,6 +2380,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/vault)
 "Jz" = (
@@ -2340,6 +2395,7 @@
 	name = "Kitchen Storage"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/kitchen,
 /area/ruin/space/has_grav/cargodise_freighter/kitchen)
 "JD" = (
@@ -2381,6 +2437,10 @@
 /area/ruin/space/has_grav/cargodise_freighter/primaryhall)
 "Kr" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/structure/curtain/bounty/start_closed{
+	name = "dark curtains";
+	pixel_y = 32
+	},
 /turf/open/floor/wood/parquet,
 /area/ruin/space/has_grav/cargodise_freighter/kitchen)
 "Kt" = (
@@ -2434,6 +2494,10 @@
 /area/ruin/space/has_grav/cargodise_freighter/kitchen)
 "Lk" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/structure/curtain/bounty/start_closed{
+	name = "dark curtains";
+	pixel_y = 32
+	},
 /turf/open/floor/wood/parquet,
 /area/ruin/space/has_grav/cargodise_freighter/kitchen)
 "Ll" = (
@@ -2573,6 +2637,9 @@
 /area/ruin/space/has_grav/cargodise_freighter/utility)
 "Ns" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/machinery/door/poddoor{
+	id = "freighterwlockdown"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/cargodise_freighter/cargo)
 "Nt" = (
@@ -2620,15 +2687,18 @@
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ruin/space/has_grav/cargodise_freighter/quarters)
 "NZ" = (
-/obj/machinery/door/airlock/command/glass{
-	name = "Bridge"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command/glass{
+	name = "Freighter Boss's Quarters";
+	id_tag = "freighterchief"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/qm,
 /obj/machinery/door/poddoor{
 	id = "bridgelockdown"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/bridge)
 "Oa" = (
@@ -2702,6 +2772,10 @@
 "OY" = (
 /obj/structure/rack/gunrack,
 /obj/item/gun/ballistic/rifle/boltaction,
+/obj/item/gun/ballistic/automatic/lanca{
+	pixel_x = -1;
+	pixel_y = -5
+	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/cargodise_freighter/vault)
 "Pa" = (
@@ -2763,7 +2837,7 @@
 "Qn" = (
 /obj/machinery/button/door/directional/north{
 	id = "bridgelockdown";
-	name = "Bridge Blastdoors";
+	name = "Bridge/Armory Blastdoors";
 	pixel_y = -24
 	},
 /mob/living/simple_animal/hostile/looter/ranged/space/laser,
@@ -2817,6 +2891,11 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /obj/structure/rack/shelf,
 /obj/effect/spawner/random/entertainment/money_large,
+/obj/machinery/button/door/directional/north{
+	id = "bridgelockdown";
+	name = "Bridge/Armory Blastdoors";
+	pixel_y = -24
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/bridge)
 "Sc" = (
@@ -3015,6 +3094,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "lostfreighter"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/cargodise_freighter/mining)
 "Vn" = (
@@ -3151,6 +3231,19 @@
 	dir = 1
 	},
 /area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"WM" = (
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor{
+	id = "bridgelockdown"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
 "WN" = (
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/open/floor/plating,
@@ -3255,6 +3348,7 @@
 /obj/machinery/door/poddoor{
 	id = "cargolockdown"
 	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/cargo)
 "Yf" = (
@@ -3363,9 +3457,15 @@
 /area/ruin/space/has_grav/cargodise_freighter/kitchen)
 "Ze" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "Freighter Boss's Quarters"
+	name = "Freighter Boss's Quarters";
+	id_tag = "freighterchief"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor{
+	id = "bridgelockdown"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/qm,
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/bridge)
 "Zg" = (
@@ -3419,6 +3519,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/cargodise_freighter/kitchen)
 "ZV" = (
@@ -3934,7 +4035,7 @@ Gh
 Gh
 Gh
 JQ
-ev
+Ef
 Ef
 Ef
 Yr
@@ -4142,7 +4243,7 @@ Gh
 Gh
 Gh
 Gh
-hr
+iv
 Lk
 xw
 JN
@@ -4306,7 +4407,7 @@ Gh
 Gh
 Gh
 Gh
-hr
+iv
 Kr
 Ny
 JN
@@ -5340,7 +5441,7 @@ vh
 vh
 kX
 kX
-NZ
+WM
 ux
 ei
 kX
@@ -5752,7 +5853,7 @@ kX
 Wt
 WT
 Oj
-WT
+BY
 dy
 kX
 Gh

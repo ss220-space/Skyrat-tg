@@ -3,5 +3,14 @@
 	"scannable_directory": "modular_nova/",
 	"subdirectories": true,
 	"excluded_files": [],
-	"forbidden_includes": []
+	"forbidden_includes": ["modular_nova/modules/company_imports/code/armament_datums/kahraman_industries.dm",
+		"modular_nova/modules/company_imports/code/armament_datums/nri_military_surplus.dm",
+		"modular_nova/modules/company_imports/code/armament_datums/deforest_medical.dm",
+		"modular_nova/modules/company_imports/code/armament_datums/nakamura_modsuits.dm",
+		"modular_nova/modules/company_imports/code/armament_datums/vitezstvi_ammo.dm",
+		"modular_nova/modules/company_imports/code/armament_datums/jarnsmiour.dm",
+		"modular_nova/modules/company_imports/code/armament_datums/put_a_donk_on_it.dm",
+		"modular_nova/modules/company_imports/code/armament_datums/akh_frontier.dm",
+		"modular_nova/modules/company_imports/code/armament_datums/sol_defense.dm",
+		"modular_nova/modules/company_imports/code/armament_datums/microstar_energy.dm"]
 }

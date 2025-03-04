@@ -34,7 +34,10 @@
 	desc = "The Mark IV HEV suit helmet."
 	icon = 'modular_ss220/modules/return_prs/black_mesa/hev_suit/icons/helmeq.dmi'
 	worn_icon = 'modular_ss220/modules/return_prs/black_mesa/hev_suit/icons/helmet.dmi'
-	icon_state = "hev"
+	worn_icon_muzzled = 'modular_ss220/modules/return_prs/black_mesa/hev_suit/icons/helmet_m.dmi'
+	icon_state = "hev-IV"
+	base_icon_state = "hev"
+	inhand_icon_state = "syndicate-helm-orange"
 	armor_type = /datum/armor/space_hev_suit
 	obj_flags = NO_MAT_REDEMPTION
 	resistance_flags = LAVA_PROOF|FIRE_PROOF|UNACIDABLE|ACID_PROOF|INDESTRUCTIBLE|FREEZE_PROOF
@@ -46,6 +49,12 @@
 	slowdown = 0
 	max_heat_protection_temperature = 25000
 	min_cold_protection_temperature = 2
+	var/has_flashlight = TRUE
+
+/obj/item/clothing/head/helmet/space/hev_suit/Initialize(mapload)
+	. = ..()
+	if(has_flashlight)
+		AddComponent(/datum/component/seclite_attachable, starting_light = new /obj/item/flashlight/seclite(src), light_icon_state = "IV", is_light_removable = FALSE)
 
 /datum/armor/space_hev_suit
 	melee = 20
@@ -88,6 +97,7 @@
 	clothing_flags = STOPSPRESSUREDAMAGE|THICKMATERIAL|SNUG_FIT|LAVAPROTECT
 	max_heat_protection_temperature = 25000
 	min_cold_protection_temperature = 2
+	var/radio_key = /obj/item/encryptionkey
 
 	///Whether or not the suit is activated/activating.
 	var/activated = FALSE
@@ -190,6 +200,7 @@
 /obj/item/clothing/suit/space/hev_suit/Initialize(mapload)
 	. = ..()
 	internal_radio = new(src)
+	internal_radio.keyslot = new radio_key
 	internal_radio.subspace_transmission = TRUE
 	internal_radio.canhear_range = 0 // anything greater will have the bot broadcast the channel as if it were saying it out loud.
 	internal_radio.recalculateChannels()
@@ -568,14 +579,6 @@
 			current_user.adjustStaminaLoss(-heal_amount)
 			healing_current_cooldown = world.time + health_static_cooldown * 2
 
-	if(new_oxyloss)
-		if(use_hev_power(HEV_POWERUSE_HEAL))
-			current_user.adjustOxyLoss(-heal_amount)
-			healing_current_cooldown = world.time + health_static_cooldown
-			send_message("ADRENALINE ADMINISTERED", HEV_COLOR_BLUE)
-			send_hev_sound(morphine_sound)
-		return
-
 	if(new_bruteloss)
 		if(use_hev_power(HEV_POWERUSE_HEAL))
 			current_user.adjustBruteLoss(-heal_amount)
@@ -590,6 +593,14 @@
 			healing_current_cooldown = world.time + health_static_cooldown
 			send_message("BURN MEDICAL ATTENTION ADMINISTERED", HEV_COLOR_BLUE)
 			send_hev_sound(wound_sound)
+		return
+
+	if(new_oxyloss)
+		if(use_hev_power(HEV_POWERUSE_HEAL))
+			current_user.adjustOxyLoss(-heal_amount)
+			healing_current_cooldown = world.time + health_static_cooldown
+			send_message("ADRENALINE ADMINISTERED", HEV_COLOR_BLUE)
+			send_hev_sound(morphine_sound)
 		return
 
 	if(new_toxloss)
@@ -693,7 +704,8 @@
 	if(current_internals_tank)
 		REMOVE_TRAIT(current_internals_tank, TRAIT_NODROP, "hev_trait")
 	if(current_user)
-		send_message("SYSTEMS DEACTIVATED", HEV_COLOR_RED)
+		if(activating||activated)
+			send_message("SYSTEMS DEACTIVATED", HEV_COLOR_RED)
 		REMOVE_TRAIT(current_user, list(TRAIT_GUNFLIP,TRAIT_GUN_NATURAL), "hev_trait")
 		UnregisterSignal(current_user, list(
 			COMSIG_ATOM_ACID_ACT,
@@ -718,6 +730,7 @@
 	icon = 'modular_ss220/modules/return_prs/black_mesa/icons/misc/hecucloth.dmi'
 	worn_icon = 'modular_ss220/modules/return_prs/black_mesa/icons/misc/hecumob.dmi'
 	worn_icon_digi = 'modular_ss220/modules/return_prs/black_mesa/icons/misc/hecumob_muzzled.dmi'
+	inhand_icon_state = "blueshift_helmet"
 	icon_state = "hecu_helm"
 	armor_type = /datum/armor/hev_suit_pcv
 	flags_inv = HIDEHAIR
@@ -731,6 +744,7 @@
 	visor_flags_inv = null
 	visor_flags = null
 	slowdown = 0
+	has_flashlight = FALSE
 	uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Basic" = list(
@@ -782,6 +796,7 @@
 	worn_icon = 'modular_ss220/modules/return_prs/black_mesa/icons/misc/hecumob.dmi'
 	worn_icon_digi = 'modular_ss220/modules/return_prs/black_mesa/icons/misc/hecumob_digi.dmi'
 	icon_state = "hecu_vest"
+	inhand_icon_state = "swat_suit"
 	armor_type = /datum/armor/hev_suit_pcv
 	flags_inv = null
 	allowed = list(/obj/item/gun, /obj/item/ammo_box,/obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/melee/energy/sword, /obj/item/restraints/handcuffs, /obj/item/tank/internals)
@@ -790,6 +805,8 @@
 	resistance_flags = FIRE_PROOF|ACID_PROOF|FREEZE_PROOF
 	clothing_flags = SNUG_FIT
 	show_hud = FALSE
+	radio_key = /obj/item/encryptionkey/headset_faction
+	radio_channel = RADIO_CHANNEL_FACTION
 	uses_advanced_reskins = TRUE
 	unique_reskin = list(
 		"Basic" = list(
@@ -836,6 +853,7 @@
 	blood_toxins_sound = 'modular_ss220/modules/return_prs/black_mesa/hev_suit/sound/pcv/blood_toxins.ogg'
 	biohazard_sound = 'modular_ss220/modules/return_prs/black_mesa/hev_suit/sound/pcv/biohazard_detected.ogg'
 	chemical_sound = 'modular_ss220/modules/return_prs/black_mesa/hev_suit/sound/pcv/chemical_detected.ogg'
+	radiation_sound = 'modular_ss220/modules/return_prs/black_mesa/hev_suit/sound/pcv/radiation_detected.ogg'
 
 	minor_fracture_sound = 'modular_ss220/modules/return_prs/black_mesa/hev_suit/sound/pcv/minor_fracture.ogg'
 	major_fracture_sound = 'modular_ss220/modules/return_prs/black_mesa/hev_suit/sound/pcv/major_fracture.ogg'
