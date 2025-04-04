@@ -519,6 +519,34 @@
 		internal_radio.talk_into(src, "WARNING! USER [uppertext(current_user.real_name)] VITALSIGNS HAVE FLATLINED, CURRENT POSITION: [loc.x], [loc.y], [loc.z]!", radio_channel)
 		deactivate()
 
+/obj/item/clothing/suit/space/hev_suit/proc/get_highest_damage_status()
+    var/highest_status = null
+    var/highest_value = 0
+
+    var/current_brute = current_user.getBruteLoss()
+    var/current_fire = current_user.getFireLoss()
+    var/current_oxy = current_user.getOxyLoss()
+    var/current_tox = current_user.getToxLoss()
+    var/current_stamina = current_user.getStaminaLoss()
+
+    if(current_brute > highest_value)
+        highest_value = current_brute
+        highest_status = "brute"
+    if(current_fire > highest_value)
+        highest_value = current_fire
+        highest_status = "fire"
+    if(current_oxy > highest_value)
+        highest_value = current_oxy
+        highest_status = "oxy"
+    if(current_tox > highest_value)
+        highest_value = current_tox
+        highest_status = "tox"
+    if(current_stamina > highest_value)
+        highest_value = current_stamina
+        highest_status = "stamina"
+
+    return highest_status
+
 /obj/item/clothing/suit/space/hev_suit/proc/medical_systems()
 	RegisterSignal(current_user, COMSIG_CARBON_GAIN_WOUND, PROC_REF(process_wound))
 	RegisterSignal(current_user, COMSIG_ATOM_ACID_ACT, PROC_REF(process_acid))
@@ -568,57 +596,46 @@
 	if(world.time <= healing_current_cooldown)
 		return
 
-	var/new_bruteloss = current_user.getBruteLoss()
-	var/new_fireloss = current_user.getFireLoss()
-	var/new_toxloss = current_user.getToxLoss()
-	var/new_oxyloss = current_user.getOxyLoss()
-	var/new_stamloss = current_user.getStaminaLoss()
+	var/status_to_heal = get_highest_damage_status()
 
-	if(new_stamloss)
-		if(use_hev_power(HEV_POWERUSE_HEAL))
-			current_user.adjustStaminaLoss(-heal_amount)
-			healing_current_cooldown = world.time + health_static_cooldown * 2
+	if(status_to_heal)
+		switch(status_to_heal)
+			if("stamina")
+				if(use_hev_power(HEV_POWERUSE_HEAL))
+					current_user.adjustStaminaLoss(-heal_amount)
+					healing_current_cooldown = world.time + health_static_cooldown * 2
+				return
 
-	if(new_bruteloss)
-		if(use_hev_power(HEV_POWERUSE_HEAL))
-			current_user.adjustBruteLoss(-heal_amount)
-			healing_current_cooldown = world.time + health_static_cooldown
-			send_message("BRUTE MEDICAL ATTENTION ADMINISTERED", HEV_COLOR_BLUE)
-			send_hev_sound(wound_sound)
-		return
+			if("brute")
+				if(use_hev_power(HEV_POWERUSE_HEAL))
+					current_user.adjustBruteLoss(-heal_amount)
+					healing_current_cooldown = world.time + health_static_cooldown
+					send_message("BRUTE MEDICAL ATTENTION ADMINISTERED", HEV_COLOR_BLUE)
+					send_hev_sound(wound_sound)
+				return
 
-	if(new_fireloss)
-		if(use_hev_power(HEV_POWERUSE_HEAL))
-			current_user.adjustFireLoss(-heal_amount)
-			healing_current_cooldown = world.time + health_static_cooldown
-			send_message("BURN MEDICAL ATTENTION ADMINISTERED", HEV_COLOR_BLUE)
-			send_hev_sound(wound_sound)
-		return
+			if("fire")
+				if(use_hev_power(HEV_POWERUSE_HEAL))
+					current_user.adjustFireLoss(-heal_amount)
+					healing_current_cooldown = world.time + health_static_cooldown
+					send_message("BURN MEDICAL ATTENTION ADMINISTERED", HEV_COLOR_BLUE)
+					send_hev_sound(wound_sound)
+				return
+			if("oxy")
+				if(use_hev_power(HEV_POWERUSE_HEAL))
+					current_user.adjustOxyLoss(-heal_amount)
+					healing_current_cooldown = world.time + health_static_cooldown
+					send_message("ADRENALINE ADMINISTERED", HEV_COLOR_BLUE)
+					send_hev_sound(morphine_sound)
+				return
 
-	if(new_oxyloss)
-		if(use_hev_power(HEV_POWERUSE_HEAL))
-			current_user.adjustOxyLoss(-heal_amount)
-			healing_current_cooldown = world.time + health_static_cooldown
-			send_message("ADRENALINE ADMINISTERED", HEV_COLOR_BLUE)
-			send_hev_sound(morphine_sound)
-		return
-
-	if(new_toxloss)
-		if(use_hev_power(HEV_POWERUSE_HEAL))
-			current_user.adjustToxLoss(-heal_amount)
-			healing_current_cooldown = world.time + health_static_cooldown
-			send_message("TOXIN MEDICAL ATTENTION ADMINISTERED", HEV_COLOR_BLUE)
-			send_hev_sound(antitoxin_sound)
-		return
-
-
-//	if(new_cloneloss)
-//		if(use_hev_power(HEV_POWERUSE_HEAL))
-//			current_user.adjustCloneLoss(-heal_amount)
-//			healing_current_cooldown = world.time + health_static_cooldown
-//			send_message("MEDICAL ATTENTION ADMINISTERED", HEV_COLOR_BLUE)
-//			send_hev_sound(antidote_sound)
-//		return
+			if("tox")
+				if(use_hev_power(HEV_POWERUSE_HEAL))
+					current_user.adjustToxLoss(-heal_amount)
+					healing_current_cooldown = world.time + health_static_cooldown
+					send_message("TOXIN MEDICAL ATTENTION ADMINISTERED", HEV_COLOR_BLUE)
+					send_hev_sound(antitoxin_sound)
+				return
 
 /obj/item/clothing/suit/space/hev_suit/proc/process_wound(carbon, wound, bodypart)
 	SIGNAL_HANDLER
