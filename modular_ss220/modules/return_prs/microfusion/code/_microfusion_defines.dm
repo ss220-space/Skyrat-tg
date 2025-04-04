@@ -15,7 +15,11 @@
 /// Camo slot. Because why would you put four overlapping camos on your gun?
 #define GUN_SLOT_CAMO "camo"
 
-/// Techweb defines
+/* Gun defines (spare, if off's delete original)
+
+#define COMPANY_MICRON "It has <b>[span_cyan("Micron Control Sys.")]</b> cut into it."
+
+Techweb defines*/
 #define TECHWEB_NODE_BASIC_MICROFUSION "basic_microfusion"
 #define TECHWEB_NODE_ENHANCED_MICROFUSION "enhanced_microfusion"
 #define TECHWEB_NODE_ADVANCED_MICROFUSION "advanced_microfusion"
@@ -23,9 +27,3 @@
 #define TECHWEB_NODE_QUANTUM_MICROFUSION "quantum_microfusion"
 #define TECHWEB_NODE_ILLEGAL_MICROFUSION "illegal_microfusion"
 #define TECHWEB_NODE_CLOWN_MICROFUSION "clown_microfusion"
-
-/// Gun defines (spare, if off's delete original)
-/*
-#define COMPANY_MICRON "It has <b>[span_cyan("Micron Control Sys.")]</b> cut into it."
-
-*/

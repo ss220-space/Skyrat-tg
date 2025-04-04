@@ -520,32 +520,32 @@
 		deactivate()
 
 /obj/item/clothing/suit/space/hev_suit/proc/get_highest_damage_status()
-    var/highest_status = null
-    var/highest_value = 0
+	var/highest_status = null
+	var/highest_value = 0
 
-    var/current_brute = current_user.getBruteLoss()
-    var/current_fire = current_user.getFireLoss()
-    var/current_oxy = current_user.getOxyLoss()
-    var/current_tox = current_user.getToxLoss()
-    var/current_stamina = current_user.getStaminaLoss()
+	var/current_brute = current_user.getBruteLoss()
+	var/current_fire = current_user.getFireLoss()
+	var/current_oxy = current_user.getOxyLoss()
+	var/current_tox = current_user.getToxLoss()
+	var/current_stamina = current_user.getStaminaLoss()
 
-    if(current_brute > highest_value)
-        highest_value = current_brute
-        highest_status = "brute"
-    if(current_fire > highest_value)
-        highest_value = current_fire
-        highest_status = "fire"
-    if(current_oxy > highest_value)
-        highest_value = current_oxy
-        highest_status = "oxy"
-    if(current_tox > highest_value)
-        highest_value = current_tox
-        highest_status = "tox"
-    if(current_stamina > highest_value)
-        highest_value = current_stamina
-        highest_status = "stamina"
+	if(current_brute > highest_value)
+		highest_value = current_brute
+		highest_status = "brute"
+	if(current_fire > highest_value)
+		highest_value = current_fire
+		highest_status = "fire"
+	if(current_oxy > highest_value)
+		highest_value = current_oxy
+		highest_status = "oxy"
+	if(current_tox > highest_value)
+		highest_value = current_tox
+		highest_status = "tox"
+	if(current_stamina > highest_value)
+		highest_value = current_stamina
+		highest_status = "stamina"
 
-    return highest_status
+	return highest_status
 
 /obj/item/clothing/suit/space/hev_suit/proc/medical_systems()
 	RegisterSignal(current_user, COMSIG_CARBON_GAIN_WOUND, PROC_REF(process_wound))
@@ -605,7 +605,6 @@
 					current_user.adjustStaminaLoss(-heal_amount)
 					healing_current_cooldown = world.time + health_static_cooldown * 2
 				return
-
 			if("brute")
 				if(use_hev_power(HEV_POWERUSE_HEAL))
 					current_user.adjustBruteLoss(-heal_amount)
@@ -613,7 +612,6 @@
 					send_message("BRUTE MEDICAL ATTENTION ADMINISTERED", HEV_COLOR_BLUE)
 					send_hev_sound(wound_sound)
 				return
-
 			if("fire")
 				if(use_hev_power(HEV_POWERUSE_HEAL))
 					current_user.adjustFireLoss(-heal_amount)
@@ -628,7 +626,6 @@
 					send_message("ADRENALINE ADMINISTERED", HEV_COLOR_BLUE)
 					send_hev_sound(morphine_sound)
 				return
-
 			if("tox")
 				if(use_hev_power(HEV_POWERUSE_HEAL))
 					current_user.adjustToxLoss(-heal_amount)

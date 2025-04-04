@@ -44,7 +44,7 @@
 		return CLICK_ACTION_BLOCKING
 	toggle_stock(user)
 
-/obj/item/gun/ballistic/automatic/cmg/proc/toggle_stock(mob/user, var/forced)
+/obj/item/gun/ballistic/automatic/cmg/proc/toggle_stock(mob/user, forced)
 	if(!user && forced) // for the possible case of having every shipped CMG be pre-folded
 		folded = !folded
 		update_fold_stats()
