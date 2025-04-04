@@ -565,7 +565,6 @@
 	if(user)
 		user.put_in_hands(phase_emitter)
 		balloon_alert(user, "removed phase emitter")
-	phase_emitter.parent_gun = null
 	phase_emitter = null
 	update_appearance()
 
