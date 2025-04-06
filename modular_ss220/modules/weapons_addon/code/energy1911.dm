@@ -3,6 +3,8 @@
 	desc = "A special laser pistol, designed to look like the M1911."
 	icon = 'modular_ss220/modules/weapons_addon/icons/guns.dmi'
 	icon_state = "m1911"
+	lefthand_file = 'modular_ss220/modules/weapons_addon/icons/guns_lefthand.dmi'
+	righthand_file = 'modular_ss220/modules/weapons_addon/icons/guns_righthand.dmi'
 	inhand_icon_state = "colt"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/recharge/m1911
 	force = 5
