@@ -47,9 +47,9 @@
 	name = "RIP shotgun slug"
 	damage = 50
 	weak_against_armour = TRUE
-	embed_type = /datum/embed_data/shotgun_slug
+	embed_type = /datum/embedding/shotgun_slug
 
-/datum/embed_data/shotgun_slug
+/datum/embedding/shotgun_slug
 	embed_chance = 80
 	pain_chance=40
 	fall_chance=5

@@ -1,6 +1,5 @@
 SUBSYSTEM_DEF(ttsSilero)
 	name = "Text-to-Speech"
-	init_order = INIT_ORDER_DEFAULT
 	wait = 1 SECONDS
 	runlevels = RUNLEVEL_LOBBY | RUNLEVELS_DEFAULT
 

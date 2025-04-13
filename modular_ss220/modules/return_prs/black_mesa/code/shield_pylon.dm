@@ -47,8 +47,8 @@
 
 /obj/structure/xen_pylon/proc/mob_entered_range(datum/source, atom/movable/entered_atom)
 	SIGNAL_HANDLER
-	if(!isxenmob(entered_atom))
-		return
+	// if(!isxenmob(entered_atom))
+	// 	return
 	var/mob/living/simple_animal/hostile/blackmesa/xen/entered_xen_mob = entered_atom
 	if(!entered_xen_mob.can_be_shielded)
 		return
